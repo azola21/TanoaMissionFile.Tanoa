@@ -244,6 +244,15 @@ class HG_WestAmmoShop // this addAction["<img image='HG\UI\Icons\money.paa' size
 		};
 	};
 	
+	class MosinAmmo
+	{
+	    displayName = "Mosin Ammo";
+		items[] =
+		{
+			{"rhsgref_5Rnd_762x54_m38",1,"true"}
+		};
+	};
+	
 	class AK74Ammo
 	{
 	    displayName = "5.45mm";
@@ -295,16 +304,6 @@ class HG_WestAmmoShop // this addAction["<img image='HG\UI\Icons\money.paa' size
 			{"rhs_10rnd_9x39mm_SP5",1,"true"},
 			{"rhs_20rnd_9x39mm_SP6",2,"true"},
 			{"rhs_20rnd_9x39mm_SP5",2,"true"}
-		};
-	};
-	
-	class M107Amm
-	{
-	    displayName = "M82A1 & M107 Ammo";
-		items[] =
-		{
-			{"rhsusf_mag_10Rnd_STD_50BMG_M33",50,"true"},
-			{"rhsusf_mag_10Rnd_STD_50BMG_mk211",50,"true"}
 		};
 	};
 	
@@ -448,6 +447,52 @@ class HG_SupportAmmoShop // this addAction["<img image='HG\UI\Icons\money.paa' s
 		};
 	};
 	
+	class M107Amm
+	{
+	    displayName = "M82A1 & M107 Ammo";
+		items[] =
+		{
+			{"rhsusf_mag_10Rnd_STD_50BMG_M33",50,"true"},
+			{"rhsusf_mag_10Rnd_STD_50BMG_mk211",50,"true"}
+		};
+	};
+	
+	class M24Amm
+	{
+	    displayName = "M24 Sniper Ammo";
+		items[] =
+		{
+			{"rhsusf_5Rnd_762x51_m118_special_Mag",4,"true"},
+			{"rhsusf_5Rnd_762x51_m993_Mag",4,"true"},
+			{"rhsusf_5Rnd_762x51_m62_Mag",4,"true"}
+		};
+	};
+	
+	class M40Amm
+	{
+	    displayName = "M40A5 Sniper Ammo";
+		items[] =
+		{
+			{"rhsusf_10Rnd_762x51_m118_special_Mag",8,"true"},
+			{"rhsusf_10Rnd_762x51_m993_Mag",8,"true"},
+			{"rhsusf_10Rnd_762x51_m62_Mag",8,"true"}
+		};
+	};
+	
+	class AWMAmm
+	{
+	    displayName = "AWM Sniper Ammo";
+		items[] =
+		{
+			{"hlc_5rnd_300WM_FMJ_AWM",8,"true"},
+			{"hlc_5rnd_300WM_mk248_AWM",8,"true"},
+			{"hlc_5rnd_300WM_BTSP_AWM",8,"true"},
+			{"hlc_5rnd_300WM_AP_AWM",8,"true"},
+			{"hlc_5rnd_300WM_SBT_AWM",8,"true"},
+			{"hlc_5rnd_300WM_T_AWM",8,"true"}
+		};
+	};
+	
 	class 762machinegunAmmo
 	{
 	    displayName = "7.62 Machinegun Ammo";
@@ -512,6 +557,19 @@ class HG_SupportAmmoShop // this addAction["<img image='HG\UI\Icons\money.paa' s
 		};
 	};
 	
+	class PKMmachinegunAmmo
+	{
+	    displayName = "PKM Ammo";
+		items[] =
+		{
+			{"rhs_100Rnd_762x54mmR_7BZ3",30,"true"},
+			{"rhs_100Rnd_762x54mmR_7N26",30,"true"},
+			{"rhs_100Rnd_762x54mmR_7N13",30,"true"},
+			{"rhs_100Rnd_762x54mmR_green",30,"true"},
+			{"rhs_100Rnd_762x54mmR",30,"true"}
+		};
+	};
+	
 	class HK121machinegunAmmo
 	{
 	    displayName = "HK121 MMG Ammo";
@@ -532,6 +590,7 @@ class HG_PistolShop // this addAction["<img image='HG\UI\Icons\money.paa' size='
 		items[] =
 		{
 			{"RH_g17",750,"true"},
+			{"RH_g18",800,"true"},
 			{"RH_g19",700,"true"},
 			{"RH_g19t",700,"true"},
 			{"RH_17Rnd_9x19_g17",5,"true"},
@@ -831,6 +890,123 @@ class HG_PistolShop // this addAction["<img image='HG\UI\Icons\money.paa' size='
 		};
 	};
 	
+	class PythonPistol
+	{
+	    displayName = "Colt Python";
+		items[] =
+		{
+			{"RH_python",400,"true"},
+			{"RH_6Rnd_357_Mag",6,"true"}
+		};
+	};
+	
+	class MatebaPistol
+	{
+	    displayName = "Meteba Revolver";
+		items[] =
+		{
+			{"RH_mateba",400,"true"},
+			{"RH_6Rnd_44_Mag",6,"true"}
+		};
+	};
+	
+	class MP412Pistol
+	{
+	    displayName = "MP412 Revolver";
+		items[] =
+		{
+			{"RH_mp412",400,"true"},
+			{"RH_6Rnd_357_Mag",6,"true"}
+		};
+	};
+	
+	class BullPistol
+	{
+	    displayName = "Raging Bull Revolver";
+		items[] =
+		{
+			{"RH_bull",400,"true"},
+			{"RH_bullb",400,"true"},
+			{"RH_6Rnd_454_Mag",6,"true"}
+		};
+	};
+	
+	class TrackerPistol
+	{
+	    displayName = "Tracker Revolver";
+		items[] =
+		{
+			{"RH_ttracker",400,"true"},
+			{"RH_6Rnd_45ACP_Mag",6,"true"}
+		};
+	};
+	
+	class SW659
+	{
+	    displayName = "S&W 659 Pistol";
+		items[] =
+		{
+			{"RH_sw659",500,"true"},
+			{"RH_32Rnd_9x19_tec",3,"true"},
+			{"RH_suppr9",20,"true"}
+		};
+	};
+	
+	class VP70P
+	{
+	    displayName = "HK VP70 Pistol";
+		items[] =
+		{
+			{"RH_vp70",680,"true"},
+			{"RH_18Rnd_9x19_VP",3,"true"},
+			{"RH_vp70stock",20,"true"}
+		};
+	};
+	
+	class Mk2Pistol
+	{
+	    displayName = ".22 Pistol";
+		items[] =
+		{
+			{"RH_mk2",70,"true"},
+			{"RH_10Rnd_22LR_mk2",6,"true"}
+		};
+	};
+	
+	class DeaglePistol
+	{
+	    displayName = "Desert Eagle Pistol";
+		items[] =
+		{
+			{"RH_deagle",600,"true"},
+			{"RH_Deaglem",600,"true"},
+			{"RH_Deagles",600,"true"},
+			{"RH_7Rnd_50_AE",6,"true"}
+		};
+	};
+	
+	class TEC9
+	{
+	    displayName = "TEC-9 Pistol";
+		items[] =
+		{
+			{"RH_tec9",750,"true"},
+			{"RH_32Rnd_9x19_tec",12,"true"},
+			{"RH_tecsd",20,"true"}
+		};
+	};
+	
+	class UZI
+	{
+	    displayName = "Micro Uzi";
+		items[] =
+		{
+			{"RH_muzi",750,"true"},
+			{"RH_30Rnd_9x19_UZI",12,"true"},
+			{"RH_muzisd",20,"true"}
+		};
+	};
+	
 	class MP5K
 	{
 	    displayName = "HK MP5K";
@@ -989,6 +1165,61 @@ class HG_ExplosiveShop // this addAction["<img image='HG\UI\Icons\money.paa' siz
 		items[] =
 		{
 			{"ACE_FlareTripMine_Mag",15,"true"}
+		};
+	};
+};
+
+class HG_AKATTShop // this addAction["<img image='HG\UI\Icons\money.paa' size='1.5'/><t color='#FF0000'>AK Attachments</t>",{_this call HG_fnc_dialogOnLoadItems},"HG_AKATTShop",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; // Example: "(playerSide in [west,independent]) AND ((rank player) isEqualTo 'COLONEL')"
+	
+	class ScopesRUS
+	{
+	    displayName = "AK Scopes";
+		items[] =
+		{
+			{"rhs_acc_1p29",150,"true"},
+			{"rhs_acc_1p63",150,"true"},
+			{"rhs_acc_1p78",150,"true"},
+			{"rhs_acc_1pn93_1",150,"true"},
+			{"rhs_acc_1pn93_2",150,"true"},
+			{"rhs_acc_ekp1",150,"true"},
+			{"rhs_acc_ekp8_02",150,"true"},
+			{"rhs_acc_nita",150,"true"},
+			{"rhs_acc_pgo7v",150,"true"},
+			{"rhs_acc_pgo7v2",150,"true"},
+			{"rhs_acc_pgo7v3",150,"true"},
+			{"rhs_acc_pkas",150,"true"},
+			{"rhs_acc_pso1m2",150,"true"},
+			{"rhs_acc_pso1m21",150,"true"}
+		};
+	};
+	
+	class MuzzleRUSAKM
+	{
+	    displayName = "AKM Muzzle Attachments";
+		items[] =
+		{
+			{"rhs_acc_dtk1l",150,"true"},
+			{"rhs_acc_dtkakm",150,"true"},
+			{"rhs_acc_pbs1",150,"true"}
+		};
+	};
+	
+	class MuzzleRUSAK74
+	{
+	    displayName = "AK-74 Muzzle Attachments";
+		items[] =
+		{
+			{"rhs_acc_uuk",120,"true"},
+			{"rhs_acc_ak5",120,"true"},
+			{"rhs_acc_dtk",120,"true"},
+			{"rhs_acc_dtk1",120,"true"},
+			{"rhs_acc_dtk2",120,"true"},
+			{"rhs_acc_dtk3",120,"true"},
+			{"rhs_acc_dtk4short",120,"true"},
+			{"rhs_acc_dtk1983",120,"true"},
+			{"rhs_acc_tgpa",120,"true"}
 		};
 	};
 };
