@@ -1,0 +1,1 @@
+[500000,0] call HG_fnc_addOrSubCash;
