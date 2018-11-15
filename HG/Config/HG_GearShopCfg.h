@@ -1,0 +1,3767 @@
+/*
+    Author - HoverGuy
+    © All Fucks Reserved
+	Website - http://www.sunrise-production.com
+	
+    Defines available gear shops
+	
+	class YourShopClass - Used as a param for the call, basically the shop you want to display
+	{
+		conditionToAccess - STRING - Condition that must return either true or false, if true the player will have access to the shop
+		
+		class ShopCategory - Shop category, can only be Glasses/Headgear/Uniform/Vest/Backpack/MissileLauncher/RocketLauncher/Handgun/AssaultRifle/MachineGun/SubmachineGun/SniperRifle
+		{
+			content - ARRAY OF ARRAYS - Shop content
+			|- 0 - STRING - Classname
+			|- 1 - INTEGER - Price
+			|- 2 - STRING - Condition that must return either true or false, if true the item appears in the list else no
+		};
+	};
+*/
+
+class HG_TiggRiflesShop //this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>Tigg Rifles</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_TiggRiflesShop",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; 
+	
+	class CivilianRifles
+	{
+		displayName = "5.56/.223 Civilian Grade Rifles";
+		content[] =
+		{
+			{"RH_SR16A4",1250,"true"},
+			{"RH_SR16A2",800,"true"},
+			{"RH_hbsd",1600,"true"},
+			{"RH_hb",1600,"true"},
+			{"RH_samr",1700,"true"},
+			{"RH_mk12mod1",1800,"true"}
+		};
+	};
+	
+	class MilitaryRifles
+	{
+		displayName = "5.56/.223 Military Grade Rifles";
+		content[] =
+		{
+			{"RH_m16a2",2850,"true"},
+			{"RH_m16a4",3150,"true"},
+			{"RH_m16a6",3650,"true"},
+			{"RH_m4",3450,"true"},
+			{"RH_m4_ris",3450,"true"},
+			{"RH_m4_ris_m",3450,"true"},
+			{"RH_m4m",3450,"true"},
+			{"RH_m4_moe",3450,"true"},
+			{"RH_m4a6",3450,"true"}
+		};
+	};
+};
+
+class HG_AlibabaShop //this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>www.alibaba.com/jihad</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_AlibabaShop",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; 
+	
+	class SKS
+	{
+		displayName = "SKS";
+		content[] =
+		{
+			{"hlc_rifle_sks",400,"true"}
+		};
+	};
+	
+	class MosinRifle
+	{
+		displayName = "Mosin Nagant";
+		content[] =
+		{
+			{"rhs_weap_m38",200,"true"},
+			{"rhs_weap_m38_rail",260,"true"},
+			{"rhs_weap_mosin_sbr",120,"true"}
+		};
+	};
+	
+	class AK556
+	{
+		displayName = "5.56 AK Rifles";
+		content[] =
+		{
+			{"rhs_weap_m21a",2350,"true"},
+			{"rhs_weap_m21s",2350,"true"}
+		};
+	};
+	
+	class AK74
+	{
+		displayName = "AK74s";
+		content[] =
+		{
+			{"rhs_weap_ak74",2650,"true"},
+			{"rhs_weap_ak74_3",2650,"true"},
+			{"rhs_weap_ak74_2",2650,"true"}
+		};
+	};
+	
+	class AK47
+	{
+		displayName = "AK47s";
+		content[] =
+		{
+			{"rhs_weap_savz58p",2100,"true"},
+			{"rhs_weap_savz58p_black",2100,"true"},
+			{"rhs_weap_savz58v",2100,"true"},
+			{"rhs_weap_savz58v_black",2100,"true"},
+			{"rhs_weap_akm",2250,"true"},
+			{"rhs_weap_pm63",2250,"true"},
+			{"rhs_weap_akmn",2250,"true"},
+			{"rhs_weap_akms",2250,"true"},
+			{"rhs_weap_akms",2250,"true"},
+			{"hlc_rifle_ak47",2250,"true"},
+			{"hlc_rifle_akm2",2250,"true"},
+			{"hlc_rifle_akms",2250,"true"}
+		};
+	};
+	
+	class Mg42
+	{
+		displayName = "MG42";
+		content[] =
+		{
+			{"hlc_lmg_MG42",7500,"true"}
+		};
+	};
+	
+	class PKM
+	{
+		displayName = "PKM";
+		content[] =
+		{
+			{"rhs_weap_pkm",7800,"true"}
+		};
+	};
+};
+
+class HG_Launchers //this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>armsdatabase.gov</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_Launchers",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; 
+	
+	class BULLPUP556
+	{
+		displayName = "NATO Bullpups";
+		content[] =
+		{
+			{"SMA_Tavor_F",3450,"true"},
+			{"SMA_TavorBLK_F",3450,"true"},
+			{"SMA_TavorOD_F",3450,"true"},
+			{"SMA_CTAR_F",3450,"true"},
+			{"SMA_CTARBLK_F",3450,"true"},
+			{"SMA_CTAROD_F",3450,"true"},
+			{"SMA_SAR21_F",3450,"true"},
+			{"SMA_SAR21_AFG_F",3450,"true"},
+			{"SMA_SAR21MMS_F",3450,"true"},
+			{"SMA_SAR21MMS_AFG_F",3450,"true"},
+			{"SMA_SAR21X_F",3450,"true"},
+			{"SMA_Steyr_AUG_BLACK_F",3450,"true"},
+			{"SMA_Steyr_AUG_F",3450,"true"},
+			{"SMA_AUG_A3_F",3450,"true"},
+			{"SMA_AUG_A3_KRYPT_F",3450,"true"},
+			{"SMA_AUG_A3_MCAM_F",3450,"true"},
+			{"SMA_STG_E4_F",3450,"true"},
+			{"bg21_famas2",3450,"true"},
+			{"bg21_famas1",3450,"true"},
+			{"bg21_famas_HG",3450,"true"},
+			{"bg21_famas_FS_blk",3450,"true"},
+			{"bg21_famas_FS_grn",3450,"true"},
+			{"bg21_famas_FS_tan",3450,"true"},
+			{"SMA_STG_E4_BLACK_F",3450,"true"},
+			{"SMA_STG_E4_OD_F",3450,"true"},
+			{"SMA_SKS_F",3450,"true"},
+			{"SMA_SKS_TAN_F",3450,"true"},
+			{"UK3CB_BAF_L22",3050,"true"},
+			{"UK3CB_BAF_L22A2",3050,"true"},
+			{"UK3CB_BAF_L85A2",3450,"true"},
+			{"UK3CB_BAF_L85A2_RIS_AFG",3450,"true"},
+			{"UK3CB_BAF_L85A2_EMAG",3450,"true"},
+			{"UK3CB_BAF_L85A2_RIS",3450,"true"},
+			{"UK3CB_BAF_L85A2_RIS_Green",3450,"true"},
+			{"UK3CB_BAF_L85A2_RIS_Tan",3450,"true"},
+			{"UK3CB_BAF_L86A2",3450,"true"},
+			{"UK3CB_BAF_L86A3",3450,"true"}
+		};
+	};
+	
+	class BULLPUPGL
+	{
+		displayName = "5.56/.223 Civilian Grade Rifles";
+		content[] =
+		{
+			{"SMA_AUG_EGLM",4450,"true"},
+			{"SMA_AUG_EGLM_Olive",4450,"true"},
+			{"SMA_AUG_EGLM_tan",4450,"true"},
+			{"UK3CB_BAF_L85A2_UGL",4450,"true"},
+			{"UK3CB_BAF_L85A2_UGL_HWS",4450,"true"}
+		};
+	};
+	
+	class AK556
+	{
+		displayName = "5.56 AK Rifles";
+		content[] =
+		{
+			{"rhs_weap_m21a",2350,"true"},
+			{"rhs_weap_m21s",2350,"true"}
+		};
+	};
+	
+	class AK556S
+	{
+		displayName = "5.56 AK Rifles W/ Scopes";
+		content[] =
+		{
+			{"rhs_weap_m21a_pr",2550,"true"},
+			{"rhs_weap_m21s_pr",2550,"true"}
+		};
+	};
+	
+	class AK74
+	{
+		displayName = "AK74s";
+		content[] =
+		{
+			{"rhs_weap_ak74",2650,"true"},
+			{"rhs_weap_ak74_3",2650,"true"},
+			{"rhs_weap_ak74_2",2650,"true"},
+			{"rhs_weap_ak74m",2650,"true"},
+			{"rhs_weap_ak74m_2mag",2650,"true"},
+			{"rhs_weap_ak74m_2mag_camo",2650,"true"},
+			{"rhs_weap_ak74m_camo",2650,"true"},
+			{"rhs_weap_ak74m_desert",2650,"true"},
+			{"rhs_weap_ak74m_plummag",2650,"true"},
+			{"rhs_weap_ak74m_fullplum",2650,"true"},
+			{"rhs_weap_ak74m_zenitco01",2650,"true"},
+			{"hlc_rifle_aek971",2650,"true"},
+			{"rhs_weap_ak74n",2650,"true"},
+			{"rhs_weap_ak74n_2",2650,"true"},
+			{"rhs_weap_aks74",2650,"true"},
+			{"rhs_weap_aks74u",2650,"true"},
+			{"rhs_weap_aks74un",2650,"true"},
+			{"rhs_weap_aks74",2650,"true"},
+			{"rhs_weap_aks74_2",2650,"true"},
+			{"rhs_weap_aks74n",2650,"true"},
+			{"rhs_weap_ak105",2650,"true"},
+			{"hlc_rifle_ak105",2650,"true"},
+			{"hlc_rifle_rpk74n",2650,"true"},
+			{"hlc_rifle_aks74",2650,"true"},
+			{"hlc_rifle_aks74u",2650,"true"},
+			{"hlc_rifle_ak74m",2650,"true"},
+			{"hlc_rifle_ak74",2650,"true"},
+			{"hlc_rifle_ak74_dirty2",2650,"true"},
+			{"rhs_weap_ak105_zenitco01",2650,"true"}
+		};
+	};
+	
+	class AK74Scope
+	{
+		displayName = "AK74s w/ Scope Rail";
+		content[] =
+		{
+			{"rhs_weap_ak74m_2mag_npz",3000,"true"},
+			{"rhs_weap_ak74m_npz",3000,"true"},
+			{"rhs_weap_ak74m_desert_npz",3000,"true"},
+			{"rhs_weap_ak74m_plummag_npz",3000,"true"},
+			{"rhs_weap_ak74m_fullplum_npz",3000,"true"},
+			{"rhs_weap_ak74m_zenitco01_b33",3000,"true"},
+			{"rhs_weap_ak74mr",3000,"true"},
+			{"hlc_rifle_aek971_mtk",3000,"true"},
+			{"rhs_weap_ak74n_npz",3000,"true"},
+			{"rhs_weap_ak74n_2_npz",3000,"true"},
+			{"rhs_weap_ak74m_dtk",3000,"true"},
+			{"rhs_weap_ak74m_2mag_dtk",3000,"true"},
+			{"rhs_weap_ak74m_desert_dtk",3000,"true"},
+			{"hlc_rifle_ak74m_MTK",3000,"true"},
+			{"hlc_rifle_ak74_MTK",3000,"true"},
+			{"hlc_rifle_aks74_MTK",3000,"true"},
+			{"hlc_rifle_aks74u_MTK",3000,"true"},
+			{"rhs_weap_ak105_npz",3000,"true"},
+			{"rhs_weap_ak105_zenitco01_b33",3000,"true"}
+		};
+	};
+	
+	class AK47
+	{
+		displayName = "AK47s";
+		content[] =
+		{
+			{"rhs_weap_savz58p",2100,"true"},
+			{"rhs_weap_savz58p_black",2100,"true"},
+			{"rhs_weap_savz58v",2100,"true"},
+			{"rhs_weap_savz58v_black",2100,"true"},
+			{"hlc_rifle_slr107u",2250,"true"},
+			{"bnae_rk95_virtual",2250,"true"},
+			{"bnae_rk95_camo1_virtual",2250,"true"},
+			{"rhs_weap_akm",2250,"true"},
+			{"rhs_weap_pm63",2250,"true"},
+			{"hlc_rifle_mpikms",2250,"true"},
+			{"rhs_weap_m70ab2",2250,"true"},
+			{"rhs_weap_m70b1",2250,"true"},
+			{"rhs_weap_m70b3n",2250,"true"},
+			{"hlc_rifle_RK62",2250,"true"},
+			{"rhs_weap_akmn",2250,"true"},
+			{"rhs_weap_akms",2250,"true"},
+			{"rhs_weap_akms",2250,"true"},
+			{"hlc_rifle_ak104",2250,"true"},
+			{"hlc_rifle_ak47",2250,"true"},
+			{"hlc_rifle_akm2",2250,"true"},
+			{"hlc_rifle_akms",2250,"true"},
+			{"hlc_rifle_rpk",2250,"true"},
+			{"rhs_weap_ak103_2",2250,"true"},
+			{"rhs_weap_ak103_zenitco01",2250,"true"},
+			{"rhs_weap_ak104",2250,"true"},
+			{"rhs_weap_ak104_zenitco01",2250,"true"}
+		};
+	};
+	
+	class AK47Scope
+	{
+		displayName = "AK47s w/ Scopes";
+		content[] =
+		{
+			{"rhs_weap_savz58p_rail",2650,"true"},
+			{"rhs_weap_savz58p_rail_black",2650,"true"},
+			{"rhs_weap_savz58v_rail",2650,"true"},
+			{"rhs_weap_savz58v_rail_black",2650,"true"},
+			{"hlc_rifle_slr107u_MTK",2850,"true"},
+			{"bnae_rk95r_virtual",2850,"true"},
+			{"bnae_rk95r_camo1_virtual",2850,"true"},
+			{"rhs_weap_akm_zenitco01_b33",2850,"true"},
+			{"rhs_weap_akmn_npz",2850,"true"},
+			{"hlc_rifle_akm_MTK",2850,"true"},
+			{"rhs_weap_ak103_2_npz",2850,"true"},
+			{"rhs_weap_ak103_npz",2850,"true"},
+			{"rhs_weap_ak103_zenitco01_b33",2850,"true"},
+			{"rhs_weap_ak104_npz",2850,"true"},
+			{"rhs_weap_ak104_zenitco01_b33",2850,"true"}
+		};
+	};
+	
+	class AK12
+	{
+		displayName = "AK12's (Multicaliber)";
+		content[] =
+		{
+			{"hlc_rifle_ak12",3800,"true"},
+			{"hlc_rifle_aku12",3800,"true"},
+			{"hlc_rifle_RPK12",3800,"true"}
+		};
+	};
+	
+	class SVD76254
+	{
+		displayName = "SVD Rifles";
+		content[] =
+		{
+			{"rhs_weap_svdp_wd_npz",1000,"true"},
+			{"rhs_weap_svdp_npz",1000,"true"},
+			{"rhs_weap_svds_npz",1000,"true"}
+		};
+	};
+	
+	class VSSRifle
+	{
+		displayName = "VSS Rifles";
+		content[] =
+		{
+			{"rhs_weap_vss_grip_npz",1125,"true"},
+			{"rhs_weap_vss_npz",1125,"true"}
+		};
+	};
+	
+	class USAMSnipers
+	{
+		displayName = "NATO Anti-Material Rifles";
+		content[] =
+		{
+			{"rhs_weap_m82a1",12000,"true"},
+			{"rhs_weap_M107",12000,"true"},
+			{"rhs_weap_M107_d",12000,"true"},
+			{"rhs_weap_M107_w",12000,"true"}
+		};
+	};
+	
+	class USSnipers
+	{
+		displayName = "M24 Sniper Rifles";
+		content[] =
+		{
+			{"rhs_weap_m24sws",650,"true"},
+			{"rhs_weap_m24sws_blk",650,"true"},
+			{"rhs_weap_m24sws_ghillie",650,"true"}
+		};
+	};
+	
+	class USSnipers2
+	{
+		displayName = "M40A5 Sniper Rifles";
+		content[] =
+		{
+			{"rhs_weap_m40a5",700,"true"},
+			{"rhs_weap_m40a5_d",700,"true"},
+			{"rhs_weap_m40a5_wd",700,"true"}
+		};
+	};
+	
+	class USSnipers3
+	{
+		displayName = "AWM Sniper Rifles";
+		content[] =
+		{
+			{"hlc_rifle_awmagnum_BL",750,"true"},
+			{"hlc_rifle_awMagnum_BL_ghillie",752,"true"},
+			{"hlc_rifle_awmagnum_FDE",750,"true"},
+			{"hlc_rifle_awMagnum_FDE_ghillie",752,"true"},
+			{"hlc_rifle_awmagnum",750,"true"},
+			{"hlc_rifle_awMagnum_OD_ghillie",752,"true"}
+		};
+	};
+	
+	class QBZ95
+	{
+		displayName = "QBZ-95-1 Rifles";
+		content[] =
+		{
+			{"arifle_CTAR_blk_F",3250,"true"},
+			{"arifle_CTAR_ghex_F",3250,"true"}
+		};
+	};
+	
+	class QBZ03
+	{
+		displayName = "QBZ-03 Rifle";
+		content[] =
+		{
+			{"vme_pla_qbz03",3250,"true"}
+		};
+	};
+	
+	class MG3Gum
+	{
+		displayName = "MG3 7.62 Machineguns";
+		content[] =
+		{
+			{"hlc_lmg_MG3_optic",8000,"true"},
+			{"hlc_lmg_MG3KWS_b",8000,"true"},
+			{"hlc_lmg_MG3KWS_g",8000,"true"},
+			{"hlc_lmg_MG3KWS",8000,"true"}
+		};
+	};
+	
+	class RocketLauncher
+	{
+		displayName = "Launchers";
+		content[] =
+		{
+			{"rhs_weap_M136",900,"true"},
+			{"rhs_weap_M136_hedp",850,"true"},
+			{"rhs_weap_M136_hp",950,"true"},
+			{"rhs_weap_m72a7",750,"true"}
+		};
+	};
+};
+
+class HG_SigRiflesShop //this addAction["<img image='HG\UI\Icons\sig.paa' size='1.5'/><t color='#FF0000'>Sig Sauer Store</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_SigRiflesShop",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; 
+	
+	class CivilianRifles556
+	{
+		displayName = "5.56/.223 Civilian Grade Rifles";
+		content[] =
+		{
+			{"hlc_rifle_SG550Sniper_RIS",1150,"true"}
+		};
+	};
+	
+	class MilitaryRifles556
+	{
+		displayName = "SG550 Rifles";
+		content[] =
+		{
+			{"hlc_rifle_SG550",2050,"true"},
+			{"hlc_rifle_SG551LB",2050,"true"},
+			{"hlc_rifle_SG551SB",2050,"true"},
+			{"hlc_rifle_SG553LB",2050,"true"},
+			{"hlc_rifle_SG553SB",2050,"true"}
+		};
+	};
+	
+	class MilitaryRifles556S
+	{
+		displayName = "SG550 Rifles w/ Scopes";
+		content[] =
+		{
+			{"hlc_rifle_SG550_RIS",3050,"true"},
+			{"hlc_rifle_SG550_TAC",3050,"true"},
+			{"hlc_rifle_SG551LB_RIS",3050,"true"},
+			{"hlc_rifle_SG551LB_TAC",3050,"true"},
+			{"hlc_rifle_SG551SB_RIS",3050,"true"},
+			{"hlc_rifle_SG551SB_TAC",3050,"true"},
+			{"hlc_rifle_SG553LB_RIS",3050,"true"},
+			{"hlc_rifle_SG553LB_TAC",3050,"true"},
+			{"hlc_rifle_SG553SB_RIS",3050,"true"},
+			{"hlc_rifle_SG553SB_TAC",3050,"true"}
+		};
+	};
+	
+	class MilitaryRifles556GL
+	{
+		displayName = "SG550 Rifles w/ GL";
+		content[] =
+		{
+			{"hlc_rifle_SG550_TAC_GL",4050,"true"},
+			{"hlc_rifle_SG551LB_TAC_GL",4050,"true"},
+			{"hlc_rifle_SG551SB_TAC_GL",4050,"true"}
+		};
+	};
+	
+	class CivilianRifles510
+	{
+		displayName = "SG510 Civilian Grade Rifles";
+		content[] =
+		{
+			{"hlc_rifle_amt",1450,"true"}
+		};
+	};
+	
+	class MilitaryRifles510
+	{
+		displayName = "SG510 Military Grade Rifles";
+		content[] =
+		{
+			{"hlc_rifle_sig5104",1950,"true"}
+		};
+	};
+	
+	class MilitaryRifles57
+	{
+		displayName = "StG-57 Military Grade Rifles";
+		content[] =
+		{
+			{"hlc_rifle_stgw57_commando",2100,"true"},
+			{"hlc_rifle_stgw57_RIS",2100,"true"}
+		};
+	};
+	
+	class MilitaryRifles762R
+	{
+		displayName = "SG553R Rifles";
+		content[] =
+		{
+			{"hlc_rifle_sg553RLB",2975,"true"},
+			{"hlc_rifle_sg553RLB_TAC",2975,"true"},
+			{"hlc_rifle_sg553RSB",2975,"true"},
+			{"hlc_rifle_sg553RSB_TAC",2975,"true"}
+		};
+	};
+	
+	class SIGMPX
+	{
+		displayName = "MPX SMG";
+		content[] =
+		{
+			{"VSM_MPX",750,"true"},
+			{"VSM_MPX_COYOTE",750,"true"}
+		};
+	};
+};
+
+class HG_FNAmericaShop //this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>FN Rifles and MGs</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_FNAmericaShop",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; 
+	
+	class FALBR
+	{
+		displayName = "FAL Rifles";
+		content[] =
+		{
+			{"hlc_rifle_FAL5000",3500,"true"},
+			{"hlc_rifle_FAL5000Rail",4000,"true"},
+			{"hlc_rifle_FAL5061",3500,"true"},
+			{"hlc_rifle_FAL5061Rail",4000,"true"},
+			{"hlc_rifle_SLR",2100,"true"},
+			{"hlc_rifle_SLRchopmod",2800,"true"},
+			{"hlc_rifle_falosw",4200,"true"}
+		};
+	};
+	
+	class SCARL
+	{
+		displayName = "SCAR-Ls";
+		content[] =
+		{
+			{"SMA_MK16",3950,"true"},
+			{"SMA_Mk16_black",3950,"true"},
+			{"SMA_Mk16_blackQCB",3950,"true"},
+			{"SMA_Mk16_Green",3950,"true"},
+			{"SMA_Mk16_GreenQCB",3950,"true"},
+			{"SMA_Mk16QCB",3950,"true"},
+			{"VSM_SCAR_16",4000,"true"},
+			{"VSM_SCAR_16_Bowflage",4000,"true"},
+			{"VSM_SCAR_16_coyote",4000,"true"}
+		};
+	};
+	
+	class SCARLGL
+	{
+		displayName = "SCAR-L w/ GL";
+		content[] =
+		{
+			{"SMA_Mk16_EGLM",4650,"true"},
+			{"SMA_MK16_EGLM_black",4650,"true"},
+			{"SMA_MK16_EGLM_Green",4650,"true"}
+		};
+	};
+	
+	class SCARH
+	{
+		displayName = "SCAR-Hs";
+		content[] =
+		{
+			{"VSM_MK17",4200,"true"},
+			{"SMA_Mk17",4200,"true"},
+			{"SMA_Mk17_black",4200,"true"},
+			{"SMA_Mk17_Green",36000,"true"},
+			{"SMA_Mk17_16",4370,"true"},
+			{"SMA_Mk17_16_black",4370,"true"},
+			{"SMA_Mk17_16_Green",4370,"true"},
+			{"VSM_mk20",4650,"true"}
+		};
+	};
+	
+	class SCARHGL
+	{
+		displayName = "SCAR-H w/ GL";
+		content[] =
+		{
+			{"SMA_Mk17_EGLM",4950,"true"},
+			{"SMA_MK17_EGLM_black",4950,"true"},
+			{"SMA_MK17_EGLM_Green",4950,"true"}
+		};
+	};
+	
+	class M249
+	{
+		displayName = "M249s";
+		content[] =
+		{
+			{"rhs_weap_m249",5800,"true"},
+			{"rhs_weap_m249_pip",6500,"true"},
+			{"rhs_weap_m249_pip_L",6500,"true"},
+			{"rhs_weap_m249_pip_L_para",6500,"true"},
+			{"rhs_weap_m249_pip_L_vfg",6500,"true"},
+			{"rhs_weap_m249_pip_S",6500,"true"},
+			{"rhs_weap_m249_pip_S_para",6500,"true"},
+			{"rhs_weap_m249_pip_S_vfg",6500,"true"},
+			{"hlc_m249_SQuantoon",7000,"true"},
+			{"hlc_m249_pip1",6500,"true"},
+			{"hlc_m249_pip2",6500,"true"},
+			{"hlc_m249_pip3",6500,"true"},
+			{"hlc_m249_pip4",6500,"true"},
+			{"hlc_lmg_minimi_railed",6500,"true"},
+			{"hlc_lmg_minimipara_long_railed",6500,"true"},
+			{"hlc_lmg_minimipara_railed",6500,"true"},
+			{"sma_minimi_mk3_556tlb",7200,"true"},
+			{"sma_minimi_mk3_556tlb_des",7200,"true"},
+			{"sma_minimi_mk3_556tlb_wdl",7200,"true"},
+			{"sma_minimi_mk3_556tsb",7200,"true"},
+			{"sma_minimi_mk3_556tsb_des",7200,"true"},
+			{"sma_minimi_mk3_556tsb_wdl",7200,"true"}
+		};
+	};
+	
+	class 762Machineguns
+	{
+		displayName = "7.62 Machineguns";
+		content[] =
+		{
+			{"rhs_weap_m240B",8400,"true"},
+			{"rhs_weap_m240B_CAP",8400,"true"},
+			{"rhs_weap_m240G",8400,"true"},
+			{"hlc_lmg_mk48",8100,"true"},
+		    {"hlc_lmg_mk48mod1",8100,"true"},
+			{"sma_minimi_mk3_762tlb",8600,"true"},
+			{"sma_minimi_mk3_762tlb_des",8600,"true"},
+			{"sma_minimi_mk3_762tlb_wdl",8600,"true"},
+			{"sma_minimi_mk3_762tsb",8600,"true"},
+			{"sma_minimi_mk3_762tsb_des",8600,"true"},
+			{"sma_minimi_mk3_762tsb_wdl",8600,"true"}
+		};
+	};
+	
+	class PS90
+	{
+		displayName = "Civilian P90s";
+		content[] =
+		{
+			{"SMG_03_TR_black",650,"true"},
+			{"SMG_03_TR_camo",650,"true"},
+			{"SMG_03_TR_hex",650,"true"},
+			{"SMG_03_TR_khaki",650,"true"}
+		};
+	};
+	
+	class P90
+	{
+		displayName = "P90s";
+		content[] =
+		{
+			{"SMG_03C_TR_black",850,"true"},
+			{"SMG_03C_TR_camo",850,"true"},
+			{"SMG_03C_TR_hex",850,"true"},
+			{"SMG_03C_TR_khaki",850,"true"}
+		};
+	};
+};
+
+class HG_ArmsDepotShop // this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>www.Armsdepot.usa</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_ArmsDepotShop",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; // Example: "(playerSide in [west,independent]) AND ((rank player) isEqualTo 'COLONEL')"
+	
+	class ColtRifles
+	{
+		displayName = "5.56/.223 Colt Rifles";
+		content[] =
+		{
+			{"rhs_weap_m4a1_blockII",3450,"true"},
+			{"rhs_weap_m4a1_blockII_bk",3450,"true"},
+			{"rhs_weap_m4a1_blockII_d",3450,"true"},
+			{"rhs_weap_m4a1_blockII_KAC",3450,"true"},
+			{"rhs_weap_m4a1_blockII_KAC_bk",3450,"true"},
+			{"rhs_weap_m4a1_blockII_KAC_d",3450,"true"},
+			{"rhs_weap_m4a1_blockII_KAC_wd",3450,"true"},
+			{"rhs_weap_m4a1_blockII_wd",3450,"true"},
+			{"rhs_weap_m4a1_carryhandle",3450,"true"},
+			{"rhs_weap_m4a1_carryhandle_mstock",3450,"true"},
+			{"rhs_weap_m4a1_carryhandle_pmag",3450,"true"},
+			{"rhs_weap_m4a1_d",3450,"true"},
+			{"rhs_weap_m4a1_d_mstock",3450,"true"},
+			{"rhs_weap_m4a1_mstock",3450,"true"},
+			{"rhs_weap_m4a1_pmag",3450,"true"},
+			{"rhs_weap_mk18",3450,"true"},
+			{"rhs_weap_mk18_bk",3450,"true"},
+			{"rhs_weap_mk18_d",3450,"true"},
+			{"rhs_weap_mk18_KAC",3450,"true"},
+			{"rhs_weap_mk18_KAC_bk",3450,"true"},
+			{"rhs_weap_mk18_KAC_d",3450,"true"},
+			{"rhs_weap_mk18_KAC_wd",3450,"true"},
+			{"rhs_weap_mk18_wd",3450,"true"},
+			{"SMA_MK18MOEOD_SM",3450,"true"},
+			{"SMA_MK18MOEODBLK",3450,"true"},
+			{"SMA_MK18MOEODBLK_SM",3450,"true"},
+			{"SMA_MK18MOETAN",3450,"true"},
+			{"SMA_MK18MOETAN_SM",3450,"true"},
+			{"SMA_M4afg",3450,"true"},
+			{"SMA_M4afg_BLK1",3450,"true"},
+			{"SMA_M4afg_BLK1_SM",3450,"true"},
+			{"SMA_M4afg_OD",3450,"true"},
+			{"SMA_M4afg_OD_SM",3450,"true"},
+			{"SMA_M4afg_SM",3450,"true"},
+			{"SMA_M4afg_Tan",3450,"true"},
+			{"SMA_M4afg_Tan_SM",3450,"true"},
+			{"SMA_M4afgSTOCK",3450,"true"},
+			{"SMA_M4CQBR",3450,"true"},
+			{"SMA_M4CQBRMOE",3450,"true"},
+			{"SMA_M4MOE",3450,"true"},
+			{"SMA_M4MOE_BLK1",3450,"true"},
+			{"SMA_M4MOE_BLK1_SM",3450,"true"},
+			{"SMA_M4MOE_OD",3450,"true"},
+			{"SMA_M4MOE_OD_SM",3450,"true"},
+			{"SMA_M4MOE_SM",3450,"true"},
+			{"SMA_M4MOE_Tan",3450,"true"},
+			{"SMA_M4MOE_Tan_SM",3450,"true"},
+			{"SMA_MK18afg",3450,"true"},
+			{"SMA_MK18afg_SM",3450,"true"},
+			{"SMA_MK18afgBLK",3450,"true"},
+			{"SMA_MK18afgBLK_SM",3450,"true"},
+			{"SMA_MK18afgOD",3450,"true"},
+			{"SMA_MK18afgOD_SM",3450,"true"},
+			{"SMA_MK18afgODBLK",3450,"true"},
+			{"SMA_MK18afgODBLK_SM",3450,"true"},
+			{"SMA_MK18afgTAN",3450,"true"},
+			{"SMA_MK18afgTAN_SM",3450,"true"},
+			{"SMA_MK18afgTANBLK",3450,"true"},
+			{"SMA_MK18afgTANBLK_SM",3450,"true"},
+			{"SMA_MK18MOE",3450,"true"},
+			{"SMA_MK18MOE_SM",3450,"true"},
+			{"SMA_MK18MOEBLK",3450,"true"},
+			{"SMA_MK18MOEBLK_SM",3450,"true"},
+			{"SMA_MK18MOEBLKTAN",3450,"true"},
+			{"SMA_MK18MOEBLKTAN_SM",3450,"true"},
+			{"SMA_MK18MOEOD",3450,"true"},
+			{"hlc_wp_m16A1",2800,"true"},
+			{"hlc_wp_m16a2",2800,"true"},
+			{"RH_M16a1",2800,"true"},
+			{"RH_M16a1",2800,"true"},
+			{"RH_M16a1",2800,"true"},
+			{"RH_M16a1",2800,"true"},
+			{"rhs_weap_m16a4",3050,"true"},
+			{"rhs_weap_m16a4_carryhandle",3050,"true"},
+			{"rhs_weap_m16a4_carryhandle_pmag",3050,"true"},
+			{"rhs_weap_m16a4_pmag",3050,"true"},
+			{"rhs_weap_m4",3450,"true"},
+			{"rhs_weap_m4_carryhandle",3450,"true"},
+			{"rhs_weap_m4_carryhandle_mstock",3450,"true"},
+			{"rhs_weap_m4_carryhandle_pmag",3450,"true"},
+			{"rhs_weap_m4_mstock",3450,"true"},
+			{"rhs_weap_m4_pmag",3450,"true"},
+			{"rhs_weap_m4a1",3450,"true"},
+			{"UK3CB_BAF_L119A1",3450,"true"},
+			{"UK3CB_BAF_L119A1_CQB",3450,"true"},
+			{"UK3CB_BAF_L119A1_FG",3550,"true"},
+			{"hlc_rifle_Colt727",3000,"true"},
+			{"VSM_M4",3450,"true"},
+			{"VSM_M4_coyote",3450,"true"},
+			{"hlc_rifle_CQBR",3450,"true"},
+			{"hlc_rifle_M4a1carryhandle",3450,"true"},
+			{"hlc_rifle_M4",3450,"true"},
+			{"hlc_wp_mod727",3000,"true"},
+			{"hlc_wp_mod733",3000,"true"},
+			{"hlc_wp_XM177E2",3450,"true"}
+		};
+	};
+	
+	class ColtGLRifles
+	{
+		displayName = "5.56/.223 Colt Rifles W/ GL";
+		content[] =
+		{
+			{"UK3CB_BAF_L119A1_UKUGL",4450,"true"},
+			{"hlc_rifle_Colt727_GL",4050,"true"},
+			{"hlc_rifle_A1m203",3200,"true"},
+			{"hlc_rifle_m203",3200,"true"},
+			{"SMA_MK18OD_GL",4450,"true"},
+			{"SMA_MK18OD_GL_SM",4450,"true"},
+			{"SMA_MK18ODBLK_GL",4450,"true"},
+			{"SMA_MK18ODBLK_GL_SM",4450,"true"},
+			{"SMA_MK18TAN_GL",4450,"true"},
+			{"SMA_MK18TAN_GL_SM",4450,"true"},
+			{"SMA_MK18TANBLK_GL",4450,"true"},
+			{"SMA_MK18TANBLK_GL_SM",4450,"true"},
+			{"SMA_MK18BLK_GL",4450,"true"},
+			{"SMA_MK18BLK_GL_SM",4450,"true"},
+			{"SMA_MK18_GL",4450,"true"},
+			{"SMA_MK18_GL_SM",4450,"true"},
+			{"SMA_M4_GL",4450,"true"},
+			{"SMA_M4_GL_SM",4450,"true"},
+			{"rhs_weap_mk18_m320",4450,"true"},
+			{"rhs_weap_m4a1_carryhandle_m203",4450,"true"},
+			{"rhs_weap_m4a1_carryhandle_m203S",4450,"true"},
+			{"rhs_weap_m4a1_blockII_M203",4450,"true"},
+			{"rhs_weap_m4a1_blockII_M203_bk",4450,"true"},
+			{"rhs_weap_m4a1_blockII_M203_d",4450,"true"},
+			{"rhs_weap_m4a1_blockII_M203_wd",4450,"true"},
+			{"rhs_weap_m4a1_m203",4450,"true"},
+			{"rhs_weap_m4a1_m203s",4450,"true"},
+			{"rhs_weap_m4a1_m203s_d",4450,"true"},
+			{"rhs_weap_m16a4_carryhandle_M203",4150,"true"},
+			{"rhs_weap_m4a1_m320",4450,"true"},
+			{"rhs_weap_m4_m203",4450,"true"},
+			{"rhs_weap_m4_m203S",4450,"true"},
+			{"rhs_weap_m4_m320",4450,"true"},
+			{"hlc_rifle_m4m203",4450,"true"}
+		};
+	};
+	
+	class ACR556
+	{
+		displayName = "556 ACR's";
+		content[] =
+		{
+			{"hlc_rifle_ACR_SBR_tan",3450,"true"},
+			{"hlc_rifle_ACR_SBR_black",3450,"true"},
+			{"hlc_rifle_ACR_Carb_black",3450,"true"},
+			{"hlc_rifle_ACR_Carb_tan",3450,"true"},
+			{"hlc_rifle_ACR_MID_black",3450,"true"},
+			{"hlc_rifle_ACR_MID_tan",3450,"true"},
+			{"hlc_rifle_ACR_full_black",3450,"true"},
+			{"hlc_rifle_ACR_full_tan",3450,"true"},
+			{"hlc_rifle_ACR_full_green",3450,"true"},
+			{"hlc_rifle_ACR_MID_green",3450,"true"},
+			{"hlc_rifle_ACR_Carb_green",3450,"true"},
+			{"hlc_rifle_ACR_SBR_green",3450,"true"},
+			{"SMA_ACRREM_N",3450,"true"},
+			{"SMA_ACRREMAFGCQB_N",3450,"true"},
+			{"SMA_ACRREMAFG_N",3450,"true"},
+			{"SMA_ACRREMMOECQB_N",3450,"true"},
+			{"SMA_ACRREMMOE_N",3450,"true"},
+			{"SMA_ACRREMblk_N",3450,"true"},
+			{"SMA_ACRREMAFGCQBblk_N",3450,"true"},
+			{"SMA_ACRREMMOECQBblk_N",3450,"true"},
+			{"SMA_ACRREMMOEblk_N",3450,"true"}
+		};
+	};
+	
+	class AR15MilitaryRifles
+	{
+		displayName = "5.56/.223 Rifles";
+		content[] =
+		{
+			{"VSM_CASV",3450,"true"},
+			{"VSM_CASV_coyote",3450,"true"},
+			{"VSM_PDW",3450,"true"},
+			{"RH_M4sbr_b",3450,"true"},
+			{"RH_M4sbr_g",3450,"true"},
+			{"RH_M4sbr",3450,"true"},
+			{"VSM_R5_2",3450,"true"},
+			{"VSM_R5_2_coyote",3450,"true"},
+			{"VSM_R5",3450,"true"},
+			{"VSM_R5_coyote",3450,"true"},
+			{"VSM_Fortis_Long",3450,"true"},
+			{"VSM_FORTIS",3450,"true"},
+			{"VSM_FORTIS_COYOTE",3450,"true"},
+			{"VSM_DDM4_2t",3450,"true"},
+			{"VSM_DDM4_2t2",3450,"true"},
+			{"VSM_DDM4_Tan",3450,"true"},
+			{"VSM_DDM4_SPRAY",3450,"true"},
+			{"VSM_DDM4_PZW",3450,"true"},
+			{"VSM_DDM4_PZA",3450,"true"},
+			{"VSM_DDM4",3450,"true"},
+			{"hlc_rifle_RU5562",3450,"true"},
+			{"hlc_rifle_RU556",3450,"true"},
+			{"RH_hb",3450,"true"},
+			{"RH_hb_b",3450,"true"},
+			{"hlc_rifle_bcmjack",3450,"true"},
+			{"VSM_HoneyBadger",3450,"true"},
+			{"VSM_HoneyBadger_coyote",3450,"true"}
+		};
+	};
+	
+	class RRARifle
+	{
+		displayName = "5.56/.223 Civilian Grade Rifles";
+		content[] =
+		{
+			{"hlc_rifle_samr2",1800,"true"},
+			{"hlc_rifle_SAMR",1800,"true"}
+		};
+	};
+	
+	class 300BlackoutRiflesCiv
+	{
+		displayName = ".300 Blackout Civilian Rifles";
+		content[] =
+		{
+			{"hlc_rifle_vendimus",1200,"true"}
+		};
+	};
+	
+	class 300BlackoutRifles
+	{
+		displayName = ".300 Blackout Military Rifles";
+		content[] =
+		{
+			{"hlc_rifle_honeybadger",3250,"true"},
+			{"SMA_AAC_MPW_9_Black",3250,"true"},
+			{"SMA_AAC_MPW_9_Desert",3250,"true"},
+			{"SMA_AAC_MPW_9_OD",3250,"true"},
+			{"SMA_AAC_MPW_9_Tan",3250,"true"},
+			{"SMA_AAC_MPW_9_Woodland",3250,"true"},
+			{"SMA_AAC_MPW_12_Black",3250,"true"},
+			{"SMA_AAC_MPW_12_Desert",3250,"true"},
+			{"SMA_AAC_MPW_12_OD",3250,"true"},
+			{"SMA_AAC_MPW_12_Tan",3250,"true"},
+			{"SMA_AAC_MPW_12_Woodland",3250,"true"},
+			{"SMA_AAC_MPW_16_Black",3250,"true"},
+			{"SMA_AAC_MPW_16_Desert",3250,"true"},
+			{"SMA_AAC_MPW_16_OD",3250,"true"},
+			{"SMA_AAC_MPW_16_Tan",3250,"true"},
+			{"SMA_AAC_MPW_16_Woodland",3250,"true"},
+			{"hlc_rifle_bcmblackjack",3250,"true"},
+			{"hlc_rifle_Bushmaster300",3250,"true"}
+		};
+	};
+	
+	class EnfieldRifle
+	{
+		displayName = ".303 Rifles";
+		content[] =
+		{
+			{"bnae_mk1_virtual",350,"true"},
+			{"bnae_mk1_t_virtual",350,"true"}
+		};
+	};
+	
+	class 762CivRifle
+	{
+		displayName = "7.62x51 Civilian Grade Rifles";
+		content[] =
+		{
+			{"UK3CB_BAF_L129A1",2500,"true"},
+			{"hlc_rifle_M21_Rail",2500,"true"},
+			{"hlc_rifle_m14dmr",2000,"true"},
+			{"hlc_rifle_M14dmr_Rail",2300,"true"}
+		};
+	};
+	
+	class 762Rifle
+	{
+		displayName = "7.62x51 Military Grade Rifles";
+		content[] =
+		{
+			{"RH_ar10",2600,"true"},
+			{"bnae_Spartan_blk_virtual",4250,"true"},
+			{"bnae_Spartan_camo1_virtual",4250,"true"},
+			{"bnae_Spartan_snd_virtual",4250,"true"},
+			{"bnae_Spartan_camo2_virtual",4250,"true"},
+			{"hlc_rifle_M14",2500,"true"},
+			{"hlc_rifle_M14_Bipod",2500,"true"},
+			{"hlc_rifle_M14_Bipod_Rail",2800,"true"},
+			{"hlc_rifle_M14_Rail",2800,"true"},
+			{"rhs_weap_sr25_ec",2800,"true"},
+			{"rhs_weap_sr25_ec_d",2800,"true"},
+			{"rhs_weap_sr25_ec_wd",2800,"true"},
+			{"rhs_weap_sr25_wd",2800,"true"},
+			{"rhs_weap_sr25",2800,"true"},
+            {"rhs_weap_sr25_d",2800,"true"}
+		};
+	};
+	
+	class M60
+	{
+		displayName = "7.62 Machineguns";
+		content[] =
+		{
+			{"hlc_lmg_m60",7500,"true"},
+			{"hlc_lmg_M60E4",8000,"true"}
+		};
+	};
+	
+	class SMGs
+	{
+		displayName = "SMGs";
+		content[] =
+		{
+			{"hgun_PDW2000_F",800,"true"},
+			{"VSM_cx4",800,"true"},
+			{"VSM_cx4_spray",800,"true"}
+		};
+	};
+	
+	class Shotguns
+	{
+		displayName = "L128 Shotguns";
+		content[] =
+		{
+			{"prpl_benelli",700,"true"},
+			{"prpl_benelli_pgs",700,"true"},
+			{"prpl_benelli_pgs_rail",700,"true"},
+			{"prpl_benelli_rail",700,"true"}
+		};
+	};
+};
+
+class HG_HKRiflesShop // this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>Heckler and Koch</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_HKRiflesShop",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; // Example: "(playerSide in [west,independent]) AND ((rank player) isEqualTo 'COLONEL')"
+	
+	class CivilianRifles
+	{
+		displayName = "5.56/.223 Civilian Grade Rifles";
+		content[] =
+		{
+			{"RH_MR556",2000,"true"}
+		};
+	};
+	
+	class MilitaryRifles
+	{
+		displayName = "HK416s";
+		content[] =
+		{
+			{"hlc_rifle_416D10",3850,"true"},
+			{"hlc_rifle_416D10_ptato",3850,"true"},
+			{"hlc_rifle_416D10_RAHG",3850,"true"},
+			{"hlc_rifle_416D10_geissele",3850,"true"},
+			{"rhs_weap_hk416d10",3850,"true"},
+			{"rhs_weap_hk416d10_LMT",3850,"true"},
+			{"rhs_weap_hk416d10_LMT_d",3850,"true"},
+			{"rhs_weap_hk416d10_LMT_wd",3850,"true"},
+			{"RH_Hk416s",3850,"true"},
+			{"RH_hk416s_des",3850,"true"},
+			{"RH_hk416s_tg",3850,"true"},
+			{"RH_hk416s_wdl",3850,"true"},
+			{"RH_Hk416",3850,"true"},
+			{"RH_hk416_des",3850,"true"},
+			{"RH_hk416_tg",3850,"true"},
+			{"RH_hk416_wdl",3850,"true"},
+			{"SMA_HK416_afg_ODPAINTED",3850,"true"},
+			{"SMA_HK416_vfg_ODPAINTED",3850,"true"},
+			{"SMA_HK416afg",3850,"true"},
+			{"SMA_HK416afgOD",3850,"true"},
+			{"SMA_HK416afgQCB",3850,"true"},
+			{"SMA_HK416CQB_vfg_ODPAINTED",3850,"true"},
+			{"SMA_HK416CQBafgOD",3850,"true"},
+			{"SMA_HK416CQBMOEOD",3850,"true"},
+			{"SMA_HK416CUSTOMafg",3850,"true"},
+			{"SMA_HK416CUSTOMafgB",3850,"true"},
+			{"SMA_HK416CUSTOMafgODP",3850,"true"},
+			{"SMA_HK416CUSTOMCQBafg",3850,"true"},
+			{"SMA_HK416CUSTOMCQBafgB",3850,"true"},
+			{"SMA_HK416CUSTOMCQBafgODP",3850,"true"},
+			{"SMA_HK416CUSTOMCQBvfg",3850,"true"},
+			{"SMA_HK416CUSTOMCQBvfgB",3850,"true"},
+			{"SMA_HK416CUSTOMCQBvfgODP",3850,"true"},
+			{"SMA_HK416CUSTOMvfg",3850,"true"},
+			{"SMA_HK416CUSTOMvfgB",3850,"true"},
+			{"SMA_HK416CUSTOMvfgODP",3850,"true"},
+			{"SMA_HK416MOEOD",3850,"true"},
+			{"SMA_HK416vfg",3850,"true"},
+			{"SPS_hk416_11_afg_black_f",3850,"true"},
+			{"SPS_hk416_11_afg_fde_f",3850,"true"},
+			{"SPS_hk416_11_afg_ral8000_f",3850,"true"},
+			{"SPS_hk416_11_vfg_black_f",3850,"true"},
+			{"SPS_hk416_11_vfg_fde_f",3850,"true"},
+			{"SPS_hk416_11_vfg_ral8000_f",3850,"true"},
+			{"SPS_hk416_14_5_afg_black_f",3850,"true"},
+			{"SPS_hk416_14_5_afg_fde_f",3850,"true"},
+			{"SPS_hk416_14_5_afg_ral8000_f",3850,"true"},
+			{"SPS_hk416_14_5_vfg_black_f",3850,"true"},
+			{"SPS_hk416_14_5_vfg_fde_f",3850,"true"},
+			{"SPS_hk416_14_5_vfg_ral8000_f",3850,"true"},
+			{"SPS_hk416_16_5_afg_fde_f",3850,"true"},
+			{"SPS_hk416_16_5_afg_fde_f",3850,"true"},
+			{"SPS_hk416_16_5_afg_ral8000_f",3850,"true"},
+			{"SPS_hk416_16_5_vfg_black_f",3850,"true"},
+			{"SPS_hk416_16_5_vfg_fde_f",3850,"true"},
+			{"SPS_hk416_16_5_vfg_ral8000_f",3850,"true"},
+			{"SPS_hk416_20_afg_black_f",3950,"true"},
+			{"SPS_hk416_20_afg_fde_f",3950,"true"},
+			{"SPS_hk416_20_afg_ral8000_f",3950,"true"},
+			{"SPS_hk416_20_vfg_black_f",3950,"true"},
+			{"SPS_hk416_20_vfg_fde_f",3950,"true"},
+			{"SPS_hk416_20_vfg_ral8000_f",3950,"true"},
+			{"VSM_416_2",3850,"true"},
+			{"VSM_416",3850,"true"},
+			{"VSM_HK416A5_11_5",3850,"true"},
+			{"VSM_HK416A5_11_5_COYOTE",3850,"true"},
+			{"VSM_HK416A5_2",3850,"true"},
+            {"VSM_HK416A5_2_COYOTE",3850,"true"},
+			{"hlc_rifle_416D145",3950,"true"},
+			{"rhs_weap_hk416d145",3950,"true"},
+			{"rhs_weap_hk416d145_d",3950,"true"},
+			{"rhs_weap_hk416d145_d_2",3950,"true"},
+			{"rhs_weap_hk416d145_wd",3950,"true"},
+			{"rhs_weap_hk416d145_wd_2",3950,"true"},
+			{"hlc_rifle_416D165",3950,"true"},
+			{"hlc_rifle_416D20",3950,"true"},
+			{"hlc_rifle_416C",3550,"true"},
+			{"RH_hk416c_des",3550,"true"},
+			{"RH_hk416c_tg",3550,"true"},
+			{"RH_hk416c_wdl",3550,"true"},
+			{"RH_Hk416c",3550,"true"}
+		};
+	};
+	
+	class SpecialistRifles
+	{
+		displayName = "HK416s w/ GL";
+		content[] =
+		{
+			{"SMA_HK416_GL_ODPAINTED",5200,"true"},
+			{"SMA_HK416GL",5200,"true"},
+			{"SMA_HK416GLCQB",5200,"true"},
+			{"SMA_HK416GLCQB_B",5200,"true"},
+			{"SMA_HK416GLCQB_ODP",5200,"true"},
+			{"SMA_HK416GLOD",5200,"true"},
+			{"SMA_HK416CQBGLOD",5200,"true"},
+			{"SPS_hk416_11_glm_black_f",5200,"true"},
+			{"SPS_hk416_11_glm_fde_f",5200,"true"},
+			{"SPS_hk416_11_glm_ral8000_f",5200,"true"},
+			{"SPS_hk416_14_5_glm_black_f",5500,"true"},
+			{"SPS_hk416_14_5_glm_fde_f",5500,"true"},
+			{"SPS_hk416_14_5_glm_ral8000_f",5500,"true"},
+			{"SPS_hk416_16_5_glm_black_f",5500,"true"},
+			{"SPS_hk416_16_5_glm_fde_f",5500,"true"},
+			{"SPS_hk416_16_5_glm_ral8000_f",5500,"true"},
+			{"rhs_weap_hk416d145_m320",5500,"true"},
+			{"rhs_weap_hk416d10_m320",5200,"true"}
+		};
+	};
+	
+	class G36Rifles
+	{
+		displayName = "Other Rifles";
+		content[] =
+		{
+			{"hlc_rifle_hk33a2RIS",3550,"true"},
+			{"CSW_XM8_assault_black",3950,"true"},
+			{"CSW_XM8_assault_green",3950,"true"},
+			{"CSW_XM8_assault_tan",3950,"true"},
+			{"CSW_XM8_assault_ucp",3950,"true"},
+			{"CSW_XM8_c_black",3550,"true"},
+			{"CSW_XM8_c_green",3550,"true"},
+			{"CSW_XM8_c_tan",3550,"true"},
+			{"CSW_XM8_c_ucp",3550,"true"},
+			{"hlc_rifle_G36A1",3350,"true"},
+			{"rhs_weap_g36c",3950,"true"},
+			{"hlc_rifle_G36C",3950,"true"},
+			{"hlc_rifle_G36CV",3950,"true"},
+			{"hlc_rifle_G36CTac",3950,"true"},
+			{"hlc_rifle_G36E1",3350,"true"},
+			{"hlc_rifle_G36KA1KSK",3950,"true"},
+			{"hlc_rifle_G36KA1",3350,"true"},
+			{"hlc_rifle_G36KE1",3950,"true"},
+			{"hlc_rifle_G36KV",3950,"true"},
+			{"rhs_weap_g36kv",3950,"true"},
+			{"hlc_rifle_g36KTac",3950,"true"},
+			{"hlc_rifle_G36V",3950,"true"},
+            {"hlc_rifle_G36TAC",3950,"true"}
+		};
+	};
+	
+	class G36GLRifles
+	{
+		displayName = "GL Rifles";
+		content[] =
+		{
+			{"CSW_XM8_m320_black",4550,"true"},
+			{"CSW_XM8_m320_green",4550,"true"},
+			{"CSW_XM8_m320_tan",4550,"true"},
+			{"CSW_XM8_m320_ucp",4550,"true"},
+			{"hlc_rifle_hk33a2RIS_GL",3750,"true"},
+			{"hlc_rifle_G36A1AG36",3950,"true"},
+			{"hlc_rifle_G36E1AG36",3950,"true"},
+			{"rhs_weap_g36kv_ag36",4550,"true"},
+			{"HLC_Rifle_G36KSKAG36",4550,"true"},
+			{"rhs_weap_g36kv_ag36",4550,"true"},
+			{"hlc_rifle_G36MLIAG36",4550,"true"},
+			{"hlc_rifle_G36VAG36",4550,"true"}
+		};
+	};
+	
+	class XM8GLRifles
+	{
+		displayName = "XM8 Shotgun Rifles";
+		content[] =
+		{
+			{"CSW_XM8_xm26_black",4550,"true"},
+			{"CSW_XM8_xm26_green",4550,"true"},
+			{"CSW_XM8_xm26_tan",4550,"true"},
+			{"CSW_XM8_xm26_ucp",4550,"true"}
+		};
+	};
+	
+	class SupportRifles
+	{
+		displayName = "Support Weapons";
+		content[] =
+		{
+			{"CSW_XM8_dmar_black",3950,"true"},
+			{"CSW_XM8_dmar_green",3950,"true"},
+			{"CSW_XM8_dmar_tan",3950,"true"},
+			{"CSW_XM8_dmar_ucp",3950,"true"},
+			{"RH_M27IAR",3950,"true"},
+			{"RH_M27IAR_des",3950,"true"},
+			{"RH_M27IAR_tg",3950,"true"},
+			{"RH_M27IAR_wdl",3950,"true"},
+			{"rhs_weap_m27iar",3950,"true"},
+            {"rhs_weap_m27iar_grip",3950,"true"}
+		};
+	};
+	
+	class 762CivRifle
+	{
+		displayName = "7.62x51 Civilian Grade Rifles";
+		content[] =
+		{
+			{"hlc_rifle_g3sg1",3000,"true"},
+			{"hlc_rifle_g3sg1ris",3200,"true"},
+			{"hlc_rifle_PSG1A1_RIS",3250,"true"}
+		};
+	};
+	
+	class 762Rifle
+	{
+		displayName = "7.62x51 Military Grade Rifles";
+		content[] =
+		{
+			{"hlc_rifle_g3a3",3800,"true"},
+			{"hlc_rifle_g3a3ris",4260,"true"},
+			{"hlc_rifle_g3a3v",3800,"true"},
+			{"hlc_rifle_g3a3vris",4260,"true"},
+			{"hlc_rifle_g3ka4",4260,"true"},
+			{"SMA_HK417",4200,"true"},
+			{"SMA_HK417_16in",4250,"true"},
+			{"SMA_HK417vfg",4250,"true"},
+			{"SPS_hk417_13_afg_black_f",4200,"true"},
+			{"SPS_hk417_13_afg_fde_f",4200,"true"},
+			{"SPS_hk417_13_afg_ral8000_f",4200,"true"},
+			{"SPS_hk417_13_vfg_black_f",4200,"true"},
+			{"SPS_hk417_13_vfg_fde_f",4200,"true"},
+			{"SPS_hk417_13_vfg_ral8000_f",4200,"true"},
+			{"SPS_hk417_16_afg_black_f",4250,"true"},
+			{"SPS_hk417_16_afg_fde_f",4250,"true"},
+			{"SPS_hk417_16_afg_ral8000_f",4250,"true"},
+			{"SPS_hk417_16_vfg_black_f",4250,"true"},
+			{"SPS_hk417_16_vfg_fde_f",4250,"true"},
+			{"SPS_hk417_16_vfg_ral8000_f",4250,"true"},
+			{"SPS_hk417_20_afg_black_f",4450,"true"},
+			{"SPS_hk417_20_afg_fde_f",4450,"true"},
+			{"SPS_hk417_20_afg_ral8000_f",4450,"true"},
+			{"SPS_hk417_20_vfg_black_f",4450,"true"},
+			{"SPS_hk417_20_vfg_fde_f",4450,"true"},
+			{"SPS_hk417_20_vfg_ral8000_f",4450,"true"}
+		};
+	};
+	
+	class 762GLRifle
+	{
+		displayName = "7.62x51 Military Grade Rifles";
+		content[] =
+		{
+			{"HLC_Rifle_g3ka4_GL",5500,"true"},
+			{"SPS_hk417_13_glm_black_f",5500,"true"},
+			{"SPS_hk417_13_glm_fde_f",5500,"true"},
+			{"SPS_hk417_13_glm_ral8000_f",5500,"true"},
+			{"SPS_hk417_16_glm_black_f",5800,"true"},
+			{"SPS_hk417_16_glm_fde_f",5800,"true"},
+			{"SPS_hk417_16_glm_ral8000_f",5800,"true"}
+		};
+	};
+	
+	class SMGs
+	{
+		displayName = "MP5s";
+		content[] =
+		{
+			{"hlc_smg_mp5a2",850,"true"},
+			{"hlc_smg_mp5a3",850,"true"},
+			{"hlc_smg_mp5a4",900,"true"},
+			{"hlc_smg_mp5k_PDW",800,"true"},
+			{"hlc_smg_MP5N",900,"true"},
+			{"hlc_smg_mp5sd5",950,"true"},
+			{"hlc_smg_mp5sd6",950,"true"}
+		};
+	};
+	
+	class SMGGLs
+	{
+		displayName = "MP5 Specialist";
+		content[] =
+		{
+			{"hlc_smg_9mmar",1250,"true"}
+		};
+	};
+	
+	class Mp7ss
+	{
+		displayName = "MP7s";
+		content[] =
+		{
+			{"rhsusf_weap_MP7A2",975,"true"},
+			{"rhsusf_weap_MP7A2_aor1",975,"true"},
+			{"rhsusf_weap_MP7A2_desert",975,"true"},
+			{"rhsusf_weap_MP7A2_winter",975,"true"}
+		};
+	};
+	
+	class HKLMGs
+	{
+		displayName = "HK121 MMG";
+		content[] =
+		{
+			{"MMG_01_tan_F",9875,"true"}
+		};
+	};
+};
+
+class HG_Clothing //this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>Civilian Clothing</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_Clothing",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; 
+	
+	class Uniform
+	{
+		displayName = "Uniforms";
+		content[] =
+		{
+			{"TRYK_shirts_DENIM_BK",30,"true"},
+			{"TRYK_shirts_DENIM_BL",30,"true"},
+			{"TRYK_shirts_DENIM_BWH",30,"true"},
+			{"TRYK_shirts_DENIM_od",30,"true"},
+			{"TRYK_shirts_DENIM_R",30,"true"},
+			{"TRYK_shirts_DENIM_RED2",30,"true"},
+			{"TRYK_shirts_DENIM_WH",30,"true"},
+			{"TRYK_shirts_DENIM_WHB",30,"true"},
+			{"TRYK_shirts_DENIM_ylb",30,"true"},
+			{"TRYK_shirts_DENIM_od_Sleeve",30,"true"},
+			{"TRYK_shirts_DENIM_ylb_Sleeve",30,"true"},
+			{"TRYK_shirts_DENIM_BK_Sleeve",30,"true"},
+			{"TRYK_shirts_DENIM_BL_Sleeve",30,"true"},
+			{"TRYK_shirts_DENIM_BWH_Sleeve",30,"true"},
+			{"TRYK_shirts_DENIM_R_Sleeve",30,"true"},
+			{"TRYK_shirts_DENIM_RED2_Sleeve",30,"true"},
+			{"TRYK_shirts_DENIM_WH_Sleeve",30,"true"},
+			{"TRYK_shirts_DENIM_WHB_Sleeve",30,"true"},
+			{"TRYK_shirts_PAD_BK",30,"true"},
+			{"TRYK_shirts_BLK_PAD_BK",30,"true"},
+			{"TRYK_shirts_OD_PAD_BK",30,"true"},
+			{"TRYK_shirts_TAN_PAD_BK",30,"true"},
+			{"TRYK_shirts_PAD_BL",30,"true"},
+			{"TRYK_shirts_BLK_PAD_BL",30,"true"},
+			{"TRYK_shirts_OD_PAD_BL",30,"true"},
+			{"TRYK_shirts_TAN_PAD_BL",30,"true"},
+			{"TRYK_shirts_PAD_BLW",30,"true"},
+			{"TRYK_shirts_BLK_PAD_BLW",30,"true"},
+			{"TRYK_shirts_OD_PAD_BLW",30,"true"},
+			{"TRYK_shirts_TAN_PAD_BLW",30,"true"},
+			{"TRYK_shirts_PAD_BLU3",30,"true"},
+			{"TRYK_shirts_BLK_PAD_BLU3",30,"true"},
+			{"TRYK_shirts_OD_PAD_BLU3",30,"true"},
+			{"TRYK_shirts_TAN_PAD_BLU3",30,"true"},
+			{"TRYK_shirts_PAD",30,"true"},
+			{"TRYK_shirts_BLK_PAD",30,"true"},
+			{"TRYK_shirts_OD_PAD",30,"true"},
+			{"TRYK_shirts_TAN_PAD",30,"true"},
+			{"TRYK_shirts_PAD_RED2",30,"true"},
+			{"TRYK_shirts_BLK_PAD_RED2",30,"true"},
+			{"TRYK_shirts_OD_PAD_RED2",30,"true"},
+			{"TRYK_shirts_TAN_PAD_RED2",30,"true"},
+			{"TRYK_shirts_PAD_YEL",30,"true"},
+			{"TRYK_shirts_BLK_PAD_YEL",30,"true"},
+			{"TRYK_shirts_OD_PAD_YEL",30,"true"},
+			{"TRYK_shirts_TAN_PAD_YEL",30,"true"},
+			{"TRYK_T_PAD",30,"true"},
+			{"TRYK_U_pad_hood_Blod",30,"true"},
+			{"TRYK_U_pad_hood_Blk",30,"true"},
+			{"TRYK_U_pad_hood_Cl_blk",30,"true"},
+			{"TRYK_U_pad_hood_BKT2",30,"true"},
+			{"TRYK_U_nohoodPcu_gry",30,"true"},
+			{"TRYK_U_pad_hood_tan",30,"true"},
+			{"TRYK_U_pad_hood_odBK",30,"true"},
+			{"TRYK_U_pad_hood_Cl",30,"true"},
+			{"TRYK_hoodie_3c",30,"true"},
+			{"TRYK_hoodie_FR",30,"true"},
+			{"TRYK_hoodie_Blk",30,"true"},
+			{"TRYK_hoodie_Wood",30,"true"},
+			{"TRYK_U_hood_mc",30,"true"},
+			{"TRYK_U_hood_nc",30,"true"},
+			{"TRYK_T_BLK_PAD",30,"true"},
+			{"TRYK_T_OD_PAD",30,"true"},
+			{"TRYK_T_TAN_PAD",30,"true"},
+			{"TRYK_T_T2_PAD",30,"true"},
+			{"TRYK_U_denim_hood_3c",30,"true"},
+			{"TRYK_U_denim_hood_blk",30,"true"},
+			{"TRYK_U_denim_hood_mc",30,"true"},
+			{"TRYK_U_denim_hood_nc",30,"true"},
+			{"TRYK_U_denim_jersey_blk",30,"true"},
+			{"TRYK_U_denim_jersey_blu",30,"true"},
+			{"TRYK_U_pad_j_blk",30,"true"},
+			{"TRYK_U_pad_j",30,"true"},
+			{"TRYK_T_camo_3c_BG",30,"true"},
+			{"TRYK_T_camo_desert_marpat_BG",30,"true"},
+			{"TRYK_T_camo_Wood_BG",30,"true"},
+			{"TRYK_T_camo_wood_marpat_BG",30,"true"},
+			{"TRYK_T_camo_3c",30,"true"},
+			{"TRYK_T_camo_Desert_marpat",30,"true"},
+			{"TRYK_T_camo_tan",30,"true"},
+			{"TRYK_T_camo_Wood",30,"true"},
+			{"TRYK_T_camo_wood_marpat",30,"true"},
+			{"TRYK_U_B_BLK_T_BG_BK",30,"true"},
+			{"TRYK_U_B_RED_T_BG_BR",30,"true"},
+			{"TRYK_U_B_BLK_T_BG_WH",30,"true"},
+			{"TRYK_U_B_BLK_T_BK",30,"true"},
+			{"TRYK_U_B_RED_T_BR",30,"true"},
+			{"TRYK_U_B_BLK_T_WH",30,"true"},
+			{"TRYK_U_B_Denim_T_BG_BK",30,"true"},
+			{"TRYK_U_B_Denim_T_BG_WH",30,"true"},
+			{"TRYK_U_B_Denim_T_BK",30,"true"},
+			{"TRYK_U_B_Denim_T_WH",30,"true"},
+			{"U_I_G_Story_Protagonist_F",30,"true"},
+			{"U_C_Poor_1",30,"true"},
+			{"TRYK_U_Bts_PCUs",30,"true"},
+			{"TRYK_U_Bts_PCUGs",30,"true"},
+			{"TRYK_U_Bts_GRYGRY_PCUs",30,"true"},
+			{"TRYK_U_Bts_UCP_PCUs",30,"true"},
+			{"TRYK_U_Bts_Wood_PCUs",30,"true"},
+			{"TRYK_U_Bts_PCUODs",30,"true"},
+			{"TRYK_U_B_PCUHs",30,"true"},
+			{"TRYK_U_B_PCUGHs",30,"true"},
+			{"TRYK_U_B_PCUODHs",30,"true"},
+			{"TRYK_U_B_PCUGs_BLK_R",30,"true"},
+			{"TRYK_U_B_PCUGs_gry_R",30,"true"},
+			{"TRYK_U_B_PCUGs_OD_R",30,"true"},
+			{"TRYK_U_B_PCUs_R",30,"true"},
+			{"TRYK_U_B_PCUs",30,"true"},
+			{"TRYK_U_B_PCUGs_BLK",30,"true"},
+			{"TRYK_U_B_PCUGs",30,"true"},
+			{"TRYK_U_B_GRY_PCUs_R",30,"true"},
+			{"TRYK_U_B_GRY_PCUs",30,"true"},
+			{"TRYK_U_B_UCP_PCUs_R",30,"true"},
+			{"TRYK_U_B_UCP_PCUs",30,"true"},
+			{"TRYK_U_B_Wood_PCUs_R",30,"true"},
+			{"TRYK_U_B_Wood_PCUs",30,"true"},
+			{"TRYK_U_B_PCUGs_gry",30,"true"},
+			{"TRYK_U_B_PCUODs",30,"true"},
+			{"TRYK_U_B_PCUGs_OD",30,"true"},
+			{"TRYK_U_B_AOR1_Rollup_CombatUniform",30,"true"},
+			{"TRYK_U_B_AOR2_Rollup_CombatUniform",30,"true"},
+			{"TRYK_U_B_BLK_OD_Rollup_CombatUniform",30,"true"},
+			{"TRYK_U_B_BLK_tan_Rollup_CombatUniform",30,"true"},
+			{"TRYK_U_B_wh_blk_Rollup_CombatUniform",30,"true"},
+			{"TRYK_U_B_wh_OD_Rollup_CombatUniform",30,"true"},
+			{"TRYK_U_B_wh_tan_Rollup_CombatUniform",30,"true"},
+			{"TRYK_U_B_Sage_T",30,"true"},
+			{"TRYK_U_B_NATO_OCP_c_BLK_CombatUniform",30,"true"},
+			{"TRYK_U_B_NATO_OCP_BLK_CombatUniform",30,"true"},
+			{"TRYK_U_B_NATO_OCP_BLK_c_R_CombatUniform",30,"true"},
+			{"TRYK_U_B_NATO_OCP_BLK_R_CombatUniform",30,"true"},
+			{"TRYK_U_B_MTP_BLK_CombatUniform",30,"true"},
+			{"TRYK_U_B_MTP_BLK_R_CombatUniform",30,"true"},
+			{"TRYK_U_B_BLK_Tshirt",30,"true"},
+			{"TRYK_U_B_BLK",30,"true"},
+			{"VSM_Multicam_casual_Camo",30,"true"},
+			{"VSM_OGA_grey_casual_Camo",30,"true"},
+			{"VSM_OGA_OD_casual_Camo",30,"true"},
+			{"VSM_OGA_tan_casual_Camo",30,"true"},
+			{"TRYK_U_B_BLK3CD_Tshirt",30,"true"},
+			{"TRYK_U_B_BLK3CD",30,"true"},
+			{"TRYK_U_B_BLKTAN_Tshirt",30,"true"},
+			{"TRYK_U_B_BLKTAN",30,"true"},
+			{"TRYK_U_B_BLK_OD",30,"true"},
+			{"U_I_C_Soldier_Bandit_3_F",30,"true"},
+			{"U_C_Man_casual_2_F",30,"true"},
+			{"U_C_Man_casual_3_F",30,"true"},
+			{"U_C_Man_casual_1_F",30,"true"},
+			{"U_I_C_Soldier_Bandit_2_F",30,"true"},
+			{"TRYK_U_B_BLK_OD_Tshirt",30,"true"},
+			{"TRYK_U_B_OD_BLK",30,"true"},
+			{"TRYK_U_B_OD_BLK_2",30,"true"},
+			{"U_BG_Guerilla2_2",30,"true"},
+			{"U_BG_Guerilla2_1",30,"true"},
+			{"U_BG_Guerilla2_3",30,"true"}
+		};
+	};
+	
+	class Vest
+	{
+		displayName = "$STR_HG_SHOP_VESTS";
+		content[] =
+		{
+		    {"milgp_v_battle_belt_assaulter_CB",30,"true"},
+			{"milgp_v_battle_belt_assaulter_KHK",30,"true"},
+			{"milgp_v_battle_belt_assaulter_mc",30,"true"},
+			{"milgp_v_battle_belt_assaulter_RGR",30,"true"},
+			{"milgp_v_battle_belt_hgunner_CB",30,"true"},
+			{"milgp_v_battle_belt_hgunner_KHK",30,"true"},
+			{"milgp_v_battle_belt_hgunner_mc",30,"true"},
+			{"milgp_v_battle_belt_hgunner_RGR",30,"true"},
+			{"VSM_Gen2_BattleBelt_coyote",30,"true"},
+			{"V_LegStrapBag_black_F",30,"true"},
+			{"V_LegStrapBag_coyote_F",30,"true"},
+			{"V_LegStrapBag_olive_F",30,"true"},
+			{"rhs_vest_commander",30,"true"},
+			{"rhs_vest_pistol_holster",30,"true"},
+			{"V_Rangemaster_belt",30,"true"},
+			{"V_BandollierB_blk",30,"true"},
+			{"V_BandollierB_cbr",30,"true"},
+			{"V_BandollierB_rgr",30,"true"},
+			{"V_BandollierB_khk",30,"true"},
+			{"V_BandollierB_oli",30,"true"},
+			{"TAC_HSG_ABH_B",30,"true"},
+			{"TAC_HSG_ABH_Khaki",30,"true"},
+			{"TAC_HSG_ABH_OD",30,"true"},
+			{"TAC_HSG_ABL_B",30,"true"},
+			{"TAC_HSG_ABL_Khaki",30,"true"},
+			{"TAC_HSG_ABL_OD",30,"true"},
+			{"TAC_HSG_AB_B",30,"true"},
+			{"TAC_HSG_AB_Khaki",30,"true"},
+			{"TAC_HSG_AB_OD",30,"true"},
+			{"TAC_LBT_BL_BK",30,"true"},
+			{"TAC_LBT_BL_KH",30,"true"},
+			{"TAC_LBT_BL_OD",30,"true"},
+			{"TAC_LBT_H_B",30,"true"},
+			{"TAC_LBT_H_Khaki",30,"true"},
+			{"TAC_LBT_H_OD",30,"true"},
+			{"TAC_LBT_H2_B",30,"true"},
+			{"TAC_LBT_H2_Khaki",30,"true"},
+			{"TAC_LBT_H2_OD",30,"true"},
+			{"TAC_LBT_H4_B",30,"true"},
+			{"TAC_LBT_H4_Khaki",30,"true"},
+			{"TAC_LBT_H4_OD",30,"true"},
+			{"TAC_LBT_HL_B",30,"true"},
+			{"TAC_LBT_HL_OD",30,"true"},
+			{"TAC_LBT_HL_Khaki",30,"true"},
+			{"TAC_LBT_HL2_B",30,"true"},
+			{"TAC_LBT_HL2_Khaki",30,"true"},
+			{"TAC_LBT_HL2_OD",30,"true"},
+			{"TAC_LBT_H3_B",30,"true"},
+			{"TAC_LBT_H3_Khaki",30,"true"},
+			{"TAC_LBT_H3_OD",30,"true"},
+			{"TAC_LBT_HL3_B",30,"true"},
+			{"TAC_LBT_HL3_Khaki",30,"true"},
+			{"TAC_LBT_HL3_OD",30,"true"},
+			{"TAC_HGB_B",30,"true"},
+			{"TAC_HGB_Khaki",30,"true"},
+			{"TAC_HGB_OD",30,"true"},
+			{"TAC_Jvest_B",30,"true"},
+			{"TAC_Jvest_GR",30,"true"},
+			{"TAC_Jvest_TN",30,"true"},
+			{"TAC_Jvest_U",30,"true"},
+			{"TAC_Jvest_B2B",30,"true"},
+			{"TAC_Jvest_B2C",30,"true"},
+			{"TAC_Jvest_B2O",30,"true"},
+			{"TAC_Jvest_B2R",30,"true"},
+			{"TAC_Jvest_GR2B",30,"true"},
+			{"TAC_Jvest_GR2C",30,"true"},
+			{"TAC_Jvest_GR2O",30,"true"},
+			{"TAC_Jvest_GR2R",30,"true"},
+			{"TAC_Jvest_TN2B",30,"true"},
+			{"TAC_Jvest_TN2C",30,"true"},
+			{"TAC_Jvest_TN2O",30,"true"},
+			{"TAC_Jvest_TN2R",30,"true"},
+			{"TAC_Jvest_U2B",30,"true"},
+			{"TAC_Jvest_U2C",30,"true"},
+			{"TAC_Jvest_U2O",30,"true"},
+			{"TAC_Jvest_U2R",30,"true"},
+			{"TRYK_V_Bulletproof_BL",30,"true"},
+			{"TRYK_V_Bulletproof_BLK",30,"true"},
+			{"TRYK_V_Bulletproof",30,"true"},
+			{"TRYK_V_harnes_blk_L",30,"true"},
+			{"TAC_LBT_AX_B",30,"true"},
+			{"TRYK_V_harnes_od_L",30,"true"},
+			{"TRYK_V_harnes_TAN_L",30,"true"},
+			{"rhsgref_alice_webbing",30,"true"},
+			{"rhs_6sh46",30,"true"}
+		};
+	};
+	
+	class Glasses
+	{
+		displayName = "Facewear";
+		content[] =
+		{
+			{"Balaclava_Gsg9_GreyG",20,"true"},
+			{"Balaclava_Gsg9",20,"true"},
+			{"Balaclava_Gsg9_Polizei",20,"true"},
+			{"Balaclava_Gsg9_YellowG",20,"true"},
+			{"Balaclava_Gsg9_GreyG_Polizei",20,"true"},
+			{"Balaclava_Gsg9_Yellow_Polizei",20,"true"},
+			{"milgp_glasses_class",20,"true"},
+			{"milgp_f_tactical_khk",20,"true"},
+			{"milgp_f_goggles_khk",20,"true"},
+			{"milgp_f_face_shield_khk",20,"true"},
+			{"milgp_f_face_shield_tactical_khk",20,"true"},
+			{"milgp_f_face_shield_goggles_khk",20,"true"},
+			{"milgp_f_face_shield_shades_khk",20,"true"},
+			{"milgp_f_face_shield_shemagh_khk",20,"true"},
+			{"milgp_f_face_shield_tactical_shemagh_khk",20,"true"},
+			{"milgp_f_face_shield_goggles_shemagh_khk",20,"true"},
+			{"milgp_f_face_shield_shades_shemagh_khk",20,"true"},
+			{"milgp_f_face_shield_RGR",20,"true"},
+			{"milgp_f_face_shield_tactical_RGR",20,"true"},
+			{"milgp_f_face_shield_goggles_RGR",20,"true"},
+			{"milgp_f_face_shield_shades_RGR",20,"true"},
+			{"milgp_f_face_shield_shemagh_RGR",20,"true"},
+			{"milgp_f_face_shield_tactical_shemagh_RGR",20,"true"},
+			{"milgp_f_face_shield_goggles_shemagh_RGR",20,"true"},
+			{"milgp_f_face_shield_shades_shemagh_RGR",20,"true"},
+			{"milgp_f_face_shield_CB",20,"true"},
+			{"milgp_f_face_shield_tactical_CB",20,"true"},
+			{"milgp_f_face_shield_goggles_CB",20,"true"},
+			{"milgp_f_face_shield_shades_CB",20,"true"},
+			{"milgp_f_face_shield_shemagh_CB",20,"true"},
+			{"milgp_f_face_shield_tactical_shemagh_CB",20,"true"},
+			{"milgp_f_face_shield_goggles_shemagh_CB",20,"true"},
+			{"milgp_f_face_shield_shades_shemagh_CB",20,"true"},
+			{"milgp_f_face_shield_MC",20,"true"},
+			{"milgp_f_face_shield_tactical_MC",20,"true"},
+			{"milgp_f_face_shield_goggles_MC",20,"true"},
+			{"milgp_f_face_shield_shades_MC",20,"true"},
+			{"milgp_f_face_shield_shemagh_MC",20,"true"},
+			{"milgp_f_face_shield_tactical_shemagh_MC",20,"true"},
+			{"milgp_f_face_shield_goggles_shemagh_MC",20,"true"},
+			{"milgp_f_face_shield_shades_shemagh_MC",20,"true"},
+			{"milgp_f_face_shield_BLK",20,"true"},
+			{"milgp_f_face_shield_tactical_BLK",20,"true"},
+			{"milgp_f_face_shield_goggles_BLK",20,"true"},
+			{"milgp_f_face_shield_shades_BLK",20,"true"},
+			{"milgp_f_face_shield_shemagh_BLK",20,"true"},
+			{"milgp_f_face_shield_tactical_shemagh_BLK",20,"true"},
+			{"milgp_f_face_shield_goggles_shemagh_BLK",20,"true"},
+			{"milgp_f_face_shield_shades_shemagh_BLK",20,"true"},
+			{"L_shemagh_white",20,"true"},
+			{"L_Shemagh_OD",20,"true"},
+			{"L_Shemagh_Tan",20,"true"},
+			{"L_Shemagh_Red",20,"true"},
+			{"L_Shemagh_Gry",20,"true"},
+			{"LCG_Shemagh_Tan",20,"true"},
+			{"LBG_Shemagh_Tan",20,"true"},
+			{"LOG_Shemagh_Tan",20,"true"},
+			{"LCG_Shemagh_OD",20,"true"},
+			{"LOG_Shemagh_OD",20,"true"},
+			{"LBG_Shemagh_OD",20,"true"},
+			{"LBG_Shemagh_Gry",20,"true"},
+			{"LOG_Shemagh_Gry",20,"true"},
+			{"LCG_Shemagh_Gry",20,"true"},
+			{"LCG_Shemagh_White",20,"true"},
+			{"LOG_Shemagh_White",20,"true"},
+			{"LBG_Shemagh_White",20,"true"},
+			{"NeckTight",20,"true"},
+			{"NeckTight_OD",20,"true"},
+			{"NeckTight_WhiteCLR",20,"true"},
+			{"NeckTight_WhiteBLK",20,"true"},
+			{"NeckTight_WhiteO",20,"true"},
+			{"NeckTight_ODCLR",20,"true"},
+			{"NeckTight_ODBLK",20,"true"},
+			{"NeckTight_ODO",20,"true"},
+			{"NeckTight_Dmaripat",20,"true"},
+			{"NeckTight_DMBLK",20,"true"},
+			{"NeckTight_DMCLR",20,"true"},
+			{"NeckTight_DMO",20,"true"},
+			{"NeckTight_Tan",20,"true"},
+			{"NeckTight_TanBLK",20,"true"},
+			{"NeckTight_TanCLR",20,"true"},
+			{"NeckTight_TanO",20,"true"},
+			{"NeckTight_Red",20,"true"},
+			{"NeckTight_Gry",20,"true"},
+			{"NeckTight_GryBLK",20,"true"},
+			{"NeckTight_GryCLR",20,"true"},
+			{"NeckTight_GryO",20,"true"},
+			{"PU_shemagh_White",20,"true"},
+			{"PU_shemagh_OD",20,"true"},
+			{"PU_shemagh_Tan",20,"true"},
+			{"PU_shemagh_GryCLR",20,"true"},
+			{"PU_shemagh_GryBLK",20,"true"},
+			{"PU_shemagh_GryO",20,"true"},
+			{"PU_shemagh_ODO",20,"true"},
+			{"PU_shemagh_ODCLR",20,"true"},
+			{"PU_shemagh_ODBLK",20,"true"},
+			{"PU_shemagh_TanBLK",20,"true"},
+			{"PU_shemagh_TanCLR",20,"true"},
+			{"PU_shemagh_TanO",20,"true"},
+			{"PU_shemagh_WhiteO",20,"true"},
+			{"PU_shemagh_WhiteBLK",20,"true"},
+			{"PU_shemagh_WhiteCLR",20,"true"},
+			{"VSM_beard_2",20,"true"},
+			{"VSM_beard_2_hair",20,"true"},
+			{"VSM_beard_3",20,"true"},
+			{"VSM_beard_3_hair",20,"true"},
+			{"VSM_Goggles",20,"true"},
+			{"G_Balaclava_oli",20,"true"},
+			{"VSM_FaceMask_class",20,"true"},
+			{"VSM_FaceMask_tan",20,"true"},
+			{"VSM_FaceMask_black",20,"true"},
+			{"VSM_FaceMask_olive",20,"true"},
+			{"VSM_FaceMask_Ghost",20,"true"},
+			{"VSM_FaceMask_Ghost_tan",20,"true"},
+			{"VSM_FaceMask_Ghost_olive",20,"true"},
+			{"VSM_balaclava_Black",20,"true"},
+			{"VSM_balaclava_olive",20,"true"},
+			{"VSM_balaclava_tan",20,"true"},
+			{"VSM_balaclava_Black_Skull",20,"true"},
+			{"VSM_balaclava_TAN_Skull",20,"true"},
+			{"VSM_balaclava_olive_Skull",20,"true"},
+			{"VSM_balaclava2_Black",20,"true"},
+			{"VSM_SkiMask_Black",20,"true"},
+			{"VSM_magpul_flightglove_standalone",20,"true"},
+			{"VSM_flightglove_standalone",20,"true"},
+			{"VSM_511_flightglove_standalone",20,"true"},
+			{"VSM_511_flightglove_OD_standalone",20,"true"},
+			{"VSM_511_flightglove_Black_standalone",20,"true"},
+			{"VSM_Peltor_coyote_glasses",20,"true"},
+			{"VSM_Peltor_OD_glasses",20,"true"},
+			{"VSM_Peltor_m81_glasses",20,"true"},
+			{"VSM_Peltor_OCP_glasses",20,"true"},
+			{"VSM_Peltor_AOR1_glasses",20,"true"},
+			{"VSM_Facemask_black_glasses",20,"true"},
+			{"VSM_Facemask_tan_glasses",20,"true"},
+			{"VSM_Facemask_OD_glasses",20,"true"},
+			{"VSM_Facemask_black_Goggles",20,"true"},
+			{"VSM_Facemask_tan_Goggles",20,"true"},
+			{"VSM_Facemask_OD_Goggles",20,"true"},
+			{"VSM_Facemask_black_Peltor",20,"true"},
+			{"VSM_Facemask_tan_Peltor",20,"true"},
+			{"VSM_Facemask_OD_Peltor",20,"true"},
+			{"VSM_Facemask_black_Peltor_glasses",20,"true"},
+			{"VSM_Facemask_tan_Peltor_glasses",20,"true"},
+			{"VSM_Facemask_OD_Peltor_glasses",20,"true"},
+			{"VSM_Facemask_black_Peltor_Goggles",20,"true"},
+			{"VSM_Facemask_tan_Peltor_Goggles",20,"true"},
+			{"VSM_Facemask_OD_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Facemask_tan_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Facemask_OD_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Facemask_tan_Peltor_Glasses",20,"true"},
+			{"VSM_Shemagh_Facemask_OD_Peltor_Glasses",20,"true"},
+			{"VSM_Shemagh_Facemask_tan_Peltor",20,"true"},
+			{"VSM_Shemagh_Facemask_OD_Peltor",20,"true"},
+			{"VSM_Shemagh_Facemask_tan_Goggles",20,"true"},
+			{"VSM_Shemagh_Facemask_OD_Goggles",20,"true"},
+			{"VSM_Shemagh_Facemask_tan_Glasses",20,"true"},
+			{"VSM_Shemagh_Facemask_OD_Glasses",20,"true"},
+			{"VSM_Shemagh_Facemask_tan",20,"true"},
+			{"VSM_Shemagh_Facemask_OD",20,"true"},
+			{"VSM_Balaclava_black_glasses",20,"true"},
+			{"VSM_Balaclava_tan_glasses",20,"true"},
+			{"VSM_Balaclava_OD_glasses",20,"true"},
+			{"VSM_Balaclava_black_Goggles",20,"true"},
+			{"VSM_Balaclava_tan_Goggles",20,"true"},
+			{"VSM_Balaclava_OD_Goggles",20,"true"},
+			{"VSM_Balaclava_black_Peltor",20,"true"},
+			{"VSM_Balaclava_tan_Peltor",20,"true"},
+			{"VSM_Balaclava_OD_Peltor",20,"true"},
+			{"VSM_Balaclava_black_Peltor_glasses",20,"true"},
+			{"VSM_Balaclava_tan_Peltor_glasses",20,"true"},
+			{"VSM_Balaclava_OD_Peltor_glasses",20,"true"},
+			{"VSM_Balaclava_black_Peltor_Goggles",20,"true"},
+			{"VSM_Balaclava_tan_Peltor_Goggles",20,"true"},
+			{"VSM_Balaclava_OD_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava_tan_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava_OD_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava_tan_Peltor_Glasses",20,"true"},
+			{"VSM_Shemagh_Balaclava_OD_Peltor_Glasses",20,"true"},
+			{"VSM_Shemagh_Balaclava_tan_Peltor",20,"true"},
+			{"VSM_Shemagh_Balaclava_OD_Peltor",20,"true"},
+			{"VSM_Shemagh_Balaclava_tan_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava_OD_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava_tan_Glasses",20,"true"},
+			{"VSM_Shemagh_Balaclava_OD_Glasses",20,"true"},
+			{"VSM_Shemagh_Balaclava_tan",20,"true"},
+			{"VSM_Shemagh_Balaclava_OD",20,"true"},
+			{"VSM_Balaclava2_black_glasses",20,"true"},
+			{"VSM_Balaclava2_tan_glasses",20,"true"},
+			{"VSM_Balaclava2_OD_glasses",20,"true"},
+			{"VSM_Balaclava2_black_Goggles",20,"true"},
+			{"VSM_Balaclava2_tan_Goggles",20,"true"},
+			{"VSM_Balaclava2_OD_Goggles",20,"true"},
+			{"VSM_Balaclava2_black_Peltor",20,"true"},
+			{"VSM_Balaclava2_tan_Peltor",20,"true"},
+			{"VSM_Balaclava2_OD_Peltor",20,"true"},
+			{"VSM_Balaclava2_black_Peltor_glasses",20,"true"},
+			{"VSM_Balaclava2_tan_Peltor_glasses",20,"true"},
+			{"VSM_Balaclava2_OD_Peltor_glasses",20,"true"},
+			{"VSM_Balaclava2_black_Peltor_Goggles",20,"true"},
+			{"VSM_Balaclava2_tan_Peltor_Goggles",20,"true"},
+			{"VSM_Balaclava2_OD_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava2_tan_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava2_OD_Peltor_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava2_tan_Peltor_Glasses",20,"true"},
+			{"VSM_Shemagh_Balaclava2_OD_Peltor_Glasses",20,"true"},
+			{"VSM_Shemagh_Balaclava2_tan_Peltor",20,"true"},
+			{"VSM_Shemagh_Balaclava2_OD_Peltor",20,"true"},
+			{"VSM_Shemagh_Balaclava2_tan_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava2_OD_Goggles",20,"true"},
+			{"VSM_Shemagh_Balaclava2_tan_Glasses",20,"true"},
+			{"VSM_Shemagh_Balaclava2_OD_Glasses",20,"true"},
+			{"VSM_Shemagh_Balaclava2_tan",20,"true"},
+			{"VSM_Shemagh_Balaclava2_OD",20,"true"},
+			{"VSM_Shemagh_tan",20,"true"},
+			{"VSM_Shemagh_OD",20,"true"},
+			{"VSM_Shemagh_glasses_tan",20,"true"},
+			{"VSM_Shemagh_Glasses_OD",20,"true"},
+			{"VSM_Shemagh_goggles_tan",20,"true"},
+			{"VSM_Shemagh_Goggles_OD",20,"true"},
+			{"VSM_Thermal",20,"true"},
+			{"G_Spectacles",20,"true"},
+			{"G_Spectacles_Tinted",20,"true"},
+			{"G_Combat",20,"true"},
+			{"G_Lowprofile",20,"true"},
+			{"G_Shades_Black",20,"true"},
+			{"G_Shades_Green",20,"true"},
+			{"G_Shades_Red",20,"true"},
+			{"G_Squares",20,"true"},
+			{"G_Squares_Tinted",20,"true"},
+			{"G_Sport_BlackWhite",20,"true"},
+			{"G_Sport_Blackyellow",20,"true"},
+			{"G_Sport_Greenblack",20,"true"},
+			{"G_Sport_Checkered",20,"true"},
+			{"G_Sport_Red",20,"true"},
+			{"G_Tactical_Black",20,"true"},
+			{"G_Aviator",20,"true"},
+			{"G_Lady_Mirror",20,"true"},
+			{"G_Lady_Dark",20,"true"},
+			{"G_Lady_Red",20,"true"},
+			{"G_Lady_Blue",20,"true"},
+			{"G_Diving",20,"true"},
+			{"G_B_Diving",20,"true"},
+			{"G_O_Diving",20,"true"},
+			{"G_I_Diving",20,"true"},
+			{"G_Goggles_VR",20,"true"},
+			{"G_Balaclava_blk",20,"true"},
+			{"G_Balaclava_combat",20,"true"},
+			{"G_Balaclava_lowprofile",20,"true"},
+			{"G_Bandanna_blk",20,"true"},
+			{"G_Bandanna_oli",20,"true"},
+			{"G_Bandanna_khk",20,"true"},
+			{"G_Bandanna_tan",20,"true"},
+			{"G_Bandanna_beast",20,"true"},
+			{"G_Bandanna_shades",20,"true"},
+			{"G_Bandanna_sport",20,"true"},
+			{"G_Bandanna_aviator",20,"true"},
+			{"G_Shades_Blue",20,"true"},
+			{"G_Sport_Blackred",20,"true"},
+			{"G_Tactical_Clear",20,"true"},
+			{"ADFU_Diving_Googles",20,"true"},
+			{"ADFU_glasses_class",20,"true"},
+			{"ADFU_f_tactical_khk",20,"true"},
+			{"ADFU_f_goggles_khk",20,"true"},
+			{"ADFU_f_face_shield_khk",20,"true"},
+			{"ADFU_f_face_shield_tactical_khk",20,"true"},
+			{"ADFU_f_face_shield_goggles_khk",20,"true"},
+			{"ADFU_f_face_shield_shades_khk",20,"true"},
+			{"ADFU_f_face_shield_shemagh_khk",20,"true"},
+			{"ADFU_f_face_shield_tactical_shemagh_khk",20,"true"},
+			{"ADFU_f_face_shield_goggles_shemagh_khk",20,"true"},
+			{"ADFU_f_face_shield_shades_shemagh_khk",20,"true"},
+			{"ADFU_f_face_shield_tactical_shemagh_cap_noble",20,"true"},
+			{"ADFU_f_face_shield_tactical_shemagh_cap_Jazz",20,"true"},
+			{"ADFU_f_face_shield_tactical_shemagh_cap_fox",20,"true"},
+			{"op4_isil_mask1_black",20,"true"},
+			{"ADFU_f_face_shield_wht",20,"true"},
+			{"ADFU_f_face_shield_goggles_wht",20,"true"},
+			{"ADFU_f_face_shield_grn",20,"true"},
+			{"ADFU_f_face_shield_tactical_grn",20,"true"},
+			{"TAC_SF10",20,"true"},
+			{"TRYK_Beard",20,"true"},
+			{"TRYK_Beard_BL",20,"true"},
+			{"TRYK_Beard_BW",20,"true"},
+			{"TRYK_Beard_BK",20,"true"},
+			{"TRYK_Beard_Gr",20,"true"},
+			{"TRYK_Beard2",20,"true"},
+			{"TRYK_Beard_BL2",20,"true"},
+			{"TRYK_Beard_BW2",20,"true"},
+			{"TRYK_Beard_BK2",20,"true"},
+			{"TRYK_Beard_Gr2",20,"true"},
+			{"TRYK_Beard3",20,"true"},
+			{"TRYK_Beard_BL3",20,"true"},
+			{"TRYK_Beard_BW3",20,"true"},
+			{"TRYK_Beard_BK3",20,"true"},
+			{"TRYK_Beard_Gr3",20,"true"},
+			{"TRYK_Beard4",20,"true"},
+			{"TRYK_Beard_BL4",20,"true"},
+			{"TRYK_Beard_BW4",20,"true"},
+			{"TRYK_Beard_BK4",20,"true"},
+			{"TRYK_Beard_Gr4",20,"true"},
+			{"TRYK_SBeard",20,"true"},
+			{"TRYK_SBeard_BL",20,"true"},
+			{"TRYK_SBeard_BW",20,"true"},
+			{"TRYK_SBeard_BK",20,"true"},
+			{"TRYK_SBeard_Gr",20,"true"},
+			{"TRYK_SBeard2",20,"true"},
+			{"TRYK_SBeard_BL2",20,"true"},
+			{"TRYK_SBeard_BW2",20,"true"},
+			{"TRYK_SBeard_BK2",20,"true"},
+			{"TRYK_SBeard_Gr2",20,"true"},
+			{"TRYK_SBeard3",20,"true"},
+			{"TRYK_SBeard_BL3",20,"true"},
+			{"TRYK_SBeard_BW3",20,"true"},
+			{"TRYK_SBeard_BK3",20,"true"},
+			{"TRYK_SBeard_Gr3",20,"true"},
+			{"TRYK_SBeard4",20,"true"},
+			{"TRYK_SBeard_BL4",20,"true"},
+			{"TRYK_SBeard_BW4",20,"true"},
+			{"TRYK_SBeard_BK4",20,"true"},
+			{"TRYK_SBeard_Gr4",20,"true"},
+			{"TRYK_SBeard5",20,"true"},
+			{"TRYK_SBeard_BL5",20,"true"},
+			{"TRYK_SBeard_BW5",20,"true"},
+			{"TRYK_SBeard_BK5",20,"true"},
+			{"TRYK_SBeard_Gr5",20,"true"},
+			{"TRYK_SBeard6",20,"true"},
+			{"TRYK_SBeard_BL6",20,"true"},
+			{"TRYK_SBeard_BW6",20,"true"},
+			{"TRYK_SBeard_BK6",20,"true"},
+			{"TRYK_SBeard_Gr6",20,"true"},
+			{"PLA_goggle",20,"true"},
+			{"TAC_PMC_ID_B",20,"true"},
+			{"TAC_PMC_ID_H",20,"true"},
+			{"TAC_PMC_ID_W",20,"true"},
+			{"TAC_PMC_ID_B2",20,"true"},
+			{"TAC_PMC_ID_H2",20,"true"},
+			{"TAC_PMC_ID_W2",20,"true"},
+			{"TAC_shoulder_armor_BK",20,"true"},
+			{"TAC_shoulder_armor_OD",20,"true"},
+			{"TAC_shoulder_armor_CY",20,"true"},
+			{"TAC_shoulder_armorC_BK",20,"true"},
+			{"TAC_shoulder_armorC_OD",20,"true"},
+			{"TAC_shoulder_armorC_CY",20,"true"},
+			{"TAC_shoulder_armorC2_BK",20,"true"},
+			{"TAC_shoulder_armorC2_OD",20,"true"},
+			{"TAC_shoulder_armorC2_CY",20,"true"},
+			{"rhs_googles_black",20,"true"},
+			{"rhs_googles_clear",20,"true"},
+			{"rhs_googles_yellow",20,"true"},
+			{"rhs_googles_orange",20,"true"},
+			{"rhs_ess_black",20,"true"},
+			{"rhsusf_oakley_goggles_base",20,"true"},
+			{"rhsusf_oakley_goggles_blk",20,"true"},
+			{"rhsusf_oakley_goggles_clr",20,"true"},
+			{"rhsusf_oakley_goggles_ylw",20,"true"},
+			{"rhsusf_shemagh_base",20,"true"},
+			{"rhsusf_shemagh_white",20,"true"},
+			{"rhsusf_shemagh_tan",20,"true"},
+			{"rhsusf_shemagh_od",20,"true"},
+			{"rhsusf_shemagh_grn",20,"true"},
+			{"rhsusf_shemagh_gogg_base",20,"true"},
+			{"rhsusf_shemagh_gogg_white",20,"true"},
+			{"rhsusf_shemagh_gogg_tan",20,"true"},
+			{"rhsusf_shemagh_gogg_od",20,"true"},
+			{"rhsusf_shemagh_gogg_grn",20,"true"},
+			{"rhsusf_shemagh2_base",20,"true"},
+			{"rhsusf_shemagh2_white",20,"true"},
+			{"rhsusf_shemagh2_tan",20,"true"},
+			{"rhsusf_shemagh2_od",20,"true"},
+			{"rhsusf_shemagh2_grn",20,"true"},
+			{"rhsusf_shemagh2_gogg_base",20,"true"},
+			{"rhsusf_shemagh2_gogg_white",20,"true"},
+			{"rhsusf_shemagh2_gogg_tan",20,"true"},
+			{"rhsusf_shemagh2_gogg_od",20,"true"},
+			{"rhsusf_shemagh2_gogg_grn",20,"true"},
+			{"G_Balaclava_TI_blk_F",20,"true"},
+			{"G_Balaclava_TI_tna_F",20,"true"},
+			{"G_Balaclava_TI_G_blk_F",20,"true"},
+			{"G_Balaclava_TI_G_tna_F",20,"true"},
+			{"G_Combat_Goggles_tna_F",20,"true"},
+			{"G_Respirator_base_F",20,"true"},
+			{"G_Respirator_white_F",20,"true"},
+			{"G_Respirator_yellow_F",20,"true"},
+			{"G_Respirator_blue_F",20,"true"},
+			{"G_EyeProtectors_base_F",20,"true"},
+			{"G_EyeProtectors_F",20,"true"},
+			{"G_EyeProtectors_Earpiece_F",20,"true"},
+			{"G_WirelessEarpiece_base_F",20,"true"},
+			{"G_WirelessEarpiece_F",20,"true"},
+			{"rhs_scarf",20,"true"},
+			{"rhs_balaclava",20,"true"},
+			{"rhs_balaclava1_olive",20,"true"},
+			{"avon_fm12",1500,"true"},
+			{"avon_fm12_strapless",1500,"true"},
+			{"avon_ct12",1500,"true"},
+			{"avon_ct12_strapless",1500,"true"},
+			{"avon_SF12",1500,"true"},
+			{"avon_SF12_strapless",1500,"true"}
+		};
+	};
+};
+
+class HG_SpecialClothing //this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>Suits</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_SpecialClothing",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; 
+	
+	class Uniform
+	{
+		displayName = "Uniforms";
+		content[] =
+		{
+			{"TRYK_SUITS_BLK_F",100,"true"},
+			{"TRYK_SUITS_BR_F",100,"true"}
+		};
+	};
+};
+
+class HG_MilitaryClothing //this addAction["<img image='HG\UI\Icons\gun.paa' size='1.5'/><t color='#FF0000'>Military Uniforms</t>",{_this call HG_fnc_dialogOnLoadGear},"HG_MilitaryClothing",0,false,false,"",'(alive player) && !dialog && player distance _target < 3'];
+{
+	conditionToAccess = "true"; 
+	
+	class Uniform
+	{
+		displayName = "Uniforms";
+		content[] =
+		{
+			{"rhs_uniform_g3_tan",100,"true"},
+			{"rhs_uniform_g3_rgr",100,"true"},
+			{"ADFU_G3_MC_Rolled",100,"true"},
+			{"ADFU_G3_MC_Nopad",100,"true"},
+			{"ADFU_G3_MC_Nopad_Rolled",100,"true"},
+			{"ADFU_G3_MC",100,"true"},
+			{"rhs_uniform_g3_mc",100,"true"},
+			{"rhs_uniform_g3_m81",100,"true"},
+			{"rhs_uniform_g3_blk",100,"true"},
+			{"milgp_u_g3_field_set_rolled_rgr",100,"true"},
+			{"milgp_u_g3_field_set_rolled_mc",100,"true"},
+			{"milgp_u_g3_field_set_rolled_mctropic",100,"true"},
+			{"milgp_u_g3_field_set_rolled_mcarid",100,"true"},
+			{"milgp_u_g3_field_set_rolled_m81",100,"true"},
+			{"milgp_u_g3_field_set_rolled_khk",100,"true"},
+			{"milgp_u_g3_field_set_rolled_atacsfg",100,"true"},
+			{"milgp_u_g3_field_set_rolled_atacsau",100,"true"},
+			{"milgp_u_g3_field_set_rolled_aor2",100,"true"},
+			{"milgp_u_g3_field_set_rolled_aor1",100,"true"},
+			{"milgp_u_g3_field_set_rolled_3cd",100,"true"},
+			{"milgp_u_g3_field_set_rgr",100,"true"},
+			{"milgp_u_g3_field_set_mc",100,"true"},
+			{"milgp_u_g3_field_set_mctropic",100,"true"},
+			{"milgp_u_g3_field_set_mcarid",100,"true"},
+			{"milgp_u_g3_field_set_mcalpine",100,"true"},
+			{"milgp_u_g3_field_set_m81",100,"true"},
+			{"milgp_u_g3_field_set_khk",100,"true"},
+			{"milgp_u_g3_field_set_atacsfg",100,"true"},
+			{"milgp_u_g3_field_set_atacsau",100,"true"},
+			{"milgp_u_g3_field_set_aor2",100,"true"},
+			{"milgp_u_g3_field_set_aor1",100,"true"},
+			{"milgp_u_g3_field_set_3cd",100,"true"},
+			{"milgp_u_fleece_rgr_g3_field_pants_mc",100,"true"},
+			{"milgp_u_fleece_rgr_g3_field_pants_mctropic",100,"true"},
+			{"milgp_u_fleece_rgr_g3_field_pants_M81",100,"true"},
+			{"milgp_u_fleece_rgr_g3_field_pants_atacsfg",100,"true"},
+			{"milgp_u_fleece_rgr_g3_field_pants_aor2",100,"true"},
+			{"milgp_u_fleece_rgr_g3_field_pants_rgr",100,"true"},
+			{"milgp_u_fleece_khk_g3_field_pants_mc",100,"true"},
+			{"milgp_u_fleece_khk_g3_field_pants_mcarid",100,"true"},
+			{"milgp_u_fleece_khk_g3_field_pants_atacsau",100,"true"},
+			{"milgp_u_fleece_khk_g3_field_pants_aor1",100,"true"},
+			{"milgp_u_fleece_khk_g3_field_pants_3CD",100,"true"},
+			{"milgp_u_fleece_khk_g3_field_pants_khk",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_rgr",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_mc",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_mctropic",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_mcarid",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_mcalpine",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_M81",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_khk",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_atacsfg",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_atacsau",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_aor2",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_aor1",100,"true"},
+			{"milgp_u_fleece_grey_g3_field_pants_3CD",100,"true"},
+			{"Gen3_aor1",100,"true"},
+			{"Gen3_aor2",100,"true"},
+			{"Gen3_atacsau",100,"true"},
+			{"Gen3_atacsfg",100,"true"},
+			{"Gen3_Blk",100,"true"},
+			{"Gen3_M81",100,"true"},
+			{"Gen3_mcarid",100,"true"},
+			{"Gen3_mctropical",100,"true"},
+			{"Gen3_Multicam",100,"true"},
+			{"Gen3_Ranger",100,"true"},
+			{"Gen3_Tan",100,"true"},
+			{"VSM_Gorka_camo_3CD_3CD",100,"true"},
+			{"VSM_Gorka_camo_3CD_DDPM",100,"true"},
+			{"VSM_Gorka_camo_3CD_DPM",100,"true"},
+			{"VSM_Gorka_camo_3CD_M81",100,"true"},
+			{"VSM_Gorka_camo_3CD_UCP",100,"true"},
+			{"VSM_Gorka_camo_BLACK_3CD",100,"true"},
+			{"VSM_Gorka_camo_BLACK_DDPM",100,"true"},
+			{"VSM_Gorka_camo_BLACK_DPM",100,"true"},
+			{"VSM_Gorka_camo_BLACK_M81",100,"true"},
+			{"VSM_Gorka_camo_BLACK_UCP",100,"true"},
+			{"VSM_Gorka_camo_DDPM_3CD",100,"true"},
+			{"VSM_Gorka_camo_DDPM_DDPM",100,"true"},
+			{"VSM_Gorka_camo_DDPM_DPM",100,"true"},
+			{"VSM_Gorka_camo_DDPM_M81",100,"true"},
+			{"VSM_Gorka_camo_DDPM_UCP",100,"true"},
+			{"VSM_Gorka_camo_DMARPAT_3CD",100,"true"},
+			{"VSM_Gorka_camo_DMARPAT_DDPM",100,"true"},
+			{"VSM_Gorka_camo_DMARPAT_DPM",100,"true"},
+			{"VSM_Gorka_camo_DMARPAT_M81",100,"true"},
+			{"VSM_Gorka_camo_DMARPAT_UCP",100,"true"},
+			{"VSM_Gorka_camo_DNIGHT_3CD",100,"true"},
+			{"VSM_Gorka_camo_DNIGHT_DDPM",100,"true"},
+			{"VSM_Gorka_camo_DNIGHT_DPM",100,"true"},
+			{"VSM_Gorka_camo_DNIGHT_UCP",100,"true"},
+			{"VSM_Gorka_camo_DPM_3CD",100,"true"},
+			{"VSM_Gorka_camo_DPM_DDPM",100,"true"},
+			{"VSM_Gorka_camo_DPM_DPM",100,"true"},
+			{"VSM_Gorka_camo_DPM_M81",100,"true"},
+			{"VSM_Gorka_camo_DPM_UCP",100,"true"},
+			{"VSM_Gorka_camo_GRAY_3CD",100,"true"},
+			{"VSM_Gorka_camo_GRAY_DDPM",100,"true"},
+			{"VSM_Gorka_camo_GRAY_DPM",100,"true"},
+			{"VSM_Gorka_camo_GRAY_GRAY",100,"true"},
+			{"VSM_Gorka_camo_GRAY_M81",100,"true"},
+			{"VSM_Gorka_camo_GRAY_UCP",100,"true"},
+			{"VSM_Gorka_camo_M81_3CD",100,"true"},
+			{"VSM_Gorka_camo_M81_DDPM",100,"true"},
+			{"VSM_Gorka_camo_M81_DPM",100,"true"},
+			{"VSM_Gorka_camo_M81_M81",100,"true"},
+			{"VSM_Gorka_camo_M81_UCP",100,"true"},
+			{"VSM_Gorka_camo_OD_3CD",100,"true"},
+			{"VSM_Gorka_camo_OD_DDPM",100,"true"},
+			{"VSM_Gorka_camo_OD_DPM",100,"true"},
+			{"VSM_Gorka_camo_OD_M81",100,"true"},
+			{"VSM_Gorka_camo_OD_UCP",100,"true"},
+			{"VSM_Gorka_camo_UCP_3CD",100,"true"},
+			{"VSM_Gorka_camo_UCP_DDPM",100,"true"},
+			{"VSM_Gorka_camo_UCP_DPM",100,"true"},
+			{"VSM_Gorka_camo_UCP_M81",100,"true"},
+			{"VSM_Gorka_camo_UCP_UCP",100,"true"},
+			{"VSM_ACU_camo_3CD_3CD",100,"true"},
+			{"VSM_ACU_camo_3CD_DDPM",100,"true"},
+			{"VSM_ACU_camo_3CD_DPM",100,"true"},
+			{"VSM_ACU_camo_3CD_M81",100,"true"},
+			{"VSM_ACU_camo_3CD_UCP",100,"true"},
+			{"VSM_ACU_camo_DDPM_3CD",100,"true"},
+			{"VSM_ACU_camo_DDPM_DDPM",100,"true"},
+			{"VSM_ACU_camo_DDPM_DPM",100,"true"},
+			{"VSM_ACU_camo_DDPM_M81",100,"true"},
+			{"VSM_ACU_camo_DDPM_UCP",100,"true"},
+			{"VSM_ACU_camo_DPM_3CD",100,"true"},
+			{"VSM_ACU_camo_DPM_DDPM",100,"true"},
+			{"VSM_ACU_camo_DPM_DPM",100,"true"},
+			{"VSM_ACU_camo_DPM_M81",100,"true"},
+			{"VSM_ACU_camo_DPM_UCP",100,"true"},
+			{"VSM_ACU_camo_M81_3CD",100,"true"},
+			{"VSM_ACU_camo_M81_DDPM",100,"true"},
+			{"VSM_ACU_camo_M81_DPM",100,"true"},
+			{"VSM_ACU_camo_M81_M81",100,"true"},
+			{"VSM_ACU_camo_M81_UCP",100,"true"},
+			{"VSM_ACU_camo_UCP_3CD",100,"true"},
+			{"VSM_ACU_camo_UCP_DDPM",100,"true"},
+			{"VSM_ACU_camo_UCP_DPM",100,"true"},
+			{"VSM_ACU_camo_UCP_M81",100,"true"},
+			{"VSM_ACU_camo_UCP_UCP",100,"true"},
+			{"VSM_ACU_camo_M81",100,"true"},
+			{"VSM_ACU_camo_Multicam_black",100,"true"},
+			{"VSM_ACU_camo_Multicam",100,"true"},
+			{"VSM_ACU_camo_OD",100,"true"},
+			{"VSM_ACU_camo_PZA",100,"true"},
+			{"VSM_ACU_camo_PZJ",100,"true"},
+			{"VSM_ACU_camo_PZW",100,"true"},
+			{"VSM_ACU_camo_TAN",100,"true"},
+			{"VSM_ColdWeatherGear_camo_multicam",100,"true"},
+			{"VSM_ColdWeatherGear_camo_PZA",100,"true"},
+			{"VSM_G2_coverall_camo",100,"true"},
+			{"VSM_G2_camo_AOR1_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_AOR1_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_AOR1",100,"true"},
+			{"VSM_G2_camo_MultiCam_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_MultiCam_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_MultiCam",100,"true"},
+			{"VSM_G2_camo_PZA_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_PZA_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_PZA",100,"true"},
+			{"VSM_G2_camo_PZDA_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_PZDA_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_PZDA",100,"true"},
+			{"VSM_G2_camo_PZJ_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_PZJ_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_PZJ",100,"true"},
+			{"VSM_G2_camo_PZW_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_PZW_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_PZW",100,"true"},
+			{"VSM_G2_sweater_camo_AOR1",100,"true"},
+			{"VSM_G2_sweater_camo_MultiCam",100,"true"},
+			{"VSM_G2_sweater_camo_PZA",100,"true"},
+			{"VSM_G2_sweater_camo_PZDA",100,"true"},
+			{"VSM_G2_sweater_camo_PZJ",100,"true"},
+			{"VSM_G2_sweater_camo_PZW",100,"true"},
+			{"VSM_G2_camo_rolled_AOR1_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_AOR1_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_AOR1",100,"true"},
+			{"VSM_G2_camo_rolled_MultiCam_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_MultiCam_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_MultiCam",100,"true"},
+			{"VSM_G2_camo_rolled_PZA_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_PZA_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_PZA",100,"true"},
+			{"VSM_G2_camo_rolled_PZDA_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_PZDA_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_PZDA",100,"true"},
+			{"VSM_G2_camo_rolled_PZJ_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_PZJ_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_PZJ",100,"true"},
+			{"VSM_G2_camo_rolled_PZW_OD_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_PZW_Tan_Shirt",100,"true"},
+			{"VSM_G2_camo_rolled_PZW",100,"true"},
+			{"TRYK_U_B_BLK",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_3CD",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_aor1",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_aor2",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_atacsau",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_atacsfg",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_khk",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_M81",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_mcarid",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_mctropic",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_mc",100,"true"},
+			{"milgp_u_tshirt_g3_field_pants_rgr",100,"true"},
+			{"Gsg9_Uniform_Black",100,"true"},
+			{"Gsg9_Uniform_WetEarth",100,"true"},
+			{"Gsg9_AirUniform_Black",100,"true"},
+			{"rhs_uniform_gorka_r_y",100,"true"},
+			{"LOP_U_IRA_Fatigue_GRK_OLV",100,"true"},
+			{"rhs_uniform_gorka_r_g",100,"true"},
+			{"LOP_U_IRA_Fatigue_GRK_DPM",100,"true"},
+			{"LOP_U_IRA_Fatigue_GRK_BLUE",100,"true"},
+			{"LOP_U_IRA_Fatigue_GRK_BLK",100,"true"},
+			{"LOP_U_US_Fatigue_14",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_3cd",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_aor1",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_aor2",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_atacsau",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_atacsfg",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_khk",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_m81",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_mcalpine",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_mcarid",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_mctropic",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_mc",100,"true"},
+			{"milgp_u_pcu_g3_field_pants_rgr",100,"true"},
+			{"rhsgref_uniform_woodland_olive",100,"true"},
+			{"rhsgref_uniform_woodland",100,"true"},
+			{"rhsgref_uniform_olive",100,"true"},
+			{"rhsgref_uniform_dpm",100,"true"},
+			{"rhsgref_uniform_dpm_olive",100,"true"},
+			{"rhsgref_uniform_3color_desert",100,"true"},
+            {"TRYK_U_taki_BL",50,"true"},
+			{"TRYK_U_taki_BLK",50,"true"},
+			{"TRYK_U_taki_COY",50,"true"},
+			{"TRYK_U_taki_wh",50,"true"},
+			{"TRYK_U_taki_G_BL",50,"true"},
+			{"TRYK_U_taki_G_BLK",50,"true"},
+			{"TRYK_U_taki_G_COY",50,"true"},
+			{"TRYK_U_taki_G_WH",50,"true"}
+		};
+	};
+	
+	class Headgear
+	{
+		displayName = "Headgear";
+		content[] =
+		{
+			{"rhsusf_opscore_bk",120,"true"},
+			{"rhsusf_opscore_bk_pelt",120,"true"},
+			{"rhsusf_opscore_coy_cover",120,"true"},
+			{"rhsusf_opscore_coy_cover_pelt",120,"true"},
+			{"rhsusf_opscore_fg",120,"true"},
+			{"milgp_h_opscore_02_khk",120,"true"},
+			{"milgp_h_opscore_02_MC",120,"true"},
+			{"milgp_h_opscore_05_khk",120,"true"},
+			{"milgp_h_opscore_05_MC",120,"true"},
+			{"milgp_h_opscore_05_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_05_RGR",120,"true"},
+			{"milgp_h_opscore_05_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_05_goggles_CB",120,"true"},
+			{"rhsgref_helmet_pasgt_3color_desert",120,"true"},
+			{"rhsgref_helmet_pasgt_3color_desert_rhino",120,"true"},
+			{"rhsgref_helmet_pasgt_altis_lizard",120,"true"},
+			{"rhsgref_helmet_pasgt_erdl",120,"true"},
+			{"rhsgref_helmet_pasgt_erdl_rhino",120,"true"},
+			{"rhsgref_helmet_pasgt_flecktarn",120,"true"},
+			{"rhsgref_helmet_pasgt_olive",120,"true"},
+			{"H_Cap_headphones",10,"true"},
+			{"Zenturion1120_WetEarth",120,"true"},
+			{"Zenturion1120_WetEarth_Close",120,"true"},
+			{"Zenturion1120_WetEarth_open",120,"true"},
+			{"rhsgref_helmet_pasgt_press",120,"true"},
+			{"rhsgref_helmet_pasgt_woodland",120,"true"},
+			{"rhsgref_helmet_pasgt_woodland_rhino",120,"true"},
+			{"H_PASGT_basic_blue_press_F",120,"true"},
+			{"H_PASGT_neckprot_blue_press_F",120,"true"},
+			{"rhsusf_protech_helmet",120,"true"},
+			{"rhsusf_protech_helmet_ess",120,"true"},
+			{"rhsusf_protech_helmet_rhino",120,"true"},
+			{"rhsusf_protech_helmet_rhino_ess",120,"true"},
+			{"milgp_h_opscore_05_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_05_goggles_khk",120,"true"},
+			{"milgp_h_opscore_05_goggles_MC",120,"true"},
+			{"milgp_h_opscore_02_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_05_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_05_goggles_RGR",120,"true"},
+			{"milgp_h_opscore_06_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_06_CB",120,"true"},
+			{"milgp_h_opscore_06_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_06_khk",120,"true"},
+			{"milgp_h_opscore_06_MC",120,"true"},
+			{"milgp_h_opscore_06_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_06_RGR",120,"true"},
+			{"milgp_h_opscore_06_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_06_goggles_CB",120,"true"},
+			{"milgp_h_opscore_06_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_06_goggles_khk",120,"true"},
+			{"milgp_h_opscore_06_goggles_MC",120,"true"},
+			{"milgp_h_opscore_06_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_06_goggles_RGR",120,"true"},
+			{"milgp_h_opscore_02_RGR",120,"true"},
+			{"milgp_h_opscore_02_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_02_goggles_CB",120,"true"},
+			{"milgp_h_opscore_02_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_02_goggles_khk",120,"true"},
+			{"milgp_h_opscore_02_goggles_MC",120,"true"},
+			{"milgp_h_opscore_02_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_02_goggles_RGR",120,"true"},
+			{"milgp_h_opscore_03_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_03_CB",120,"true"},
+			{"milgp_h_opscore_03_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_03_khk",120,"true"},
+			{"milgp_h_opscore_03_MC",120,"true"},
+			{"milgp_h_opscore_03_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_03_RGR",120,"true"},
+			{"milgp_h_opscore_03_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_03_goggles_CB",120,"true"},
+			{"milgp_h_opscore_03_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_03_goggles_khk",120,"true"},
+			{"milgp_h_opscore_03_goggles_MC",120,"true"},
+			{"milgp_h_opscore_03_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_03_goggles_RGR",120,"true"},
+			{"milgp_h_opscore_04_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_04_CB",120,"true"},
+			{"milgp_h_opscore_04_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_04_khk",120,"true"},
+			{"milgp_h_opscore_04_MC",120,"true"},
+			{"milgp_h_opscore_04_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_04_RGR",120,"true"},
+			{"milgp_h_opscore_04_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_04_goggles_CB",120,"true"},
+			{"milgp_h_opscore_04_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_04_goggles_khk",120,"true"},
+			{"milgp_h_opscore_04_goggles_MC",120,"true"},
+			{"milgp_h_opscore_04_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_04_goggles_RGR",120,"true"},
+			{"milgp_h_opscore_05_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_05_CB",120,"true"},
+			{"milgp_h_opscore_05_khk_hexagon",120,"true"},
+			{"rhsusf_opscore_rg_cover",120,"true"},
+			{"rhsusf_opscore_rg_cover_pelt",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_semi",120,"true"},
+			{"A3_NVGHeadGearBlk_F",1,"true"},
+			{"OPSCORE_WetEarth",120,"true"},
+			{"OPSCORE_Black",120,"true"},
+			{"OPSCORE_Coyot",120,"true"},
+			{"ADFU_H_OpsCore_02_AMCS",120,"true"},
+			{"ADFU_H_OpsCore_03_AMCS",120,"true"},
+			{"ADFU_H_OpsCore_02_AMCT",120,"true"},
+			{"ADFU_H_OpsCore_03_AMCT",120,"true"},
+			{"ADFU_H_OpsCore_02_AMC",120,"true"},
+			{"ADFU_H_OpsCore_03_AMC",120,"true"},
+			{"ADFU_H_OpsCore_02_AMP",120,"true"},
+			{"ADFU_H_OpsCore_07_AMP",120,"true"},
+			{"ADFU_H_OpsCore_04_AMP",120,"true"},
+			{"ADFU_H_OpsCore_06_AMP",120,"true"},
+			{"ADFU_H_OpsCore_05_AMP",120,"true"},
+			{"ADFU_H_OpsCore_03_AMP",120,"true"},
+			{"ADFU_H_OpsCore_08_AMP",120,"true"},
+			{"ADFU_H_OpsCore_02_MC",120,"true"},
+			{"ADFU_H_OpsCore_04_MC",120,"true"},
+			{"ADFU_H_OpsCore_08_MC",120,"true"},
+			{"ADFU_H_OpsCore_03_MC",120,"true"},
+			{"milgp_h_opscore_01_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_01_CB",120,"true"},
+			{"milgp_h_opscore_01_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_01_khk",120,"true"},
+			{"milgp_h_opscore_01_MC",120,"true"},
+			{"milgp_h_opscore_01_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_01_RGR",120,"true"},
+			{"milgp_h_opscore_01_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_01_goggles_CB",120,"true"},
+			{"milgp_h_opscore_01_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_opscore_01_goggles_khk",120,"true"},
+			{"milgp_h_opscore_01_goggles_MC",120,"true"},
+			{"milgp_h_opscore_01_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_opscore_01_goggles_RGR",120,"true"},
+			{"milgp_h_opscore_02_CB_hexagon",120,"true"},
+			{"milgp_h_opscore_02_CB",120,"true"},
+			{"milgp_h_opscore_02_khk_hexagon",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_alt_semi",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_alt_semi_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_semi_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_semi_headset",120,"true"},
+			{"rhsusf_mich_bare_tan",120,"true"},
+			{"rhsusf_mich_bare_alt_tan",120,"true"},
+			{"rhsusf_mich_bare_tan_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_tan",120,"true"},
+			{"rhsusf_mich_helmet_marpatwd_headset",120,"true"},
+			{"rhsusf_mich_helmet_marpatwd_norotos",120,"true"},
+			{"rhsusf_mich_helmet_marpatwd_norotos_arc",120,"true"},
+			{"rhsusf_mich_helmet_marpatwd_norotos_arc_headset",120,"true"},
+			{"rhsusf_mich_helmet_marpatwd_norotos_headset",120,"true"},
+			{"ADFU_MilCap_AMC",10,"true"},
+			{"ADFU_MilCap_AMP",10,"true"},
+			{"rhsusf_mich_bare_norotos_alt_tan",120,"true"},
+			{"rhsusf_mich_bare_norotos_alt_tan_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_tan",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_alt_tan",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_alt_tan_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_tan_headset",120,"true"},
+			{"rhsusf_mich_helmet_marpatd",120,"true"},
+			{"rhsusf_mich_helmet_marpatd_alt",120,"true"},
+			{"rhsusf_mich_helmet_marpatd_alt_headset",120,"true"},
+			{"rhsusf_mich_helmet_marpatd_headset",120,"true"},
+			{"rhsusf_mich_helmet_marpatd_norotos",120,"true"},
+			{"rhsusf_mich_helmet_marpatd_norotos_arc",120,"true"},
+			{"rhsusf_mich_helmet_marpatd_norotos_arc_headset",120,"true"},
+			{"rhsusf_mich_helmet_marpatd_norotos_headset",120,"true"},
+			{"rhsusf_mich_helmet_marpatwd",120,"true"},
+			{"rhsusf_mich_helmet_marpatwd_alt",120,"true"},
+			{"rhsusf_mich_helmet_marpatwd_alt_headset",120,"true"},
+			{"rhssaf_helmet_m97_md2camo_black_ess",120,"true"},
+			{"rhssaf_helmet_m97_md2camo_black_ess_bare",120,"true"},
+			{"rhssaf_helmet_m97_oakleaf",120,"true"},
+			{"rhssaf_helmet_m97_oakleaf_black_ess",120,"true"},
+			{"rhssaf_helmet_m97_oakleaf_black_ess_bare",120,"true"},
+			{"rhssaf_helmet_m97_olive_nocamo",120,"true"},
+			{"rhssaf_helmet_m97_olive_nocamo_black_ess",120,"true"},
+			{"rhssaf_helmet_m97_olive_nocamo_black_ess_bare",120,"true"},
+			{"rhssaf_helmet_m97_woodland",120,"true"},
+			{"rhssaf_helmet_m97_woodland_black_ess",120,"true"},
+			{"rhssaf_helmet_m97_woodland_black_ess_bare",120,"true"},
+			{"H_Cap_marshal",10,"true"},
+			{"rhsusf_mich_bare",120,"true"},
+			{"rhsusf_mich_bare_alt",120,"true"},
+			{"rhsusf_mich_bare_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos",120,"true"},
+			{"rhsusf_mich_bare_norotos_alt",120,"true"},
+			{"rhsusf_mich_bare_norotos_alt_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_alt",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_alt_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_arc_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_headset",120,"true"},
+			{"rhsusf_mich_bare_semi",120,"true"},
+			{"rhsusf_mich_bare_alt_semi",120,"true"},
+			{"rhsusf_mich_bare_semi_headset",120,"true"},
+			{"rhsusf_mich_bare_norotos_semi",120,"true"},
+			{"rhsusf_mich_bare_norotos_alt_semi",120,"true"},
+			{"rhsusf_mich_bare_norotos_alt_semi_headset",120,"true"},
+			{"HoplitTSO_Black",120,"true"},
+			{"HoplitTSO_Coyot",120,"true"},
+			{"HoplitTSO_WetEarth",120,"true"},
+			{"rhsusf_lwh_helmet_M1942",120,"true"},
+			{"rhsusf_lwh_helmet_marpatd",120,"true"},
+			{"rhsusf_lwh_helmet_marpatd_ess",120,"true"},
+			{"rhsusf_lwh_helmet_marpatd_headset",120,"true"},
+			{"rhsusf_lwh_helmet_marpatwd",120,"true"},
+			{"rhsusf_lwh_helmet_marpatwd_blk_ess",120,"true"},
+			{"rhsusf_lwh_helmet_marpatwd_headset_blk",120,"true"},
+			{"rhsusf_lwh_helmet_marpatwd_headset",120,"true"},
+			{"rhsusf_lwh_helmet_marpatwd_ess",120,"true"},
+			{"rhsgref_helmet_M1_bare",120,"true"},
+			{"rhsgref_helmet_M1_bare_alt01",120,"true"},
+			{"rhsgref_helmet_M1_painted",120,"true"},
+			{"rhsgref_helmet_M1_painted_alt01",120,"true"},
+			{"rhssaf_helmet_m97_black_nocamo",120,"true"},
+			{"rhssaf_helmet_m97_black_nocamo_black_ess",120,"true"},
+			{"rhssaf_helmet_m97_black_nocamo_black_ess_bare",120,"true"},
+			{"rhssaf_helmet_m97_nostrap_blue",120,"true"},
+			{"rhssaf_helmet_m97_nostrap_blue_tan_ess",120,"true"},
+			{"rhssaf_helmet_m97_nostrap_blue_tan_ess_bare",120,"true"},
+			{"rhssaf_helmet_m97_digital",120,"true"},
+			{"rhssaf_helmet_m97_digital_black_ess",120,"true"},
+			{"rhssaf_helmet_m97_digital_black_ess_bare",120,"true"},
+			{"rhssaf_helmet_m97_md2camo",120,"true"},
+			{"H_Hat_blue",10,"true"},
+			{"H_Hat_brown",10,"true"},
+			{"rhsusf_opscore_ut",120,"true"},
+			{"rhsusf_opscore_ut_pelt",120,"true"},
+			{"rhsusf_opscore_ut_pelt_cam",120,"true"},
+			{"rhsusf_opscore_ut_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_ut_pelt_nsw_cam",120,"true"},
+			{"rhsusf_opscore_mar_fg",120,"true"},
+			{"rhsusf_opscore_mar_fg_pelt",120,"true"},
+			{"rhsusf_opscore_mar_ut",120,"true"},
+			{"rhsusf_opscore_mar_ut_pelt",120,"true"},
+			{"VSM_Peltor_M81",10,"true"},
+			{"VSM_Peltor_OCP",10,"true"},
+			{"rhsusf_opscore_mc_cover_pelt_cam",120,"true"},
+			{"rhsusf_opscore_mc",120,"true"},
+			{"rhsusf_opscore_mc_pelt",120,"true"},
+			{"rhsusf_opscore_mc_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_paint",120,"true"},
+			{"rhsusf_opscore_paint_pelt",120,"true"},
+			{"rhsusf_opscore_paint_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_paint_pelt_nsw_cam",120,"true"},
+			{"VSM_Peltor_OD",10,"true"},
+			{"H_Cap_surfer",10,"true"},
+			{"H_Cap_tan",10,"true"},
+			{"H_Cap_khaki_specops_UK",10,"true"},
+			{"H_Cap_usblack",10,"true"},
+			{"H_Cap_tan_specops_US",10,"true"},
+			{"H_Cap_White_IDAP_F",10,"true"},
+			{"H_Cap_blk_Raven",10,"true"},
+			{"H_HelmetB",120,"true"},
+			{"H_EarProtectors_black_F",10,"true"},
+			{"H_EarProtectors_orange_F",10,"true"},
+			{"H_EarProtectors_red_F",10,"true"},
+			{"H_EarProtectors_white_F",10,"true"},
+			{"H_EarProtectors_yellow_F",10,"true"},
+			{"ADFU_Helmet_ECH_AMC",120,"true"},
+			{"ADFU_Helmet_ECH_AMP",120,"true"},
+			{"rhsusf_opscore_aor1",120,"true"},
+			{"rhsusf_opscore_aor1_pelt",120,"true"},
+			{"rhsusf_opscore_aor1_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_aor2",120,"true"},
+			{"rhsusf_opscore_aor2_pelt",120,"true"},
+			{"rhsusf_opscore_aor2_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_bk",120,"true"},
+			{"rhsusf_opscore_bk_pelt",120,"true"},
+			{"rhsusf_opscore_coy_cover",120,"true"},
+			{"rhsusf_opscore_coy_cover_pelt",120,"true"},
+			{"rhsusf_opscore_fg",120,"true"},
+			{"rhsusf_opscore_fg_pelt",120,"true"},
+			{"rhsusf_opscore_fg_pelt_cam",120,"true"},
+			{"rhsusf_opscore_fg_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_mc_cover",120,"true"},
+			{"rhsusf_opscore_mc_cover_pelt",120,"true"},
+			{"rhsusf_opscore_mc_cover_pelt_nsw",120,"true"},
+			{"H_Cap_brn_SPECOPS",120,"true"},
+			{"milgp_h_cap_01_CB",10,"true"},
+			{"milgp_h_cap_01_khk",10,"true"},
+			{"milgp_h_cap_01_MC",10,"true"},
+			{"milgp_h_cap_01_RGR",10,"true"},
+			{"milgp_h_cap_01_goggles_CB",10,"true"},
+			{"milgp_h_cap_01_goggles_khk",10,"true"},
+			{"milgp_h_cap_01_goggles_MC",10,"true"},
+			{"milgp_h_cap_01_goggles_RGR",10,"true"},
+			{"milgp_h_cap_02_CB",10,"true"},
+			{"milgp_h_cap_02_khk",10,"true"},
+			{"milgp_h_cap_02_MC",10,"true"},
+			{"milgp_h_cap_02_RGR",10,"true"},
+			{"milgp_h_cap_02_goggles_CB",10,"true"},
+			{"milgp_h_cap_02_goggles_khk",10,"true"},
+			{"milgp_h_cap_02_goggles_MC",10,"true"},
+			{"milgp_h_cap_02_goggles_RGR",10,"true"},
+			{"milgp_h_cap_03_CB",10,"true"},
+			{"milgp_h_cap_03_khk",10,"true"},
+			{"milgp_h_cap_03_MC",10,"true"},
+			{"milgp_h_cap_03_RGR",10,"true"},
+			{"milgp_h_cap_03_goggles_CB",10,"true"},
+			{"milgp_h_cap_03_goggles_khk",10,"true"},
+			{"milgp_h_cap_03_goggles_MC",10,"true"},
+			{"milgp_h_cap_03_goggles_RGR",10,"true"},
+			{"milgp_h_cap_backwards_01_CB",10,"true"},
+			{"milgp_h_cap_backwards_01_khk",10,"true"},
+			{"milgp_h_cap_backwards_01_MC",10,"true"},
+			{"milgp_h_cap_backwards_01_RGR",10,"true"},
+			{"milgp_h_cap_backwards_01_goggles_CB",10,"true"},
+			{"milgp_h_cap_backwards_01_goggles_khk",10,"true"},
+			{"milgp_h_cap_backwards_01_goggles_MC",10,"true"},
+			{"milgp_h_cap_backwards_01_goggles_RGR",10,"true"},
+			{"milgp_h_cap_backwards_02_CB",10,"true"},
+			{"milgp_h_cap_backwards_02_khk",10,"true"},
+			{"milgp_h_cap_backwards_02_MC",10,"true"},
+			{"milgp_h_cap_backwards_02_RGR",10,"true"},
+			{"milgp_h_cap_backwards_02_goggles_CB",10,"true"},
+			{"milgp_h_cap_backwards_02_goggles_khk",10,"true"},
+			{"milgp_h_cap_backwards_02_goggles_MC",10,"true"},
+			{"milgp_h_cap_backwards_02_goggles_RGR",10,"true"},
+			{"milgp_h_cap_backwards_03_CB",10,"true"},
+			{"milgp_h_cap_backwards_03_khk",10,"true"},
+			{"milgp_h_cap_backwards_03_MC",10,"true"},
+			{"milgp_h_cap_backwards_03_RGR",10,"true"},
+			{"milgp_h_cap_backwards_03_goggles_CB",10,"true"},
+			{"milgp_h_cap_backwards_03_goggles_khk",10,"true"},
+			{"milgp_h_cap_backwards_03_goggles_MC",10,"true"},
+			{"milgp_h_cap_backwards_03_goggles_RGR",10,"true"},
+			{"H_Booniehat_oli",10,"true"},	
+			{"VME_Booniehat_PLAAF",10,"true"},
+			{"VME_Booniehat_PLAN",10,"true"},
+			{"H_Booniehat_tan",10,"true"},
+			{"rhsgref_Booniehat_alpen",10,"true"},
+			{"rhs_Booniehat_m81",10,"true"},
+			{"rhs_booniehat2_marpatd",10,"true"},
+			{"rhs_booniehat2_marpatwd",10,"true"},
+			{"rhs_Booniehat_ocp",10,"true"},
+			{"rhs_Booniehat_ucp",10,"true"},
+			{"rhssaf_booniehat_digital",10,"true"},
+			{"rhssaf_booniehat_md2camo",10,"true"},
+			{"rhssaf_booniehat_woodland",10,"true"},
+			{"rhsusf_Bowman",10,"true"},
+			{"rhsusf_bowman_cap",10,"true"},
+			{"ADFU_Cap_AMCS",10,"true"},
+			{"ADFU_Cap_AMCT",10,"true"},
+			{"ADFU_Cap_AMC",10,"true"},
+			{"H_Cap_grn_BI",10,"true"},
+			{"H_Cap_blk",10,"true"},
+			{"H_Cap_Black_IDAP_F",10,"true"},
+			{"H_Cap_blu",10,"true"},
+			{"H_Cap_blk_CMMG",10,"true"},
+			{"H_Cap_grn",10,"true"},
+			{"H_Cap_blk_ION",10,"true"},
+			{"ADFU_Cap_MC",10,"true"},
+			{"H_Cap_oli",10,"true"},
+			{"H_Cap_oli_hs",10,"true"},
+			{"H_Cap_Orange_IDAP_F",10,"true"},
+			{"H_Cap_police",10,"true"},
+			{"H_Cap_press",10,"true"},
+			{"H_Cap_red",10,"true"},
+			{"rhs_altyn_visordown",120,"true"},
+			{"rhs_altyn",120,"true"},
+			{"rhs_altyn_bala",120,"true"},
+			{"H_HelmetSpecO_blk",120,"true"},
+			{"H_PASGT_basic_black_F",120,"true"},
+			{"H_PASGT_basic_blue_F",120,"true"},
+			{"H_PASGT_basic_olive_F",120,"true"},
+			{"H_PASGT_basic_white_F",120,"true"},
+			{"rhs_beanie_green",10,"true"},
+			{"H_Watchcap_blk",10,"true"},
+			{"H_Watchcap_cbr",10,"true"},
+			{"rhs_beanie",10,"true"},
+			{"H_Watchcap_camo",10,"true"},
+			{"H_Watchcap_khk",10,"true"},
+			{"ADFU_Beenie_AMCS",10,"true"},
+			{"BHD_Protec_helmet",120,"true"},
+			{"BHD_Protec_helmet2",120,"true"},
+			{"BHD_Protec_helmet3",120,"true"},
+			{"ADFU_Booniehat_AMCT",10,"true"},
+			{"ADFU_Booniehat_AMC",10,"true"},
+			{"ADFU_Booniehat_AMP",10,"true"},
+			{"VME_Booniehat_PLARF",10,"true"},
+			{"VME_Booniehat_PLARF2",10,"true"},
+			{"VME_Booniehat_DES",10,"true"},
+			{"H_Booniehat_khk_hs",10,"true"},
+			{"H_Booniehat_khk",10,"true"},
+			{"ADFU_Booniehat_MC",10,"true"},
+			{"H_Booniehat_mcamo",10,"true"},
+			{"rhsusf_ach_helmet_ucp",120,"true"},
+			{"milgp_h_airframe_04_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_04_CB",120,"true"},
+			{"milgp_h_airframe_04_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_04_khk",120,"true"},
+			{"milgp_h_airframe_04_MC",120,"true"},
+			{"milgp_h_airframe_04_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_04_RGR",120,"true"},
+			{"milgp_h_airframe_04_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_04_goggles_CB",120,"true"},
+			{"milgp_h_airframe_04_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_04_goggles_khk",120,"true"},
+			{"milgp_h_airframe_04_goggles_MC",120,"true"},
+			{"milgp_h_airframe_04_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_04_goggles_RGR",120,"true"},
+			{"milgp_h_airframe_05_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_05_CB",120,"true"},
+			{"milgp_h_airframe_05_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_05_khk",120,"true"},
+			{"milgp_h_airframe_05_MC",120,"true"},
+			{"milgp_h_airframe_05_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_05_RGR",120,"true"},
+			{"milgp_h_airframe_05_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_05_goggles_CB",120,"true"},
+			{"milgp_h_airframe_05_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_05_goggles_khk",120,"true"},
+			{"milgp_h_airframe_05_goggles_MC",120,"true"},
+			{"milgp_h_airframe_05_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_05_goggles_RGR",120,"true"},
+			{"milgp_h_airframe_06_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_06_CB",120,"true"},
+			{"milgp_h_airframe_06_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_06_khk",120,"true"},
+			{"milgp_h_airframe_06_MC",120,"true"},
+			{"milgp_h_airframe_06_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_06_RGR",120,"true"},
+			{"milgp_h_airframe_06_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_06_goggles_CB",120,"true"},
+			{"milgp_h_airframe_06_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_06_goggles_khk",120,"true"},
+			{"milgp_h_airframe_06_goggles_MC",120,"true"},
+			{"milgp_h_airframe_06_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_06_goggles_RGR",120,"true"},
+			{"rhs_altyn_novisor",120,"true"},
+			{"rhs_altyn_novisor_bala",120,"true"},
+			{"rhs_altyn_novisor_ess",120,"true"},
+			{"rhs_altyn_novisor_ess_bala",120,"true"},
+			{"rhsusf_ach_helmet_ESS_ucp",120,"true"},
+			{"rhsusf_cvc_green_ess",120,"true"},
+			{"rhsusf_cvc_helmet",120,"true"},
+			{"rhsusf_cvc_alt_helmet",120,"true"},
+			{"rhsusf_cvc_ess",120,"true"},
+			{"ADFU_H_Airframe_Cover_03_AMCS",120,"true"},
+			{"ADFU_H_Airframe_Cover_02_AMCS",120,"true"},
+			{"ADFU_H_Airframe_Cover_03_AMCT",120,"true"},
+			{"milgp_h_airframe_02_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_02_CB",120,"true"},
+			{"milgp_h_airframe_02_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_02_khk",120,"true"},
+			{"milgp_h_airframe_02_MC",120,"true"},
+			{"milgp_h_airframe_02_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_02_RGR",120,"true"},
+			{"milgp_h_airframe_02_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_02_goggles_CB",120,"true"},
+			{"milgp_h_airframe_02_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_02_goggles_khk",120,"true"},
+			{"milgp_h_airframe_02_goggles_MC",120,"true"},
+			{"milgp_h_airframe_02_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_02_goggles_RGR",120,"true"},
+			{"milgp_h_airframe_03_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_03_CB",120,"true"},
+			{"milgp_h_airframe_03_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_03_khk",120,"true"},
+			{"milgp_h_airframe_03_MC",120,"true"},
+			{"milgp_h_airframe_03_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_03_RGR",120,"true"},
+			{"milgp_h_airframe_03_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_03_goggles_CB",120,"true"},
+			{"milgp_h_airframe_03_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_03_goggles_khk",120,"true"},
+			{"milgp_h_airframe_03_goggles_MC",120,"true"},
+			{"milgp_h_airframe_03_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_03_goggles_RGR",120,"true"},
+			{"ADFU_H_Airframe_Cover_02_AMCT",120,"true"},
+			{"ADFU_H_Airframe_Cover_03_AMC",120,"true"},
+			{"ADFU_H_Airframe_Cover_02_AMC",120,"true"},
+			{"ADFU_H_Airframe_Cover_05_MC",120,"true"},
+			{"ADFU_H_Airframe_Cover_03_MC",120,"true"},
+			{"ADFU_H_Airframe_Cover_02_MC",120,"true"},
+			{"milgp_h_airframe_01_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_01_CB",120,"true"},
+			{"milgp_h_airframe_01_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_01_khk",120,"true"},
+			{"milgp_h_airframe_01_MC",120,"true"},
+			{"milgp_h_airframe_01_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_01_RGR",120,"true"},
+			{"milgp_h_airframe_01_goggles_CB_hexagon",120,"true"},
+			{"milgp_h_airframe_01_goggles_CB",120,"true"},
+			{"milgp_h_airframe_01_goggles_khk_hexagon",120,"true"},
+			{"milgp_h_airframe_01_goggles_khk",120,"true"},
+			{"milgp_h_airframe_01_goggles_MC",120,"true"},
+			{"milgp_h_airframe_01_goggles_RGR_hexagon",120,"true"},
+			{"milgp_h_airframe_01_goggles_RGR",120,"true"},
+			{"rhsusf_ach_helmet_headset_ucp",120,"true"},
+			{"rhsusf_ach_helmet_headset_ess_ucp",120,"true"},
+			{"rhsusf_cvc_green_alt_helmet",120,"true"},
+			{"rhsusf_ach_helmet_ucp_norotos",120,"true"},
+			{"rhsusf_cvc_green_helmet",120,"true"},
+			{"rhsusf_ach_bare",120,"true"},
+			{"rhsusf_ach_bare_des",120,"true"},
+			{"rhsusf_ach_bare_des_ess",120,"true"},
+			{"rhsusf_ach_bare_des_headset",120,"true"},
+			{"rhsusf_ach_bare_des_headset_ess",120,"true"},
+			{"rhsusf_ach_bare_ess",120,"true"},
+			{"rhsusf_ach_bare_headset",120,"true"},
+			{"rhsusf_ach_bare_headset_ess",120,"true"},
+			{"rhsusf_ach_bare_semi",120,"true"},
+			{"rhsusf_ach_bare_semi_ess",120,"true"},
+			{"rhsusf_ach_bare_semi_headset",120,"true"},
+			{"rhsusf_ach_bare_semi_headset_ess",120,"true"},
+			{"rhsusf_ach_bare_tan",120,"true"},
+			{"rhsusf_ach_bare_tan_ess",120,"true"},
+			{"rhsusf_ach_bare_tan_headset",120,"true"},
+			{"rhsusf_ach_bare_tan_headset_ess",120,"true"},
+			{"rhsusf_ach_bare_wood",120,"true"},
+			{"rhsusf_ach_bare_wood_ess",120,"true"},
+			{"rhsusf_ach_bare_wood_headset",120,"true"},
+			{"rhsusf_ach_bare_wood_headset_ess",120,"true"},
+			{"rhsusf_ach_helmet_M81",120,"true"},
+			{"rhsusf_ach_helmet_ocp",120,"true"},
+			{"rhsusf_ach_helmet_ESS_ocp",120,"true"},
+			{"rhsusf_ach_helmet_headset_ocp",120,"true"},
+			{"rhsusf_ach_helmet_headset_ess_ocp",120,"true"},
+			{"rhsusf_ach_helmet_camo_ocp",120,"true"},
+			{"rhsusf_ach_helmet_ocp_norotos",120,"true"},
+			{"VSM_Protec_a_Alpha",120,"true"},
+			{"VSM_Protec_a_Alpha_balaclava",120,"true"},
+			{"VSM_FullShemagh_OD_pattern",10,"true"},
+			{"VSM_FullShemagh_OD",10,"true"},
+			{"VSM_FullShemagh_Tan_pattern",10,"true"},
+			{"VSM_FullShemagh_Tan",10,"true"},
+			{"VSM_SORDIN_coyote",10,"true"},
+			{"VSM_z110t_coyote",10,"true"},
+			{"VSM_AirFrame",120,"true"},
+			{"VSM_AirFrame_Operator",120,"true"},
+			{"VSM_AirFrame_balaclava",120,"true"},
+			{"VSM_AirFrame_Operator_balaclava",10,"true"},
+			{"VSM_BackwardsHat_Peltor_black",10,"true"},
+			{"VSM_BackwardsHat_Peltor_CMMG",10,"true"},
+			{"VSM_BackwardsHat_Peltor_ION",10,"true"},
+			{"VSM_BackwardsHat_Peltor_OD",10,"true"},
+			{"VSM_BackwardsHat_Peltor_Sero",10,"true"},
+			{"VSM_BackwardsHat_Peltor_tan",10,"true"},
+			{"VSM_Black_OPS_2",120,"true"},
+			{"VSM_M81_OPS_2",120,"true"},
+			{"VSM_OPS_2_multicam",120,"true"},
+			{"VSM_MulticamTropic_OPS_2",120,"true"},
+			{"VSM_OPS_2_ocp",120,"true"},
+			{"VSM_OD_Spray_OPS_2",120,"true"},
+			{"VSM_OGA_OD_OPS_2",120,"true"},
+			{"VSM_oga_OPS_2",120,"true"},
+			{"VSM_ProjectHonor_OPS_2",120,"true"},
+			{"VSM_Tan_spray_OPS_2",120,"true"},
+			{"VSM_Peltor_AOR1",10,"true"},
+			{"VSM_Peltor_coyote",10,"true"},
+			{"VSM_Tan_spray_OPS",120,"true"},
+			{"VSM_OPS_2",120,"true"},
+			{"VSM_OPS_2_AOR1",120,"true"},
+			{"VSM_Mich2000_Balaclava_coyote",120,"true"},
+			{"VSM_Mich2000_bandana_coyote",120,"true"},
+			{"VSM_Mich2000_2_aor1",120,"true"},
+			{"VSM_Mich2000_2_M81",120,"true"},
+			{"VSM_Mich2000_2_MulticamTropic",120,"true"},
+			{"VSM_Mich2000_2_Multicam",120,"true"},
+			{"VSM_Mich2000_2_OCP",120,"true"},
+			{"VSM_Mich2000_2_CamoSprayOD",120,"true"},
+			{"VSM_Mich2000_2_OGA_OD",120,"true"},
+			{"VSM_Mich2000_2_OGA",120,"true"},
+			{"VSM_Mich2000_2_ProjectHonor",120,"true"},
+			{"VSM_Mich2000_2_CamoSprayTAN",120,"true"},
+			{"VSM_OGA_Helmet1",120,"true"},
+			{"VSM_OGA_OD_Helmet1",120,"true"},
+			{"VSM_OGA_Helmet2",120,"true"},
+			{"VSM_OGA_OD_Helmet2",120,"true"},
+			{"VSM_OPS",120,"true"},
+			{"VSM_Opscore",120,"true"},
+			{"VSM_OPS_aor1",120,"true"},
+			{"VSM_Black_OPS",120,"true"},
+			{"VSM_M81_OPS",120,"true"},
+			{"VSM_OPS_multicam",120,"true"},
+			{"VSM_MulticamTropic_OPS",120,"true"},
+			{"VSM_OPS_ocp",120,"true"},
+			{"VSM_OD_spray_OPS",120,"true"},
+			{"VSM_OGA_OD_OPS",120,"true"},
+			{"VSM_oga_OPS",120,"true"},
+			{"VSM_ProjectHonor_OPS",120,"true"},
+			{"VSM_BackwardsHat_Peltor_US",10,"true"},
+			{"VSM_Beanie_Black",10,"true"},
+			{"VSM_Beanie_OD",10,"true"},
+			{"VSM_Beanie_tan",10,"true"},
+			{"VSM_Multicam_Boonie",10,"true"},
+			{"VSM_Bowman",10,"true"},
+			{"VSM_Bowman_cap_balaclava_Black",10,"true"},
+			{"VSM_Bowman_cap_balaclava_Olive",10,"true"},
+			{"VSM_Bowman_cap_balaclava_Tan",10,"true"},
+			{"VSM_Bowman_cap_Black",10,"true"},
+			{"VSM_Bowman_cap_Green",10,"true"},
+			{"VSM_Bowman_cap_Tan",10,"true"},
+			{"VSM_Multicam_Cap",10,"true"},
+			{"VSM_HAT_Multicam",10,"true"},
+			{"VSM_HAT_OD",10,"true"},
+			{"VSM_HAT_PZA",10,"true"},
+			{"VSM_HAT_PZJ",10,"true"},
+			{"VSM_HAT_PZW",10,"true"},
+			{"VSM_HAT_TAN",10,"true"},
+			{"VSM_Headwrap",10,"true"},
+			{"VSM_Mich2000_AOR1",120,"true"},
+			{"VSM_Mich2000_coyote",120,"true"},
+			{"VSM_Mich2000_M81",120,"true"},
+			{"VSM_Mich2000_MulticamTropic",120,"true"},
+			{"VSM_Mich2000_Multicam",120,"true"},
+			{"VSM_Mich2000_ocp",120,"true"},
+			{"VSM_Mich2000_CamoSprayOD",120,"true"},
+			{"VSM_Mich2000_OGA_OD",120,"true"},
+			{"VSM_Mich2000_OGA",120,"true"},
+			{"VSM_Mich2000_ProjectHonor",120,"true"},
+			{"VSM_Mich2000_CamoSprayTAN",120,"true"},
+			{"rhsusf_opscore_fg_pelt",120,"true"},
+			{"rhsusf_opscore_fg_pelt_cam",120,"true"},
+			{"rhsusf_opscore_fg_pelt_cam_nsw",120,"true"},
+			{"rhsusf_opscore_mc",120,"true"},
+			{"rhsusf_opscore_mc_pelt",120,"true"},
+			{"rhsusf_opscore_mc_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_mc_cover",120,"true"},
+			{"rhsusf_opscore_mc_cover_pelt",120,"true"},
+			{"rhsusf_opscore_mc_cover_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_mc_cover_pelt_cam_nsw",120,"true"},
+			{"rhsusf_opscore_paint",120,"true"},
+			{"rhsusf_opscore_paint_pelt",120,"true"},
+			{"rhsusf_opscore_paint_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_paint_pelt_nsw_cam",120,"true"},
+			{"rhsusf_opscore_rg_cover",120,"true"},
+			{"rhsusf_opscore_rg_cover_pelt",120,"true"},
+			{"rhsusf_opscore_ut",120,"true"},
+			{"rhsusf_opscore_ut_pelt",120,"true"},
+			{"rhsusf_opscore_ut_pelt_nsw",120,"true"},
+			{"rhsusf_opscore_ut_pelt_nsw_cam",120,"true"},
+			{"milgp_h_opscore_01_mc",120,"true"},
+			{"milgp_h_opscore_01_rgr",120,"true"},
+			{"milgp_h_opscore_01_cb",120,"true"},
+			{"milgp_h_opscore_01_khk",120,"true"},
+			{"milgp_h_opscore_02_mc",120,"true"},
+			{"milgp_h_opscore_02_rgr",120,"true"},
+			{"milgp_h_opscore_02_cb",120,"true"},
+			{"milgp_h_opscore_02_khk",120,"true"},
+			{"milgp_h_opscore_01_goggles_mc",120,"true"},
+			{"milgp_h_opscore_01_goggles_rgr",120,"true"},
+			{"milgp_h_opscore_01_goggles_cb",120,"true"},
+			{"milgp_h_opscore_01_goggles_khk",120,"true"},
+			{"milgp_h_opscore_02_goggles_mc",120,"true"},
+			{"milgp_h_opscore_02_goggles_rgr",120,"true"},
+			{"milgp_h_opscore_02_goggles_cb",120,"true"},
+			{"milgp_h_opscore_02_goggles_khk",120,"true"},
+			{"milgp_h_opscore_03_mc",120,"true"},
+			{"milgp_h_opscore_03_rgr",120,"true"},
+			{"milgp_h_opscore_03_cb",120,"true"},
+			{"milgp_h_opscore_03_khk",120,"true"},
+			{"milgp_h_opscore_04_mc",120,"true"},
+			{"milgp_h_opscore_04_rgr",120,"true"},
+			{"milgp_h_opscore_04_cb",120,"true"},
+			{"milgp_h_opscore_04_khk",120,"true"},
+			{"milgp_h_opscore_03_goggles_mc",120,"true"},
+			{"milgp_h_opscore_03_goggles_rgr",120,"true"},
+			{"milgp_h_opscore_03_goggles_cb",120,"true"},
+			{"milgp_h_opscore_03_goggles_khk",120,"true"},
+			{"milgp_h_opscore_04_goggles_mc",120,"true"},
+			{"milgp_h_opscore_04_goggles_rgr",120,"true"},
+			{"milgp_h_opscore_04_goggles_cb",120,"true"},
+			{"milgp_h_opscore_04_goggles_khk",120,"true"},
+			{"milgp_h_airframe_01_mc",120,"true"},
+			{"milgp_h_airframe_01_rgr",120,"true"},
+			{"milgp_h_airframe_01_cb",120,"true"},
+			{"milgp_h_airframe_01_khk",120,"true"},
+			{"milgp_h_airframe_02_mc",120,"true"},
+			{"milgp_h_airframe_02_rgr",120,"true"},
+			{"milgp_h_airframe_02_cb",120,"true"},
+			{"milgp_h_airframe_02_khk",120,"true"},
+			{"milgp_h_airframe_01_goggles_mc",120,"true"},
+			{"milgp_h_airframe_01_goggles_rgr",120,"true"},
+			{"milgp_h_airframe_01_goggles_cb",120,"true"},
+			{"milgp_h_airframe_01_goggles_khk",120,"true"},
+			{"milgp_h_airframe_02_goggles_mc",120,"true"},
+			{"milgp_h_airframe_02_goggles_rgr",120,"true"},
+			{"milgp_h_airframe_02_goggles_cb",120,"true"},
+			{"milgp_h_airframe_02_goggles_khk",120,"true"},
+			{"milgp_h_airframe_03_mc",120,"true"},
+			{"milgp_h_airframe_03_rgr",120,"true"},
+			{"milgp_h_airframe_03_cb",120,"true"},
+			{"milgp_h_airframe_03_khk",120,"true"},
+			{"milgp_h_airframe_04_mc",120,"true"},
+			{"milgp_h_airframe_04_rgr",120,"true"},
+			{"milgp_h_airframe_04_cb",120,"true"},
+			{"milgp_h_airframe_04_khk",120,"true"},
+			{"milgp_h_airframe_03_goggles_mc",120,"true"},
+			{"milgp_h_airframe_03_goggles_rgr",120,"true"},
+			{"milgp_h_airframe_03_goggles_cb",120,"true"},
+			{"milgp_h_airframe_03_goggles_khk",120,"true"},
+			{"milgp_h_airframe_04_goggles_mc",120,"true"},
+			{"milgp_h_airframe_04_goggles_rgr",120,"true"},
+			{"milgp_h_airframe_04_goggles_cb",120,"true"},
+			{"milgp_h_airframe_04_goggles_khk",120,"true"},
+			{"ADFU_H_Airframe_Cover_05_MC_Glue",120,"true"},
+			{"VSM_OPS_2_Multicam_Logan",120,"true"},
+			{"ADFU_H_Opscore_04_MC_B",120,"true"},
+			{"ADFU_H_Opscore_08_Test1",120,"true"},
+			{"rhsusf_opscore_mc_cover_pelt_nsw_cook",120,"true"},
+			{"VSM_OPS_2_multicam_logan",120,"true"},
+			{"milgp_h_opscore_06_goggles_MC_frank",120,"true"},
+			{"ADFU_H_OpsCore_08_Lube",120,"true"},
+			{"VSM_OPS_2_multicam_pen",120,"true"},
+			{"VSM_OPS_2_multicam_stoner",120,"true"},
+			{"VSM_OPS_2_multicam_storm",120,"true"},
+			{"VSM_Airframe",120,"true"},
+			{"VSM_Airframe_Operator",120,"true"},
+			{"VSM_Airframe_balaclava",120,"true"},
+			{"VSM_Airframe_Operator_balaclava",120,"true"},
+			{"VSM_Bowman",10,"true"},
+			{"VSM_Bowman_cap_balaclava_black",10,"true"},
+			{"VSM_OPS_2_multicam",120,"true"},
+			{"VSM_OPS_multicam",120,"true"},
+			{"rhsusf_ach_bare_tan_headset",120,"true"},
+			{"rhsusf_ach_bare_wood_headset",120,"true"},
+			{"rhsusf_ach_bare_semi_headset",120,"true"},
+			{"rhsusf_ach_bare_headset",120,"true"},
+			{"rhsusf_ach_helmet_camo_ocp",120,"true"},
+			{"ADFU_H_Opscore_08_MC",120,"true"}
+	    };
+	};
+	
+	class Vest
+	{
+		displayName = "$STR_HG_SHOP_VESTS";
+		content[] =
+		{
+			{"lbt_comms_OD2",200,"true"},
+			{"lbt_medical_OD2",200,"true"},
+			{"lbt_operator_OD2",200,"true"},
+			{"lbt_pouchless_OD2",200,"true"},
+			{"lbt_tl_OD2",200,"true"},
+			{"lbt_weapons_OD2",200,"true"},
+			{"lbt_comms_blk",200,"true"},
+			{"lbt_medical_blk",200,"true"},
+			{"lbt_operator_blk",200,"true"},
+			{"lbt_pouchless_blk",200,"true"},
+			{"lbt_tl_blk",200,"true"},
+			{"lbt_weapons_blk",200,"true"},
+			{"lbt_comms_coy",200,"true"},
+			{"lbt_medical_coy",200,"true"},
+			{"lbt_operator_coy",200,"true"},
+			{"lbt_pouchless_coy",200,"true"},
+			{"lbt_tl_coy",200,"true"},
+			{"lbt_weapons_coy",200,"true"},
+			{"lbt_comms_OCP",200,"true"},
+			{"lbt_medical_OCP",200,"true"},
+			{"lbt_operator_OCP",200,"true"},
+			{"lbt_pouchless_OCP",200,"true"},
+			{"lbt_tl_OCP",200,"true"},
+			{"lbt_weapons_OCP",200,"true"},
+			{"lbt_comms_aor1",200,"true"},
+			{"lbt_medical_aor1",200,"true"},
+			{"lbt_operator_aor1",200,"true"},
+			{"lbt_pouchless_aor1",200,"true"},
+			{"lbt_tl_aor1",200,"true"},
+			{"lbt_weapons_aor1",200,"true"},
+			{"cpc_Fast_coy",200,"true"},
+			{"cpc_light_coy",200,"true"},
+			{"cpc_medical_coy",200,"true"},
+			{"cpc_tl_coy",200,"true"},
+			{"cpc_weapons_coy",200,"true"},
+			{"cpc_communicationsbelt_coy",200,"true"},
+			{"cpc_Fastbelt_coy",200,"true"},
+			{"cpc_lightbelt_coy",200,"true"},
+			{"cpc_medicalbelt_coy",200,"true"},
+			{"cpc_tlbelt_coy",200,"true"},
+			{"cpc_weaponsbelt_coy",200,"true"},
+			{"cpc_communications_mc",200,"true"},
+			{"cpc_Fast_mc",200,"true"},
+			{"cpc_light_mc",200,"true"},
+			{"cpc_medical_mc",200,"true"},
+			{"cpc_tl_mc",200,"true"},
+			{"cpc_weapons_mc",200,"true"},
+			{"cpc_communicationsbelt_mc",200,"true"},
+			{"cpc_Fastbelt_mc",200,"true"},
+			{"cpc_lightbelt_mc",200,"true"},
+			{"cpc_medicalbelt_mc",200,"true"},
+			{"cpc_tlbelt_mc",200,"true"},
+			{"cpc_weaponsbelt_mc",200,"true"},
+			{"cpc_communications_rngr",200,"true"},
+			{"cpc_Fast_rngr",200,"true"},
+			{"cpc_light_rngr",200,"true"},
+			{"cpc_medical_rngr",200,"true"},
+			{"cpc_tl_rngr",200,"true"},
+			{"lbt_weapons_OD2",200,"true"},
+			{"VSM_FAPC_Operator_OCP",200,"true"},
+			{"VSM_CarrierRig_Breacher_OCP",200,"true"},
+			{"VSM_CarrierRig_Gunner_OCP",200,"true"},
+			{"VSM_CarrierRig_Operator_OCP",200,"true"},
+			{"VSM_LBT6094_breacher_OCP",200,"true"},
+			{"VSM_LBT6094_MG_OCP",200,"true"},
+			{"VSM_LBT6094_operator_OCP",200,"true"},
+			{"VSM_RAV_Breacher_OCP",200,"true"},
+			{"VSM_RAV_MG_OCP",200,"true"},
+			{"VSM_RAV_operator_OCP",200,"true"},
+			{"VSM_LBT1961_OGA_OD",200,"true"},
+			{"VSM_FAPC_Breacher_OGA",200,"true"},
+			{"VSM_FAPC_MG_OGA",200,"true"},
+			{"VSM_FAPC_Operator_OGA",200,"true"},
+			{"VSM_OGA_IOTV_2",200,"true"},
+			{"VSM_OGA_OD_IOTV_2",200,"true"},
+			{"VSM_OGA_IOTV_1",200,"true"},
+			{"VSM_OGA_OD_IOTV_1",200,"true"},
+			{"VSM_CarrierRig_Breacher_OGA",200,"true"},
+			{"VSM_CarrierRig_Gunner_OGA",200,"true"},
+			{"VSM_CarrierRig_Operator_OGA",200,"true"},
+			{"VSM_LBT6094_breacher_OGA",200,"true"},
+			{"VSM_LBT6094_MG_OGA",200,"true"},
+			{"VSM_LBT6094_operator_OGA",200,"true"},
+			{"VSM_FAPC_Breacher_OGA_OD",200,"true"},
+			{"VSM_FAPC_MG_OGA_OD",200,"true"},
+			{"VSM_FAPC_Operator_OGA_OD",200,"true"},
+			{"VSM_CarrierRig_Breacher_OGA_OD",200,"true"},
+			{"VSM_CarrierRig_Gunner_OGA_OD",200,"true"},
+			{"VSM_CarrierRig_Operator_OGA_OD",200,"true"},
+			{"VSM_LBT6094_breacher_OGA_OD",200,"true"},
+			{"VSM_LBT6094_MG_OGA_OD",200,"true"},
+			{"VSM_LBT6094_operator_OGA_OD",200,"true"},
+			{"VSM_RAV_Breacher_OGA_OD",200,"true"},
+			{"VSM_RAV_MG_OGA_OD",200,"true"},
+			{"VSM_RAV_operator_OGA_OD",200,"true"},
+			{"VSM_RAV_Breacher_OGA",200,"true"},
+			{"VSM_RAV_MG_OGA",200,"true"},
+			{"lbt_weapons_aor1",200,"true"},
+			{"cpc_communications_coy",200,"true"},
+			{"cpc_tl_mc_pen",200,"true"},
+			{"cpc_weapons_rngr",200,"true"},
+			{"VSM_MBSS_TAN",200,"true"},
+			{"VSM_MBSS_WTF",200,"true"},
+			{"VSM_MBSS_PACA_BLK",200,"true"},
+			{"VSM_MBSS_PACA_CB",200,"true"},
+			{"VSM_MBSS_PACA",200,"true"},
+			{"VSM_MBSS_PACA_TAN",200,"true"},
+			{"VSM_MBSS_PACA_WTF",200,"true"},
+			{"VSM_FAPC_Breacher_Multicam",200,"true"},
+			{"VSM_FAPC_MG_Multicam",200,"true"},
+			{"VSM_FAPC_Operator_Multicam",200,"true"},
+			{"VSM_CarrierRig_Breacher_Multicam",200,"true"},
+			{"VSM_CarrierRig_Gunner_Multicam",200,"true"},
+			{"VSM_CarrierRig_Operator_Multicam",200,"true"},
+			{"VSM_LBT6094_breacher_Multicam",200,"true"},
+			{"VSM_LBT6094_MG_Multicam",200,"true"},
+			{"VSM_LBT6094_operator_Multicam",200,"true"},
+			{"VSM_RAV_Breacher_Multicam",200,"true"},
+			{"VSM_RAV_MG_Multicam",200,"true"},
+			{"VSM_RAV_operator_Multicam",200,"true"},
+			{"VSM_FAPC_Breacher_MulticamTropic",200,"true"},
+			{"VSM_FAPC_MG_MulticamTropic",200,"true"},
+			{"VSM_FAPC_Operator_MulticamTropic",200,"true"},
+			{"VSM_CarrierRig_Breacher_multicamTropic",200,"true"},
+			{"VSM_CarrierRig_Gunner_multicamTropic",200,"true"},
+			{"VSM_CarrierRig_Operator_multicamTropic",200,"true"},
+			{"VSM_LBT6094_breacher_multicamTropic",200,"true"},
+			{"VSM_LBT6094_MG_multicamTropic",200,"true"},
+			{"VSM_LBT6094_operator_multicamTropic",200,"true"},
+			{"VSM_RAV_Breacher_MulticamTropic",200,"true"},
+			{"VSM_RAV_MG_MulticamTropic",200,"true"},
+			{"VSM_RAV_operator_MulticamTropic",200,"true"},
+			{"cpc_communicationsbelt_rngr",200,"true"},
+			{"cpc_Fastbelt_rngr",200,"true"},
+			{"cpc_lightbelt_rngr",200,"true"},
+			{"cpc_medicalbelt_rngr",200,"true"},
+			{"cpc_tlbelt_rngr",200,"true"},
+			{"cpc_weaponsbelt_rngr",200,"true"},
+			{"VSM_LBT1961_Black",200,"true"},
+			{"VSM_LBT1961_CB",200,"true"},
+			{"VSM_LBT1961_GRN",200,"true"},
+			{"VSM_FAPC_Breacher_M81",200,"true"},
+			{"VSM_FAPC_MG_M81",200,"true"},
+			{"VSM_FAPC_Operator_M81",200,"true"},
+			{"VSM_CarrierRig_Breacher_M81",200,"true"},
+			{"VSM_CarrierRig_Gunner_M81",200,"true"},
+			{"VSM_CarrierRig_Operator_M81",200,"true"},
+			{"VSM_LBT6094_breacher_M81",200,"true"},
+			{"VSM_LBT6094_MG_M81",200,"true"},
+			{"VSM_LBT6094_operator_M81",200,"true"},
+			{"VSM_RAV_Breacher_M81",200,"true"},
+			{"VSM_RAV_MG_M81",200,"true"},
+			{"VSM_RAV_operator_M81",200,"true"},
+			{"VSM_MBSS_BLK",200,"true"},
+			{"VSM_MBSS_CB",200,"true"},
+			{"VSM_MBSS_Green",200,"true"},
+			{"lbt_comms_blk",200,"true"},
+			{"lbt_medical_blk",200,"true"},
+			{"lbt_operator_blk",200,"true"},
+			{"lbt_pouchless_blk",200,"true"},
+			{"lbt_tl_blk",200,"true"},
+			{"lbt_weapons_blk",200,"true"},
+			{"lbt_comms_coy",200,"true"},
+			{"lbt_medical_coy",200,"true"},
+			{"lbt_operator_coy",200,"true"},
+			{"lbt_pouchless_coy",200,"true"},
+			{"lbt_tl_coy",200,"true"},
+			{"lbt_weapons_coy",200,"true"},
+			{"lbt_comms_OCP",200,"true"},
+			{"lbt_medical_OCP",200,"true"},
+			{"lbt_operator_OCP",200,"true"},
+			{"lbt_pouchless_OCP",200,"true"},
+			{"lbt_tl_OCP",200,"true"},
+			{"lbt_weapons_OCP",200,"true"},
+			{"lbt_comms_aor1",200,"true"},
+			{"lbt_medical_aor1",200,"true"},
+			{"VSM_RAV_breacher_multicam",200,"true"},
+			{"milgp_v_jpc_medic_belt_rgr",200,"true"},
+			{"milgp_v_marciras_assaulter_rgr",200,"true"},
+			{"milgp_v_marciras_assaulter_belt_rgr",200,"true"},
+			{"milgp_v_marciras_grenadier_rgr",200,"true"},
+			{"milgp_v_marciras_grenadier_belt_rgr",200,"true"},
+			{"milgp_v_marciras_hgunner_rgr",200,"true"},
+			{"milgp_v_marciras_hgunner_belt_rgr",200,"true"},
+			{"milgp_v_marciras_light_rgr",200,"true"},
+			{"milgp_v_marciras_light_belt_rgr",200,"true"},
+			{"milgp_v_marciras_marksman_rgr",200,"true"},
+			{"milgp_v_marciras_marksman_belt_rgr",200,"true"},
+			{"milgp_v_marciras_medic_rgr",200,"true"},
+			{"milgp_v_marciras_medic_belt_rgr",200,"true"},
+			{"milgp_v_mmac_assaulter_rgr",200,"true"},
+			{"milgp_v_mmac_assaulter_belt_rgr",200,"true"},
+			{"milgp_v_mmac_grenadier_rgr",200,"true"},
+			{"milgp_v_mmac_grenadier_belt_rgr",200,"true"},
+			{"milgp_v_mmac_hgunner_rgr",200,"true"},
+			{"milgp_v_mmac_hgunner_belt_rgr",200,"true"},
+			{"milgp_v_mmac_light_rgr",200,"true"},
+			{"milgp_v_jpc_marksman_mc_cook",200,"true"},
+			{"milgp_marciras_marksman_belt_mc_lube",200,"true"},
+			{"milgp_marciras_marksman_belt_mc_logan",200,"true"},
+			{"milgp_marciras_marksman_belt_mc_frank",200,"true"},
+			{"milgp_v_mmac_light_belt_rgr",200,"true"},
+			{"milgp_v_mmac_marksman_rgr",200,"true"},
+			{"milgp_v_marciras_assaulter_mc",200,"true"},
+			{"milgp_v_marciras_assaulter_belt_mc",200,"true"},
+			{"milgp_v_marciras_grenadier_mc",200,"true"},
+			{"milgp_v_marciras_grenadier_belt_mc",200,"true"},
+			{"milgp_v_marciras_hgunner_mc",200,"true"},
+			{"milgp_v_marciras_hgunner_belt_mc",200,"true"},
+			{"milgp_v_marciras_light_mc",200,"true"},
+			{"milgp_v_marciras_light_belt_mc",200,"true"},
+			{"milgp_v_marciras_marksman_mc",200,"true"},
+			{"milgp_v_marciras_marksman_belt_mc",200,"true"},
+			{"milgp_v_marciras_medic_mc",200,"true"},
+			{"milgp_v_marciras_medic_belt_mc",200,"true"},
+			{"milgp_v_mmac_assaulter_mc",200,"true"},
+			{"milgp_v_mmac_assaulter_belt_mc",200,"true"},
+			{"milgp_v_mmac_grenadier_mc",200,"true"},
+			{"milgp_v_mmac_grenadier_belt_mc",200,"true"},
+			{"milgp_v_mmac_hgunner_mc",200,"true"},
+			{"milgp_v_mmac_hgunner_belt_mc",200,"true"},
+			{"milgp_v_mmac_light_mc",200,"true"},
+			{"milgp_v_mmac_light_belt_mc",200,"true"},
+			{"milgp_v_mmac_marksman_mc",200,"true"},
+			{"milgp_v_mmac_marksman_belt_mc",200,"true"},
+			{"milgp_v_mmac_medic_mc",200,"true"},
+			{"milgp_v_mmac_medic_belt_mc",200,"true"},
+			{"VSM_MBSS_PACA_BattleBelt_Operator",200,"true"},
+			{"ADFU_V_JPC_Assaulter_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Assaulter_MC",200,"true"},
+			{"ADFU_V_JPC_Grenadier_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Grenadier_MC",200,"true"},
+			{"ADFU_V_JPC_Teamleader_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Teamleader_MC",200,"true"},
+			{"ADFU_V_JPC_Medic_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Medic_MC",200,"true"},
+			{"ADFU_V_JPC_Marksman_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Marksman_MC",200,"true"},
+			{"ADFU_V_JPC_Hgunner_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Hgunner_MC",200,"true"},
+			{"milgp_v_mmac_marksman_belt_rgr",200,"true"},
+			{"milgp_v_mmac_medic_rgr",200,"true"},
+			{"milgp_v_mmac_medic_belt_rgr",200,"true"},
+			{"milgp_v_jpc_assaulter_khk",200,"true"},
+			{"milgp_v_jpc_assaulter_belt_khk",200,"true"},
+			{"milgp_v_jpc_grenadier_khk",200,"true"},
+			{"milgp_v_jpc_grenadier_belt_khk",200,"true"},
+			{"milgp_v_jpc_hgunner_khk",200,"true"},
+			{"milgp_v_jpc_hgunner_belt_khk",200,"true"},
+			{"milgp_v_jpc_light_khk",200,"true"},
+			{"milgp_v_jpc_light_belt_khk",200,"true"},
+			{"milgp_v_jpc_marksman_khk",200,"true"},
+			{"milgp_v_jpc_marksman_belt_khk",200,"true"},
+			{"milgp_v_jpc_medic_khk",200,"true"},
+			{"milgp_v_jpc_medic_belt_khk",200,"true"},
+			{"milgp_v_marciras_assaulter_khk",200,"true"},
+			{"milgp_v_marciras_assaulter_belt_khk",200,"true"},
+			{"milgp_v_marciras_grenadier_khk",200,"true"},
+			{"milgp_v_marciras_grenadier_belt_khk",200,"true"},
+			{"milgp_v_marciras_hgunner_khk",200,"true"},
+			{"milgp_v_marciras_hgunner_belt_khk",200,"true"},
+			{"milgp_v_marciras_light_khk",200,"true"},
+			{"milgp_v_marciras_light_belt_khk",200,"true"},
+			{"milgp_v_marciras_marksman_khk",200,"true"},
+			{"milgp_v_marciras_marksman_belt_khk",200,"true"},
+			{"milgp_v_marciras_medic_khk",200,"true"},
+			{"milgp_v_marciras_medic_belt_khk",200,"true"},
+			{"milgp_v_mmac_assaulter_khk",200,"true"},
+			{"milgp_v_mmac_assaulter_belt_khk",200,"true"},
+			{"milgp_v_mmac_grenadier_khk",200,"true"},
+			{"milgp_v_mmac_grenadier_belt_khk",200,"true"},
+			{"milgp_v_mmac_hgunner_khk",200,"true"},
+			{"milgp_v_mmac_hgunner_belt_khk",200,"true"},
+			{"milgp_v_mmac_light_khk",200,"true"},
+			{"milgp_v_mmac_light_belt_khk",200,"true"},
+			{"milgp_v_mmac_marksman_khk",200,"true"},
+			{"milgp_v_mmac_marksman_belt_khk",200,"true"},
+			{"milgp_v_mmac_medic_khk",200,"true"},
+			{"milgp_v_mmac_medic_belt_khk",200,"true"},
+			{"VSM_RAV_MG_oga",200,"true"},
+			{"VSM_RAV_breacher_oga",200,"true"},
+			{"VSM_LBT6094_operator_oga",200,"true"},
+			{"VSM_LBT6094_MG_oga",200,"true"},
+			{"VSM_LBT6094_breacher_oga",200,"true"},
+			{"VSM_LBT6094_operator_oga",200,"true"},
+			{"VSM_carrierrig_operator_oga",200,"true"},
+			{"VSM_carrierrig_breacher_oga",200,"true"},
+			{"VSM_carrierrig_MG_oga",200,"true"},
+			{"VSM_FAPC_Operator_oga",200,"true"},
+			{"VSM_FAPC_MG_oga",200,"true"},
+			{"VSM_FAPC_breacher_oga",200,"true"},
+			{"VSM_RAV_operator_oga_od",200,"true"},
+			{"VSM_RAV_MG_oga_od",200,"true"},
+			{"VSM_RAV_breacher_oga_od",200,"true"},
+			{"VSM_LBT6094_operator_oga_od",200,"true"},
+			{"VSM_LBT6094_MG_oga_od",200,"true"},
+			{"VSM_LBT6094_breacher_oga_od",200,"true"},
+			{"VSM_LBT6094_operator_oga_od",200,"true"},
+			{"VSM_carrierrig_operator_oga_od",200,"true"},
+			{"VSM_carrierrig_breacher_oga_od",200,"true"},
+			{"VSM_carrierrig_MG_oga_od",200,"true"},
+			{"VSM_FAPC_Operator_oga_od",200,"true"},
+			{"VSM_FAPC_MG_oga_od",200,"true"},
+			{"VSM_FAPC_breacher_oga_od",200,"true"},
+			{"VSM_2017_Chestrig",200,"true"},
+			{"VSM_2017_Chestrig_PACA",200,"true"},
+			{"VSM_CIRAS",200,"true"},
+			{"VSM_LBT6094_operator_multicam",200,"true"},
+			{"VSM_LBT6094_MG_multicam",200,"true"},
+			{"VSM_LBT6094_breacher_multicam",200,"true"},
+			{"VSM_LBT6094_operator_multicam",200,"true"},
+			{"VSM_carrierrig_operator_multicam",200,"true"},
+			{"VSM_carrierrig_breacher_multicam",200,"true"},
+			{"VSM_carrierrig_MG_multicam",200,"true"},
+			{"VSM_FAPC_Operator_multicam",200,"true"},
+			{"VSM_FAPC_MG_multicam",200,"true"},
+			{"TAC_V_tacv10LC_TN",200,"true"},
+			{"TAC_V_tacv1LC_SRF",200,"true"},
+			{"TAC_V_tacv1_SRF2",200,"true"},
+			{"TAC_V_tacv1_SRF",200,"true"},
+			{"TAC_V_tacv1LC_P",200,"true"},
+			{"TAC_V_tacv1_P2",200,"true"},
+			{"TAC_V_tacv1_P",200,"true"},
+			{"TAC_SEAL_RRV21_AOR1",200,"true"},
+			{"TAC_SEAL_RRV26_AOR1",200,"true"},
+			{"TAC_SEAL_RRV23L_AOR1",200,"true"},
+			{"TAC_SEAL_RRV27_AOR1",200,"true"},
+			{"TAC_EI_RRVS_SPR",200,"true"},
+			{"TAC_EI_RRVS_RCN",200,"true"},
+			{"TAC_EI_RRVS_SPR2",200,"true"},
+			{"TAC_EI_RRV211_RG",200,"true"},
+			{"TAC_EI_RRV211_OD",200,"true"},
+			{"TAC_EI_RRV211_Coyote",200,"true"},
+			{"TAC_EI_RRV211_B",200,"true"},
+			{"TAC_EI_RRV21_RG",200,"true"},
+			{"TAC_EI_RRV21_OD",200,"true"},
+			{"TAC_EI_RRV21_Coyote",200,"true"},
+			{"TAC_EI_RRV21_B",200,"true"},
+			{"TAC_EI_RRV26_RG",200,"true"},
+			{"TAC_EI_RRV26_OD",200,"true"},
+			{"TAC_EI_RRV26_Coyote",200,"true"},
+			{"TAC_EI_RRV26_B",200,"true"},
+			{"TAC_EI_RRV26L_RG",200,"true"},
+			{"TAC_EI_RRV26L_OD",200,"true"},
+			{"TAC_EI_RRV26L_Coyote",200,"true"},
+			{"TAC_EI_RRV26L_B",200,"true"},
+			{"TAC_EI_RRV22_RG",200,"true"},
+			{"TAC_EI_RRV22_OD",200,"true"},
+			{"TAC_EI_RRV22_B",200,"true"},
+			{"VSM_FAPC_MG_OCP",200,"true"},
+			{"rhsusf_spcs_ucp_rifleman",200,"true"},
+			{"rhsusf_spcs_ucp",200,"true"},
+			{"ADFU_V_JPC_Assaulter_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Assaulter_MC",200,"true"},
+			{"ADFU_V_JPC_Grenadier_Belt_MC",200,"true"},
+			{"ADFU_v_JPC_Grenadier_MC",200,"true"},
+			{"ADFU_V_JPC_Light_MC",200,"true"},
+			{"ADFU_V_JPC_Hgunner_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Hgunner_MC",200,"true"},
+			{"ADFU_V_JPC_Marksman_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Marksman_MC",200,"true"},
+			{"ADFU_V_JPC_Medic_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_Medic_MC",200,"true"},
+			{"ADFU_V_JPC_Teamleader_Belt_MC",200,"true"},
+			{"ADFU_V_JPC_TeamLeader_MC",200,"true"},
+			{"ADFU_V_TBAS_Grenadier_AMCS",200,"true"},
+			{"ADFU_V_TBAS_Light_AMCS",200,"true"},
+			{"ADFU_V_TBAS_Hgunner_AMCS",200,"true"},
+			{"ADFU_V_TBAS_Medic_AMCS",200,"true"},
+			{"ADFU_V_TBAS_TeamLeader_AMCS",200,"true"},
+			{"ADFU_V_TBAS_Grenadier_AMCT",200,"true"},
+			{"TAC_V_Sheriff_BA_T4",200,"true"},
+			{"TAC_V_Sheriff_BA_TB6",200,"true"},
+			{"TAC_V_Sheriff_BA_TC6",200,"true"},
+			{"TAC_V_Sheriff_BA_T6",200,"true"},
+			{"TAC_V_Sheriff_BA_TB5",200,"true"},
+			{"TAC_V_Sheriff_BA_TC5",200,"true"},
+			{"TAC_V_Sheriff_BA_T5",200,"true"},
+			{"EF_GSG9_1",200,"true"},
+			{"EF_GSG9_2",200,"true"},
+			{"TAC_Punisher_Vest_BK",200,"true"},
+			{"TAC_EI_RRV1_B",200,"true"},
+			{"TAC_EI_RRV1_Coyote",200,"true"},
+			{"TAC_EI_RRV1_OD",200,"true"},
+			{"TAC_EI_RRV1_RG",200,"true"},
+			{"TAC_EI_RRVS_SPR_BK",200,"true"},
+			{"TAC_EI_RRVS_SPR_CY",200,"true"},
+			{"TAC_EI_RRVS_SPR_OD",200,"true"},
+			{"TAC_EI_RRVS_SPR_RG",200,"true"},
+			{"TAC_EI_RRVS_SPR2_BK",200,"true"},
+			{"TAC_EI_RRVS_SPR2_CY",200,"true"},
+			{"TAC_EI_RRVS_SPR2_OD",200,"true"},
+			{"TAC_EI_RRVS_SPR2_RG",200,"true"},
+			{"TAC_EI_RRVS_SPR2_BK_AK",200,"true"},
+			{"TAC_EI_RRVS_SPR2_CY_AK",200,"true"},
+			{"TAC_EI_RRVS_SPR2_OD_AK",200,"true"},
+			{"TAC_EI_RRVS_SPR2_RG_AK",200,"true"},
+			{"TAC_EI_RRVS_SPR_CY_AK",200,"true"},
+			{"TAC_EI_RRVS_SPR_OD_AK",200,"true"},
+			{"TAC_EI_RRVS_SPR_RG_AK",200,"true"},
+			{"TAC_EI_RRV2_B",200,"true"},
+			{"lbt_tl_OD2",200,"true"},
+			{"TAC_V_CTBA",200,"true"},
+			{"TAC_V_CTBA2",200,"true"},
+			{"TAC_V_Sheriff_BA_TB",200,"true"},
+			{"TAC_V_Sheriff_BA_TC",200,"true"},
+			{"TAC_V_Sheriff_BA_T",200,"true"},
+			{"TAC_V_Sheriff_BA_TB2",200,"true"},
+			{"TAC_V_Sheriff_BA_TC2",200,"true"},
+			{"TAC_V_Sheriff_BA_T2",200,"true"},
+			{"TAC_PMC_VEST_D",200,"true"},
+			{"TAC_V_Sheriff_BA_TB3",200,"true"},
+			{"TAC_V_Sheriff_BA_TC3",200,"true"},
+			{"TAC_V_Sheriff_BA_T3",200,"true"},
+			{"TAC_V_Sheriff_BA_TBL7",200,"true"},
+			{"TAC_V_Sheriff_BA_TCL7",200,"true"},
+			{"TAC_V_Sheriff_BA_TL7",200,"true"},
+			{"TAC_V_Sheriff_BA_TB7",200,"true"},
+			{"TAC_V_Sheriff_BA_TC7",200,"true"},
+			{"TAC_V_Sheriff_BA_T7",200,"true"},
+			{"TAC_V_Sheriff_BA_TBL",200,"true"},
+			{"TAC_V_Sheriff_BA_TCL",200,"true"},
+			{"TAC_V_Sheriff_BA_TL",200,"true"},
+			{"lbt_operator_aor1",200,"true"},
+			{"lbt_pouchless_aor1",200,"true"},
+			{"lbt_tl_aor1",200,"true"},
+			{"VSM_FAPC_Breacher_OCP",200,"true"},
+			{"TAC_FS_FO_m_K",200,"true"},
+			{"TAC_FS_FO_m_B2",200,"true"},
+			{"VSM_RAV_operator_multicam",200,"true"},
+			{"VSM_RAV_MG_multicam",200,"true"},
+			{"lbt_comms_OD2",200,"true"},
+			{"lbt_medical_OD2",200,"true"},
+			{"lbt_operator_OD2",200,"true"},
+			{"lbt_pouchless_OD2",200,"true"},
+			{"TAC_V_Sheriff_BA_TBL2",200,"true"},
+			{"TAC_V_Sheriff_BA_TCL2",200,"true"},
+			{"TAC_V_Sheriff_BA_TL2",200,"true"},
+			{"ADFU_V_TBAS_Light_AMCT",200,"true"},
+			{"ADFU_V_TBAS_Hgunner_AMCT",200,"true"},
+			{"ADFU_V_TBAS_Medic_AMCT",200,"true"},
+			{"ADFU_V_TBAS_TeamLeader_AMCT",200,"true"},
+			{"ADFU_V_TBAS_Assaulter_AMC",200,"true"},
+			{"ADFU_V_TBAS_Grenadier_AMC",200,"true"},
+			{"ADFU_V_TBAS_Light_AMC",200,"true"},
+			{"ADFU_V_TBAS_Hgunner_AMC",200,"true"},
+			{"ADFU_V_TBAS_Marksman_AMC",200,"true"},
+			{"ADFU_V_TBAS_Medic_Belt_AMC",200,"true"},
+			{"ADFU_V_TBAS_TeamLeader_AMC",200,"true"},
+			{"ADFU_V_TBAS_Grenadier_AMP",200,"true"},
+			{"ADFU_V_TBAS_Light_AMP",200,"true"},
+			{"ADFU_V_TBAS_Hgunner_AMP",200,"true"},
+			{"ADFU_V_TBAS_Marksman_AMP",200,"true"},
+			{"ADFU_V_TBAS_Medic_AMP",200,"true"},
+			{"ADFU_V_TBAS_TeamLeader_AMP",200,"true"},
+			{"TAC_V_Sheriff_BA_TBL3_BK",200,"true"},
+			{"TAC_V_Sheriff_BA_TBL3_TN",200,"true"},
+			{"TAC_V_Sheriff_BA_TBL3_OD",200,"true"},
+			{"TAC_V_Sheriff_BA_TBL4",200,"true"},
+			{"TAC_V_Sheriff_BA_TCL4",200,"true"},
+			{"TAC_V_Sheriff_BA_TL4",200,"true"},
+			{"TAC_V_Sheriff_BA_TB4",200,"true"},
+			{"TAC_V_Sheriff_BA_TC4",200,"true"},
+			{"TAC_EI_RRV2_Coyote",200,"true"},
+			{"TAC_EI_RRV2_OD",200,"true"},
+			{"TAC_EI_RRV2_RG",200,"true"},
+			{"TAC_EI_RRV24LAK_B",200,"true"},
+			{"TAC_EI_RRV24LAK_Coyote",200,"true"},
+			{"TAC_EI_RRV24LAK_OD",200,"true"},
+			{"TAC_EI_RRV24LAK_RG",200,"true"},
+			{"TAC_FS_FO_m_K2",200,"true"},
+			{"TAC_FS_FO_mL_B",200,"true"},
+			{"TAC_FS_FO_mL_K",200,"true"},
+			{"TAC_FS_FO_m_B",200,"true"},
+			{"TAC_LBT_H_B",200,"true"},
+			{"TAC_LBT_H_Khaki",200,"true"},
+			{"TAC_LBT_H_OD",200,"true"},
+			{"VSM_UTOC",200,"true"},
+			{"TAC_LBT_H2_B",200,"true"},
+			{"TAC_LBT_H2_Khaki",200,"true"},
+			{"TAC_LBT_H2_OD",200,"true"},
+			{"TAC_LBT_H4_B",200,"true"},
+			{"TAC_LBT_H4_Khaki",200,"true"},
+			{"TAC_LBT_H4_OD",200,"true"},
+			{"TAC_PBDFG2C_RG_1",200,"true"},
+			{"TAC_PBDFG2CPL_BK",200,"true"},
+			{"TAC_PBDFG2D_B",200,"true"},
+			{"TAC_PBDFG2D_CY",200,"true"},
+			{"TAC_PBDFG2D_RG",200,"true"},
+			{"TAC_PBDFG2D2_RG",200,"true"},
+			{"TAC_PBDFG2CPDEA_B_1",200,"true"},
+			{"TAC_PBDFG2CPDEA_RG_1",200,"true"},
+			{"TAC_PBDFG2CPFBI_B_1",200,"true"},
+			{"TAC_PBDFG2CPFBI_RG_1",200,"true"},
+			{"TAC_PBDFG2D2P_RG",200,"true"},
+			{"TAC_PBDFG2CPMSL_B_1",200,"true"},
+			{"TAC_PBDFG2CPP_CY_1",200,"true"},
+			{"TAC_PBDFG2CPP_BK_1",200,"true"},
+			{"TAC_PBDFG2P_B",200,"true"},
+			{"TAC_PBDFG2CPSRF_RG_1",200,"true"},
+			{"TAC_PBDFG2SACDEA_CY_1",200,"true"},
+			{"TAC_PBDFG2SACFBI_RG_1",200,"true"},
+			{"TAC_PBDFG2SACMSL_B_1",200,"true"},
+			{"TAC_PBDFG2SACP_B_1",200,"true"},
+			{"TAC_PBDFG2SACP_CY_1",200,"true"},
+			{"TAC_PBDFG2SACSRF_RG_1",200,"true"},
+			{"TAC_TAC_PBDFG2SACP_RG",200,"true"},
+			{"TAC_FS_FO_B",200,"true"},
+			{"TAC_FS_FO_P",200,"true"},
+			{"TAC_FS_FO_G",200,"true"},
+			{"TAC_FS_FO_B2",200,"true"},
+			{"TAC_FS_FO_G2",200,"true"},
+			{"TAC_FS_FOL_B",200,"true"},
+			{"TAC_FS_FOL_G",200,"true"},
+			{"TAC_CR4_B",200,"true"},
+			{"TAC_CR4_CY",200,"true"},
+			{"TAC_CR4_OD",200,"true"},
+			{"TAC_CR4_RG",200,"true"},
+			{"TAC_CR1_ACU",200,"true"},
+			{"TAC_CR1_B",200,"true"},
+			{"TAC_CR3",200,"true"},
+			{"TAC_CR1_CY",200,"true"},
+			{"TAC_CR1_MTP",200,"true"},
+			{"TAC_CR1_OD",200,"true"},
+			{"TAC_CR1_RG",200,"true"},
+			{"EF_CTV1",200,"true"},
+			{"EF_CTV2",200,"true"},
+			{"TAC_PBDFG2_B_1",200,"true"},
+			{"TAC_PBDFG2_CY_1",200,"true"},
+			{"TAC_PBDFG2_RG_1",200,"true"},
+			{"TAC_PBDFG2C_B_1",200,"true"},
+			{"TAC_PBDFG2C_CY_1",200,"true"},
+			{"VSM_RAV_operator_OGA",200,"true"},
+			{"VSM_JPC",200,"true"},
+			{"rhsusf_iotv_ocp_Grenadier",200,"true"},
+			{"rhsusf_iotv_ucp_Grenadier",200,"true"},
+			{"rhsusf_iotv_ocp_Medic",200,"true"},
+			{"rhsusf_iotv_ucp_Medic",200,"true"},
+			{"rhsusf_iotv_ocp",200,"true"},
+			{"rhsusf_iotv_ocp_Repair",200,"true"},
+			{"rhsusf_iotv_ucp_Repair",200,"true"},
+			{"rhsusf_iotv_ocp_Rifleman",200,"true"},
+			{"rhsusf_iotv_ucp_Rifleman",200,"true"},
+			{"rhsusf_iotv_ocp_SAW",200,"true"},
+			{"rhsusf_iotv_ocp_Squadleader",200,"true"},
+			{"rhsusf_iotv_ucp_Squadleader",200,"true"},
+			{"rhsusf_iotv_ocp_Teamleader",200,"true"},
+			{"rhsusf_iotv_ucp_Teamleader",200,"true"},
+			{"rhsusf_iotv_ucp",200,"true"},
+			{"Gsg9_Assault_Vest_Coyot",200,"true"},
+			{"Gsg9_Medic_Vest_Coyot",200,"true"},
+			{"Gsg9_Specialist_Vest_Coyot",200,"true"},
+			{"Gsg9_Assault_Vest",200,"true"},
+			{"Gsg9_Medic_Vest",200,"true"},
+			{"Gsg9_Specialist_Vest",200,"true"},
+			{"Gsg9_Support_Vest",200,"true"},
+			{"Gsg9_PlateCarrier_Black_Assault",200,"true"},
+			{"Gsg9_PlateCarrier_WetEarth_Assault",200,"true"},
+			{"Gsg9_PlateCarrier_Black_Medic",200,"true"},
+			{"Gsg9_PlateCarrier_WetEarth_Medic",200,"true"},
+			{"Gsg9_PlateCarrier_Black_Specialist",200,"true"},
+			{"Gsg9_PlateCarrier_WetEarth_Specialist",200,"true"},
+			{"rhsusf_spc",200,"true"},
+			{"rhsusf_spc_corpsman",200,"true"},
+			{"rhsusf_spc_crewman",200,"true"},
+			{"rhsusf_spc_iar",200,"true"},
+			{"rhsusf_spc_light",200,"true"},
+			{"rhsusf_spc_mg",200,"true"},
+			{"rhsusf_spc_marksman",200,"true"},
+			{"rhsusf_spc_patchless",200,"true"},
+			{"rhsusf_spc_patchless_radio",200,"true"},
+			{"rhsusf_spc_rifleman",200,"true"},
+			{"rhsusf_spc_squadleader",200,"true"},
+			{"rhsusf_spc_teamleader",200,"true"},
+			{"rhsusf_spcs_ocp",200,"true"},
+			{"rhsusf_spcs_ocp_rifleman",200,"true"},
+			{"VSM_OGA_Vest_1",200,"true"},
+			{"VSM_OGA_OD_Vest_1",200,"true"},
+			{"VSM_OGA_Vest_2",200,"true"},
+			{"VSM_OGA_OD_Vest_2",200,"true"},
+			{"VSM_OGA_Vest_3",200,"true"},
+			{"VSM_OGA_OD_Vest_3",200,"true"},
+			{"VSM_FAPC_Breacher_ProjectHonor",200,"true"},
+			{"VSM_FAPC_MG_ProjectHonor",200,"true"},
+			{"VSM_FAPC_Operator_ProjectHonor",200,"true"},
+			{"VSM_CarrierRig_Breacher_ProjectHonor",200,"true"},
+			{"VSM_CarrierRig_Gunner_ProjectHonor",200,"true"},
+			{"VSM_CarrierRig_Operator_ProjectHonor",200,"true"},
+			{"VSM_LBT6094_breacher_ProjectHonor",200,"true"},
+			{"VSM_LBT6094_MG_ProjectHonor",200,"true"},
+			{"VSM_LBT6094_operator_ProjectHonor",200,"true"},
+			{"VSM_RAV_Breacher_ProjectHonor",200,"true"},
+			{"VSM_RAV_MG_ProjectHonor",200,"true"},
+			{"VSM_RAV_operator_ProjectHonor",200,"true"},
+			{"BHD_TACV1C2BK",200,"true"},
+			{"BHD_TACV1C2OD",200,"true"},
+			{"BHD_TACV1C",200,"true"},
+			{"BHD_TACV1DSS",200,"true"},
+			{"BHD_TACV1D",200,"true"},
+			{"BHD_TACV1D2SS",200,"true"},
+			{"BHD_TACV1D2",200,"true"},
+			{"V_PlateCarrierGL_blk",200,"true"},
+			{"V_PlateCarrierGL_rgr",200,"true"},
+			{"V_PlateCarrierGL_mtp",200,"true"},
+			{"V_PlateCarrierGL_tna_F",200,"true"},
+			{"VSM_2017_ChestRig",200,"true"},
+			{"VSM_2017_ChestRig_PACA",200,"true"},
+			{"VSM_CIRAS",200,"true"},
+			{"VSM_FAPC_breacher_multicam",200,"true"},
+			{"VSM_RAV_operator_oga",200,"true"},
+			{"milgp_v_jpc_assaulter_mc",200,"true"},
+			{"milgp_v_jpc_assaulter_belt_mc",200,"true"},
+			{"milgp_v_jpc_grenadier_mc",200,"true"},
+			{"milgp_v_jpc_grenadier_belt_mc",200,"true"},
+			{"milgp_v_jpc_hgunner_mc",200,"true"},
+			{"milgp_v_jpc_hgunner_belt_mc",200,"true"},
+			{"milgp_v_jpc_light_mc",200,"true"},
+			{"milgp_v_jpc_light_belt_mc",200,"true"},
+			{"milgp_v_jpc_marksman_mc",200,"true"},
+			{"milgp_v_jpc_marksman_belt_mc",200,"true"},
+			{"milgp_v_jpc_medic_mc",200,"true"},
+			{"milgp_v_jpc_medic_belt_mc",200,"true"},
+			{"milgp_v_jpc_assaulter_rgr",200,"true"},
+			{"milgp_v_jpc_assaulter_belt_rgr",200,"true"},
+			{"milgp_v_jpc_grenadier_rgr",200,"true"},
+			{"milgp_v_jpc_grenadier_belt_rgr",200,"true"},
+			{"milgp_v_jpc_hgunner_rgr",200,"true"},
+			{"milgp_v_jpc_hgunner_belt_rgr",200,"true"},
+			{"milgp_v_jpc_light_rgr",200,"true"},
+			{"milgp_v_jpc_light_belt_rgr",200,"true"},
+			{"milgp_v_jpc_marksman_rgr",200,"true"},
+			{"milgp_v_jpc_marksman_belt_rgr",200,"true"},
+			{"milgp_v_jpc_medic_rgr",200,"true"}
+		};
+	};
+	
+	class Backpack
+	{
+		displayName = "$STR_HG_SHOP_BACKPACKS";
+		content[] =
+		{
+			{"milgp_b_patrol_01_khk_frank",1200,"true"},
+			{"fatpack_coy",100,"true"},
+			{"fatpack_od",100,"true"},
+			{"VSM_Multicam_carryall",100,"true"},
+			{"VSM_Multicam_Backpack_Compact",100,"true"},
+			{"VSM_Multicam_Backpack_Kitbag",100,"true"},
+			{"VSM_OGA_carryall",100,"true"},
+			{"VSM_OGA_OD_carryall",100,"true"},
+			{"VSM_OGA_Backpack_Compact",100,"true"},
+			{"VSM_OGA_OD_Backpack_Compact",100,"true"},
+			{"VSM_OGA_Backpack_Kitbag",100,"true"},
+			{"VSM_OGA_OD_Backpack_Kitbag",100,"true"},
+			{"rhsgref_hidf_alicepack",200,"true"},
+			{"rhsgref_ttsko_alicepack",200,"true"},
+			{"rhsgref_wdl_alicepack",200,"true"},
+			{"rhssaf_alice_md2camo",200,"true"},
+			{"ADFU_Assaultpack_AMCT",100,"true"},
+			{"ADFU_Assaultpack_AMC",100,"true"},
+			{"ADFU_Assaultpack_AMP",100,"true"},
+			{"B_AssaultPack_blk",100,"true"},
+			{"B_AssaultPack_cbr",100,"true"},
+			{"B_AssaultPack_rgr",100,"true"},
+			{"B_AssaultPack_khk",100,"true"},
+			{"ADFU_Assaultpack_MC",100,"true"},
+			{"B_AssaultPack_mcamo",100,"true"},
+			{"B_Bergen_mcamo_F",200,"true"},
+			{"BHD_BUTT1",100,"true"},
+			{"BHD_BUTT2",100,"true"},
+			{"GSG9_Engineer_Backpack_Black",100,"true"},
+			{"GSG9_Engineer_Backpack",100,"true"},
+			{"GSG9_Assault_Backpack_Black",100,"true"},
+			{"GSG9_Assault_Backpack",100,"true"},
+			{"milgp_bp_breacher_mc",100,"true"},
+			{"milgp_bp_hydration_mc",100,"true"},
+			{"milgp_bp_pointman_mc",100,"true"},
+			{"milgp_bp_tomahawk_mc",100,"true"},
+			{"milgp_bp_breacher_khk",100,"true"},
+			{"milgp_bp_hydration_khk",100,"true"},
+			{"milgp_bp_pointman_khk",100,"true"},
+			{"milgp_bp_tomahawk_khk",100,"true"},
+			{"milgp_bp_breacher_cb",100,"true"},
+			{"milgp_bp_hydration_cb",100,"true"},
+			{"milgp_bp_pointman_cb",100,"true"},
+			{"milgp_bp_tomahawk_cb",100,"true"},
+			{"milgp_bp_breacher_rgr",100,"true"},
+			{"milgp_bp_hydration_rgr",100,"true"},
+			{"milgp_bp_pointman_rgr",100,"true"},
+			{"milgp_bp_tomahawk_rgr",100,"true"},
+			{"TAC_BP_Butt2_mtpm",100,"true"},
+			{"TAC_BP_Butt2_odm",100,"true"},
+			{"TAC_BP_HSG_GLP2_OD",100,"true"},
+			{"TAC_BP_HSG_GLP2_khaki",100,"true"},
+			{"TAC_BP_HSG_GLP2_b",100,"true"},
+			{"TAC_BP_HSG_GLP_OD",100,"true"},
+			{"TAC_BP_HSG_GLP_khaki",100,"true"},
+			{"TAC_BP_HSG_GLP_b",100,"true"},
+			{"ADFU_Carryall_AMCT",100,"true"},
+			{"ADFU_Carryall_AMC",100,"true"},
+			{"ADFU_Carryall_AMP",100,"true"},
+			{"B_Carryall_cbr",100,"true"},
+			{"B_Carryall_khk",100,"true"},
+			{"ADFU_Carryall_MC",100,"true"},
+			{"B_Carryall_oli",100,"true"},
+			{"rhsusf_assault_eagleaiii_coy",100,"true"},
+			{"B_rhsusf_B_BACKPACK",100,"true"},
+			{"rhsusf_assault_eagleaiii_ucp",100,"true"},
+			{"adfu_bp_hydration_cb",100,"true"},
+			{"B_LegStrapBag_black_F",100,"true"},
+			{"B_LegStrapBag_coyote_F",100,"true"},
+			{"B_LegStrapBag_olive_F",100,"true"},
+			{"B_Messenger_Black_F",100,"true"},
+			{"B_Messenger_Coyote_F",100,"true"},
+			{"B_Messenger_Gray_F",100,"true"},
+			{"B_Messenger_Olive_F",100,"true"},
+			{"milgp_b_patrol_01_cb",100,"true"},
+			{"milgp_b_patrol_01_rgr",100,"true"},
+			{"milgp_b_patrol_01_khk",100,"true"},
+			{"milgp_b_patrol_01_khk",100,"true"},
+			{"milgp_b_patrol_01_khk",100,"true"}
+		};
+	};
+};

@@ -1,0 +1,127 @@
+__EXEC(HG_Profile = allVariables profileNamespace)
+
+author = "Jansen";
+OnLoadName = "Tanoa.";
+OnLoadMission = "Tanoa.";
+overviewText = "Taipan Security PMC";
+disabledAI = 1;
+respawn = "BASE";
+respawnDialog = 0;            // default = 1. show respawn timer and scoreboard when killed.
+respawnOnStart = -1;
+
+/*
+    Classes
+*/
+
+#include "HG\UI\HG_DialogsMaster.h"
+#include "conv\cfg\defines.hpp"
+#include "conv\cfg\dialogs.hpp"
+#include "missionConversations.hpp"
+
+#define SAF_DEF
+	#include "sushi_scripts\core\init.cpp"
+	#include "sushi_scripts\breach\init.cpp"
+#undef SAF_DEF
+
+class RscTitles
+{
+    #include "HG\UI\Dialogs\HG_HUD.h"
+	#include "HG\UI\Dialogs\HG_Tags.h"
+	class IP_DLG_SIMPLESENTENCE
+	{
+		idd = 20000;
+		movingenable = false;
+		duration = 1e+1000;
+		onLoad = "UINamespace setVariable ['DLG_SimpleSentence', _this select 0]"; 		
+		
+		class Controls
+		{
+			class IP_BOX_MAIN: IP_BOX
+			{
+				idc = -1;
+				text = ""; //--- ToDo: Localize;
+				x = 0.5 * GUI_GRID_W + GUI_GRID_X;
+				y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
+				w = 39 * GUI_GRID_W;
+				h = 4 * GUI_GRID_H;
+			};
+			
+			////////////////////////////////////////////////////////
+			// GUI EDITOR OUTPUT START (by IndeedPete, v1.063, #Cyvode)
+			////////////////////////////////////////////////////////
+
+			class RscFrame_1800: IP_RscFrame
+			{
+				idc = 1800;
+				x = 0.5 * GUI_GRID_W + GUI_GRID_X;
+				y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
+				w = 39 * GUI_GRID_W;
+				h = 4 * GUI_GRID_H;
+			};
+			class RscPicture_1200: IP_RscPicture
+			{
+				idc = 1200;
+				text = "#(argb,256,256,1)r2t(camrender0,1.0)";
+				x = 1 * GUI_GRID_W + GUI_GRID_X;
+				y = 21 * GUI_GRID_H + GUI_GRID_Y;
+				w = 5 * GUI_GRID_W;
+				h = 3 * GUI_GRID_H;
+			};
+			class RscStructuredText_1100: IP_RscStructuredText
+			{
+				idc = 1100;
+				x = 6.5 * GUI_GRID_W + GUI_GRID_X;
+				y = 21 * GUI_GRID_H + GUI_GRID_Y;
+				w = 32.5 * GUI_GRID_W;
+				h = 3 * GUI_GRID_H;
+			};
+			////////////////////////////////////////////////////////
+			// GUI EDITOR OUTPUT END
+			////////////////////////////////////////////////////////
+		};
+	};
+};
+
+class CfgClient
+{
+    #include "HG\Config\HG_Config.h"
+};
+
+class CfgSounds
+{
+    #include "HG\Sounds\HG_Sounds.h"
+};
+
+class CfgFunctions 
+{
+	#include "HG\Functions\HG_Functions.h"
+	#include "modules\grad-persistence\cfgFunctions.hpp"
+	#include "conv\cfg\functions.hpp"
+	class SAF {
+		#define SAF_FNCS
+			#include "sushi_scripts\core\init.cpp"
+			#include "sushi_scripts\breach\init.cpp"
+		#undef SAF_FNCS
+	};
+};
+
+class CfgDebriefing
+{
+    #include "HG\Config\HG_Debriefing.h"
+};
+
+class CfgGradPersistence {
+    missionTag = "tanoaop";
+    loadOnMissionStart = 1;
+    missionWaitCondition = "true";
+    playerWaitCondition = "(_this select 0) getVariable ['missionStuffComplete',false]";
+    saveUnits = 0;
+    saveVehicles = 0;
+    saveContainers = 1;
+    saveStatics = 0;
+    savePlayerInventory = 0;
+    savePlayerDamage = 0;
+    savePlayerPosition = 1;
+    savePlayerMoney = 0;
+    saveTeamAccounts = 0;
+};
